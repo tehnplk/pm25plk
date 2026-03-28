@@ -1,0 +1,5 @@
+{
+  "name": "Phitsanulok PM 2.5 Dashboard",
+  "description": "ระบบเฝ้าระวังสถานการณ์ฝุ่น PM 2.5 จังหวัดพิษณุโลก",
+  "requestFramePermissions": []
+}
