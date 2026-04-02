@@ -318,6 +318,7 @@ export default function Dashboard() {
   const [allMedicalRecords, setAllMedicalRecords] = useState<
     MedicalPublicHealthRecord[]
   >([]);
+  const [selectedActivityDate, setSelectedActivityDate] = useState("");
   const districtData = useMemo(() => data?.districts ?? [], [data]);
 
   useEffect(() => {
@@ -682,6 +683,54 @@ export default function Dashboard() {
     targetedGroupForm,
     vulnerableServiceForm,
   ]);
+
+  const activityDateOptions = useMemo(
+    () =>
+      Object.keys(medicalActivitiesByDate).sort((left, right) =>
+        right.localeCompare(left),
+      ),
+    [medicalActivitiesByDate],
+  );
+
+  useEffect(() => {
+    if (activityDateOptions.length === 0) {
+      setSelectedActivityDate("");
+      return;
+    }
+
+    if (!selectedActivityDate || !activityDateOptions.includes(selectedActivityDate)) {
+      setSelectedActivityDate(activityDateOptions[0]);
+    }
+  }, [activityDateOptions, selectedActivityDate]);
+
+  const filteredActivityEntries = useMemo(
+    () =>
+      selectedActivityDate ? (medicalActivitiesByDate[selectedActivityDate] ?? []) : [],
+    [medicalActivitiesByDate, selectedActivityDate],
+  );
+
+  const activityEntriesByCategory = useMemo(() => {
+    return filteredActivityEntries.reduce<
+      Record<
+        string,
+        Array<{
+          id: string;
+          district: string;
+          category: string;
+          title: string;
+          details: string;
+          value?: string;
+        }>
+      >
+    >((acc, entry) => {
+      if (!acc[entry.category]) {
+        acc[entry.category] = [];
+      }
+
+      acc[entry.category].push(entry);
+      return acc;
+    }, {});
+  }, [filteredActivityEntries]);
 
   function openForecastModal(districtId: number) {
     setActiveDistrictId(districtId);
@@ -1592,77 +1641,104 @@ export default function Dashboard() {
         >
           <section className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm">
             <div className="border-b border-orange-100 p-6">
-              <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                <ShieldCheck className="h-5 w-5 text-orange-500" />
-                รายการกิจกรรมรายวัน
-              </h2>
-              <p className="mt-1 text-xs text-slate-500">
-                แสดงสรุปรายการจากข้อมูลที่บันทึกในแบบฟอร์มด้านการแพทย์/สาธารณสุข
-              </p>
+              <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+                <div>
+                  <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                    <ShieldCheck className="h-5 w-5 text-orange-500" />
+                    รายการกิจกรรมรายวัน
+                  </h2>
+                  <p className="mt-1 text-xs text-slate-500">
+                    แสดงสรุปรายการจากข้อมูลที่บันทึกในแบบฟอร์มด้านการแพทย์/สาธารณสุข
+                  </p>
+                </div>
+                <div className="w-full max-w-xs">
+                  <label className="mb-2 block text-xs font-semibold text-slate-500">
+                    เลือกวันที่
+                  </label>
+                  <select
+                    value={selectedActivityDate}
+                    onChange={(event) => setSelectedActivityDate(event.target.value)}
+                    className="w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-orange-400"
+                  >
+                    {activityDateOptions.map((date) => (
+                      <option key={date} value={date}>
+                        {formatDailyLabel(date)}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+              </div>
             </div>
 
             <div className="max-h-[720px] space-y-5 overflow-y-auto p-6">
-              {Object.entries(medicalActivitiesByDate).map(([date, entries]) => (
-                <div
-                  key={date}
-                  className="overflow-hidden rounded-2xl border border-orange-100"
-                >
+              {selectedActivityDate ? (
+                <div className="overflow-hidden rounded-2xl border border-orange-100">
                   <div className="flex items-center justify-between bg-orange-50/70 px-5 py-4">
                     <div className="text-sm font-semibold text-slate-900">
-                      {formatDailyLabel(date)}
+                      {formatDailyLabel(selectedActivityDate)}
                     </div>
                     <div className="text-xs font-medium text-slate-500">
-                      {entries.length} รายการ
+                      {filteredActivityEntries.length} รายการ
                     </div>
                   </div>
-                  <div className="divide-y divide-orange-50 bg-white">
-                    {entries.map((entry) => (
-                      <div
-                        key={entry.id}
-                        className="grid gap-3 px-5 py-4 md:grid-cols-[180px_180px_180px_1fr]"
-                      >
-                        <div>
-                          <div className="text-xs font-medium text-slate-500">
-                            อำเภอ
+                  <div className="space-y-5 bg-white p-5">
+                    {Object.entries(activityEntriesByCategory).map(
+                      ([category, entries]) => (
+                        <div
+                          key={category}
+                          className="overflow-hidden rounded-2xl border border-orange-100"
+                        >
+                          <div className="bg-orange-50 px-4 py-3 text-sm font-bold text-orange-800">
+                            {category}
                           </div>
-                          <div className="mt-1 font-semibold text-slate-900">
-                            {entry.district}
+                          <div className="divide-y divide-orange-50 bg-white">
+                            {entries.map((entry) => (
+                              <div
+                                key={entry.id}
+                                className="grid gap-3 px-5 py-4 md:grid-cols-[180px_220px_1fr]"
+                              >
+                                <div>
+                                  <div className="text-xs font-medium text-slate-500">
+                                    อำเภอ
+                                  </div>
+                                  <div className="mt-1 font-semibold text-slate-900">
+                                    {entry.district}
+                                  </div>
+                                </div>
+                                <div>
+                                  <div className="text-xs font-medium text-slate-500">
+                                    รายการ
+                                  </div>
+                                  <div className="mt-1 font-semibold text-slate-900">
+                                    {entry.title}
+                                  </div>
+                                </div>
+                                <div>
+                                  <div className="text-xs font-medium text-slate-500">
+                                    รายละเอียด
+                                  </div>
+                                  <div className="mt-1 text-sm text-slate-700">
+                                    {entry.details || "-"}
+                                  </div>
+                                  {entry.value ? (
+                                    <div className="mt-1 text-xs text-slate-500">
+                                      รวมวันนี้ {entry.value}
+                                    </div>
+                                  ) : null}
+                                </div>
+                              </div>
+                            ))}
                           </div>
                         </div>
-                        <div>
-                          <div className="text-xs font-medium text-slate-500">
-                            หมวด
-                          </div>
-                          <div className="mt-1 font-semibold text-slate-900">
-                            {entry.category}
-                          </div>
-                        </div>
-                        <div>
-                          <div className="text-xs font-medium text-slate-500">
-                            รายการ
-                          </div>
-                          <div className="mt-1 font-semibold text-slate-900">
-                            {entry.title}
-                          </div>
-                        </div>
-                        <div>
-                          <div className="text-xs font-medium text-slate-500">
-                            รายละเอียด
-                          </div>
-                          <div className="mt-1 text-sm text-slate-700">
-                            {entry.details || "-"}
-                          </div>
-                          {entry.value ? (
-                            <div className="mt-1 text-xs text-slate-500">
-                              รวมวันนี้ {entry.value}
-                            </div>
-                          ) : null}
-                        </div>
-                      </div>
-                    ))}
+                      ),
+                    )}
                   </div>
                 </div>
-              ))}
+              ) : (
+                <div className="rounded-2xl border border-dashed border-orange-200 bg-orange-50/40 p-6 text-sm text-slate-500">
+                  ยังไม่มีข้อมูลกิจกรรมรายวันให้แสดง
+                </div>
+              )}
             </div>
           </section>
         </motion.div>
