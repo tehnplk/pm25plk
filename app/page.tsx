@@ -84,12 +84,25 @@ type VulnerableDailyEntry = {
   dailyServed: string;
 };
 
+type InventorySupplyForm = {
+  maskDistributed: string;
+  n95Distributed: string;
+};
+
 type MedicalPublicHealthPayload = {
   generalPublicForm: typeof initialGeneralPublicForm;
   targetedGroupForm: typeof initialTargetedGroupForm;
   cleanRoomForm: typeof initialCleanRoomForm;
   cleanRoomVisitors: string;
   vulnerableServiceForm: typeof initialVulnerableServiceForm;
+  inventorySuppliesForm: typeof initialInventorySuppliesForm;
+};
+
+type MedicalPublicHealthRecord = {
+  reportDate: string;
+  districtName: string;
+  payload: MedicalPublicHealthPayload;
+  updatedAt: string | null;
 };
 
 const medicalStorageKey = "pm25plk-medical-popup";
@@ -222,6 +235,11 @@ const initialVulnerableServiceForm: Record<
   respiratory: { dailyServed: "2385" },
 };
 
+const initialInventorySuppliesForm: InventorySupplyForm = {
+  maskDistributed: "0",
+  n95Distributed: "0",
+};
+
 function getStatusColor(status: string) {
   switch (status) {
     case "Red":
@@ -288,11 +306,19 @@ export default function Dashboard() {
   const [vulnerableServiceForm, setVulnerableServiceForm] = useState(
     initialVulnerableServiceForm,
   );
+  const [inventorySuppliesForm, setInventorySuppliesForm] = useState(
+    initialInventorySuppliesForm,
+  );
   const [medicalReportDate, setMedicalReportDate] = useState("");
+  const [selectedMedicalDistrict, setSelectedMedicalDistrict] = useState("");
   const [isMedicalSaving, setIsMedicalSaving] = useState(false);
   const [medicalSaveMessage, setMedicalSaveMessage] = useState<string | null>(
     null,
   );
+  const [allMedicalRecords, setAllMedicalRecords] = useState<
+    MedicalPublicHealthRecord[]
+  >([]);
+  const districtData = useMemo(() => data?.districts ?? [], [data]);
 
   useEffect(() => {
     let cancelled = false;
@@ -346,6 +372,7 @@ export default function Dashboard() {
         cleanRoomForm?: typeof initialCleanRoomForm;
         cleanRoomVisitors?: string;
         vulnerableServiceForm?: typeof initialVulnerableServiceForm;
+        inventorySuppliesForm?: typeof initialInventorySuppliesForm;
       };
 
       if (parsed.generalPublicForm) {
@@ -363,19 +390,39 @@ export default function Dashboard() {
       if (parsed.vulnerableServiceForm) {
         setVulnerableServiceForm(parsed.vulnerableServiceForm);
       }
+      if (parsed.inventorySuppliesForm) {
+        setInventorySuppliesForm(parsed.inventorySuppliesForm);
+      }
     } catch {
       window.localStorage.removeItem(medicalStorageKey);
     }
   }, []);
 
   useEffect(() => {
+    if (!selectedMedicalDistrict && districtData.length > 0) {
+      setSelectedMedicalDistrict(districtData[0].name);
+    }
+  }, [districtData, selectedMedicalDistrict]);
+
+  useEffect(() => {
     let cancelled = false;
 
     async function loadMedicalPublicHealth() {
       try {
-        const response = await fetch("/api/medical-public-health", {
-          cache: "no-store",
-        });
+        const params = new URLSearchParams();
+        if (medicalReportDate) {
+          params.set("reportDate", medicalReportDate);
+        }
+        if (selectedMedicalDistrict) {
+          params.set("districtName", selectedMedicalDistrict);
+        }
+
+        const response = await fetch(
+          `/api/medical-public-health${params.size ? `?${params.toString()}` : ""}`,
+          {
+            cache: "no-store",
+          },
+        );
 
         if (!response.ok) {
           throw new Error("Unable to load medical public health form");
@@ -383,6 +430,7 @@ export default function Dashboard() {
 
         const result = (await response.json()) as {
           reportDate: string;
+          districtName: string;
           payload: MedicalPublicHealthPayload;
           updatedAt: string | null;
         };
@@ -390,11 +438,13 @@ export default function Dashboard() {
         if (cancelled) return;
 
         setMedicalReportDate(result.reportDate);
+        setSelectedMedicalDistrict(result.districtName);
         setGeneralPublicForm(result.payload.generalPublicForm);
         setTargetedGroupForm(result.payload.targetedGroupForm);
         setCleanRoomForm(result.payload.cleanRoomForm);
         setCleanRoomVisitors(result.payload.cleanRoomVisitors);
         setVulnerableServiceForm(result.payload.vulnerableServiceForm);
+        setInventorySuppliesForm(result.payload.inventorySuppliesForm);
       } catch {
         if (!cancelled) {
           setMedicalSaveMessage(
@@ -405,6 +455,37 @@ export default function Dashboard() {
     }
 
     loadMedicalPublicHealth();
+
+    return () => {
+      cancelled = true;
+    };
+  }, [medicalReportDate, selectedMedicalDistrict]);
+
+  useEffect(() => {
+    let cancelled = false;
+
+    async function loadAllMedicalRecords() {
+      try {
+        const response = await fetch("/api/medical-public-health?listAll=true", {
+          cache: "no-store",
+        });
+
+        if (!response.ok) {
+          throw new Error("Unable to load all medical public health records");
+        }
+
+        const result = (await response.json()) as MedicalPublicHealthRecord[];
+        if (!cancelled) {
+          setAllMedicalRecords(result);
+        }
+      } catch {
+        if (!cancelled) {
+          setAllMedicalRecords([]);
+        }
+      }
+    }
+
+    loadAllMedicalRecords();
 
     return () => {
       cancelled = true;
@@ -420,17 +501,17 @@ export default function Dashboard() {
         cleanRoomForm,
         cleanRoomVisitors,
         vulnerableServiceForm,
+        inventorySuppliesForm,
       }),
     );
   }, [
     cleanRoomForm,
     cleanRoomVisitors,
     generalPublicForm,
+    inventorySuppliesForm,
     targetedGroupForm,
     vulnerableServiceForm,
   ]);
-
-  const districtData = useMemo(() => data?.districts ?? [], [data]);
 
   useEffect(() => {
     if (activeDistrictId === null && districtData.length) {
@@ -447,93 +528,157 @@ export default function Dashboard() {
   );
 
   const medicalActivitiesByDate = useMemo(() => {
-    const reportDate = medicalReportDate || new Date().toISOString().slice(0, 10);
-    const entries: Array<{
-      id: string;
-      category: string;
-      title: string;
-      details: string;
-      value?: string;
-    }> = [];
+    const sourceRecords =
+      allMedicalRecords.length > 0
+        ? allMedicalRecords
+        : [
+            {
+              reportDate:
+                medicalReportDate || new Date().toISOString().slice(0, 10),
+              districtName: selectedMedicalDistrict || "เมืองพิษณุโลก",
+              payload: {
+                generalPublicForm,
+                targetedGroupForm,
+                cleanRoomForm,
+                cleanRoomVisitors,
+                vulnerableServiceForm,
+                inventorySuppliesForm,
+              },
+              updatedAt: null,
+            },
+          ];
 
-    entries.push({
-      id: "general-public",
-      category: "ประชาชนทั่วไป",
-      title: "แจกหน้ากากให้ประชาชนทั่วไป",
-      details: `Surgical Mask ${parseNumberString(
-        generalPublicForm.surgicalDaily,
-      ).toLocaleString()} ชิ้น, N95 ${parseNumberString(
-        generalPublicForm.n95Daily,
-      ).toLocaleString()} ชิ้น`,
-      value: `${(
-        parseNumberString(generalPublicForm.surgicalDaily) +
-        parseNumberString(generalPublicForm.n95Daily)
-      ).toLocaleString()} ชิ้น`,
-    });
+    return sourceRecords.reduce<
+      Record<
+        string,
+        Array<{
+          id: string;
+          district: string;
+          category: string;
+          title: string;
+          details: string;
+          value?: string;
+        }>
+      >
+    >((acc, record) => {
+      const entries: Array<{
+        id: string;
+        district: string;
+        category: string;
+        title: string;
+        details: string;
+        value?: string;
+      }> = [];
 
-    const targetedDetails = targetedGroupMeta
-      .map((group) => {
-        const surgical = parseNumberString(
-          targetedGroupForm[group.id].surgicalDaily,
-        );
-        const n95 = parseNumberString(targetedGroupForm[group.id].n95Daily);
-        const total = surgical + n95;
+      entries.push({
+        id: `${record.reportDate}-${record.districtName}-general-public`,
+        district: record.districtName,
+        category: "ประชาชนทั่วไป",
+        title: "แจกหน้ากากให้ประชาชนทั่วไป",
+        details: `Surgical Mask ${parseNumberString(
+          record.payload.generalPublicForm.surgicalDaily,
+        ).toLocaleString()} ชิ้น, N95 ${parseNumberString(
+          record.payload.generalPublicForm.n95Daily,
+        ).toLocaleString()} ชิ้น`,
+        value: `${(
+          parseNumberString(record.payload.generalPublicForm.surgicalDaily) +
+          parseNumberString(record.payload.generalPublicForm.n95Daily)
+        ).toLocaleString()} ชิ้น`,
+      });
 
-        if (total === 0) return null;
+      const targetedDetails = targetedGroupMeta
+        .map((group) => {
+          const surgical = parseNumberString(
+            record.payload.targetedGroupForm[group.id].surgicalDaily,
+          );
+          const n95 = parseNumberString(
+            record.payload.targetedGroupForm[group.id].n95Daily,
+          );
+          const total = surgical + n95;
 
-        return `${group.title.replace(/^\d+\.\d+\s*/, "")} ${total.toLocaleString()} ชิ้น`;
-      })
-      .filter(Boolean)
-      .join(", ");
+          if (total === 0) return null;
 
-    entries.push({
-      id: "targeted-groups",
-      category: "กลุ่มเปราะบาง",
-      title: "แจกหน้ากากแยกตามกลุ่มเป้าหมาย",
-      details: targetedDetails || "ยังไม่มีการแจกเพิ่มเติมในวันนี้",
-    });
+          return `${group.title.replace(/^\d+\.\d+\s*/, "")} ${total.toLocaleString()} ชิ้น`;
+        })
+        .filter(Boolean)
+        .join(", ");
 
-    const standardRoomTotal = cleanRoomMeta.reduce(
-      (sum, row) => sum + parseNumberString(cleanRoomForm[row.id].standardRooms),
-      0,
-    );
+      entries.push({
+        id: `${record.reportDate}-${record.districtName}-targeted-groups`,
+        district: record.districtName,
+        category: "กลุ่มเปราะบาง",
+        title: "แจกหน้ากากแยกตามกลุ่มเป้าหมาย",
+        details: targetedDetails || "ยังไม่มีการแจกเพิ่มเติมในวันนี้",
+      });
 
-    entries.push({
-      id: "clean-room",
-      category: "ห้องปลอดฝุ่น",
-      title: "การให้บริการห้องปลอดฝุ่นในสถานบริการสาธารณสุข",
-      details: `ห้องที่ผ่านมาตรฐาน ${standardRoomTotal.toLocaleString()} ห้อง, ผู้รับบริการ ${parseNumberString(
-        cleanRoomVisitors,
-      ).toLocaleString()} ราย`,
-      value: `${parseNumberString(cleanRoomVisitors).toLocaleString()} ราย`,
-    });
+      const standardRoomTotal = cleanRoomMeta.reduce(
+        (sum, row) =>
+          sum + parseNumberString(record.payload.cleanRoomForm[row.id].standardRooms),
+        0,
+      );
 
-    const vulnerableDetails = vulnerableServiceMeta
-      .map((group) => {
-        const served = parseNumberString(
-          vulnerableServiceForm[group.id].dailyServed,
-        );
-        if (served === 0) return null;
-        return `${group.label} ${served.toLocaleString()} คน`;
-      })
-      .filter(Boolean)
-      .join(", ");
+      entries.push({
+        id: `${record.reportDate}-${record.districtName}-clean-room`,
+        district: record.districtName,
+        category: "ห้องปลอดฝุ่น",
+        title: "การให้บริการห้องปลอดฝุ่นในสถานบริการสาธารณสุข",
+        details: `ห้องที่ผ่านมาตรฐาน ${standardRoomTotal.toLocaleString()} ห้อง, ผู้รับบริการ ${parseNumberString(
+          record.payload.cleanRoomVisitors,
+        ).toLocaleString()} ราย`,
+        value: `${parseNumberString(record.payload.cleanRoomVisitors).toLocaleString()} ราย`,
+      });
 
-    entries.push({
-      id: "vulnerable-groups-service",
-      category: "Vulnerable Groups",
-      title: "ดูแลกลุ่มเปราะบางรายวัน",
-      details: vulnerableDetails || "ยังไม่มีการบันทึกผู้ได้รับการดูแลในวันนี้",
-    });
+      const vulnerableDetails = vulnerableServiceMeta
+        .map((group) => {
+          const served = parseNumberString(
+            record.payload.vulnerableServiceForm[group.id].dailyServed,
+          );
+          if (served === 0) return null;
+          return `${group.label} ${served.toLocaleString()} คน`;
+        })
+        .filter(Boolean)
+        .join(", ");
 
-    return {
-      [reportDate]: entries,
-    };
+      entries.push({
+        id: `${record.reportDate}-${record.districtName}-vulnerable-groups-service`,
+        district: record.districtName,
+        category: "Vulnerable Groups",
+        title: "ดูแลกลุ่มเปราะบางรายวัน",
+        details:
+          vulnerableDetails || "ยังไม่มีการบันทึกผู้ได้รับการดูแลในวันนี้",
+      });
+
+      entries.push({
+        id: `${record.reportDate}-${record.districtName}-inventory-supplies`,
+        district: record.districtName,
+        category: "เวชภัณฑ์คงคลัง",
+        title: "การแจกเวชภัณฑ์คงคลัง",
+        details: `การแจกแมส ${parseNumberString(
+          record.payload.inventorySuppliesForm.maskDistributed,
+        ).toLocaleString()} ชิ้น, N95 ${parseNumberString(
+          record.payload.inventorySuppliesForm.n95Distributed,
+        ).toLocaleString()} ชิ้น`,
+        value: `${(
+          parseNumberString(record.payload.inventorySuppliesForm.maskDistributed) +
+          parseNumberString(record.payload.inventorySuppliesForm.n95Distributed)
+        ).toLocaleString()} ชิ้น`,
+      });
+
+      if (!acc[record.reportDate]) {
+        acc[record.reportDate] = [];
+      }
+
+      acc[record.reportDate].push(...entries);
+      return acc;
+    }, {});
   }, [
+    allMedicalRecords,
     cleanRoomForm,
     cleanRoomVisitors,
     generalPublicForm,
+    inventorySuppliesForm,
     medicalReportDate,
+    selectedMedicalDistrict,
     targetedGroupForm,
     vulnerableServiceForm,
   ]);
@@ -602,6 +747,13 @@ export default function Dashboard() {
     }));
   }
 
+  function handleInventorySuppliesChange(
+    field: keyof typeof initialInventorySuppliesForm,
+    value: string,
+  ) {
+    setInventorySuppliesForm((current) => ({ ...current, [field]: value }));
+  }
+
   async function handleMedicalSave() {
     try {
       setIsMedicalSaving(true);
@@ -613,6 +765,7 @@ export default function Dashboard() {
         cleanRoomForm,
         cleanRoomVisitors,
         vulnerableServiceForm,
+        inventorySuppliesForm,
       };
 
       const response = await fetch("/api/medical-public-health", {
@@ -622,6 +775,7 @@ export default function Dashboard() {
         },
         body: JSON.stringify({
           reportDate: medicalReportDate || undefined,
+          districtName: selectedMedicalDistrict || undefined,
           payload,
         }),
       });
@@ -632,10 +786,21 @@ export default function Dashboard() {
 
       const result = (await response.json()) as {
         reportDate: string;
+        districtName: string;
       };
 
       setMedicalReportDate(result.reportDate);
-      setMedicalSaveMessage(`บันทึกข้อมูลวันที่ ${result.reportDate} เรียบร้อย`);
+      setSelectedMedicalDistrict(result.districtName);
+      setMedicalSaveMessage(
+        `บันทึกข้อมูลวันที่ ${result.reportDate} ของอำเภอ ${result.districtName} เรียบร้อย`,
+      );
+      const recordsResponse = await fetch("/api/medical-public-health?listAll=true", {
+        cache: "no-store",
+      });
+      if (recordsResponse.ok) {
+        const records = (await recordsResponse.json()) as MedicalPublicHealthRecord[];
+        setAllMedicalRecords(records);
+      }
     } catch (saveError) {
       setMedicalSaveMessage(
         saveError instanceof Error
@@ -1051,18 +1216,47 @@ export default function Dashboard() {
               </div>
 
               <div className="max-h-[calc(92vh-96px)] space-y-6 overflow-y-auto p-6">
-                <div className="flex flex-wrap items-center justify-between gap-3 rounded-2xl border border-orange-100 bg-orange-50/70 px-4 py-3 text-sm text-slate-700">
-                  <div>
-                    วันที่บันทึกข้อมูล:
-                    <span className="ml-2 font-semibold">
-                      {medicalReportDate || "กำลังโหลด..."}
-                    </span>
+                <div className="grid gap-3 rounded-2xl border border-orange-100 bg-orange-50/70 px-4 py-3 text-sm text-slate-700 lg:grid-cols-[1.1fr_0.8fr_1fr] lg:items-end">
+                  <div className="space-y-2">
+                    <label className="block text-sm font-semibold text-slate-700">
+                      อำเภอ
+                    </label>
+                    <select
+                      value={selectedMedicalDistrict}
+                      onChange={(event) =>
+                        setSelectedMedicalDistrict(event.target.value)
+                      }
+                      className="w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-orange-400"
+                    >
+                      {districtData.map((district) => (
+                        <option key={district.id} value={district.name}>
+                          {district.name}
+                        </option>
+                      ))}
+                    </select>
                   </div>
+
+                  <div className="space-y-2">
+                    <label className="block text-sm font-semibold text-slate-700">
+                      วันที่บันทึกข้อมูล
+                    </label>
+                    <input
+                      type="date"
+                      value={medicalReportDate}
+                      onChange={(event) => setMedicalReportDate(event.target.value)}
+                      className="w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-orange-400"
+                    />
+                  </div>
+
                   {medicalSaveMessage ? (
-                    <div className="font-medium text-orange-700">
+                    <div className="font-medium text-orange-700 lg:text-right">
                       {medicalSaveMessage}
                     </div>
-                  ) : null}
+                  ) : (
+                    <div className="text-slate-500 lg:text-right">
+                      เลือกอำเภอและวันที่ก่อนบันทึกข้อมูล
+                    </div>
+                  )}
                 </div>
 
                 <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
@@ -1328,6 +1522,53 @@ export default function Dashboard() {
                   </div>
                 </section>
 
+                <section className="rounded-3xl border border-slate-100 bg-white p-6 shadow-sm">
+                  <div className="mb-6 flex items-center gap-3 border-b border-slate-100 pb-5">
+                    <ShieldCheck className="h-7 w-7 text-orange-600" />
+                    <h3 className="text-2xl font-bold text-orange-600">
+                      เวชภัณฑ์คงคลัง
+                    </h3>
+                  </div>
+
+                  <div className="grid grid-cols-1 gap-6 xl:grid-cols-2">
+                    <div className="space-y-3">
+                      <label className="block text-base font-medium text-slate-700">
+                        การแจกแมส
+                      </label>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        value={inventorySuppliesForm.maskDistributed}
+                        onChange={(event) =>
+                          handleInventorySuppliesChange(
+                            "maskDistributed",
+                            event.target.value,
+                          )
+                        }
+                        className="w-full rounded-2xl border border-slate-200 px-4 py-4 text-3xl text-slate-800 outline-none"
+                      />
+                    </div>
+
+                    <div className="space-y-3">
+                      <label className="block text-base font-medium text-slate-700">
+                        N95
+                      </label>
+                      <input
+                        type="text"
+                        inputMode="numeric"
+                        value={inventorySuppliesForm.n95Distributed}
+                        onChange={(event) =>
+                          handleInventorySuppliesChange(
+                            "n95Distributed",
+                            event.target.value,
+                          )
+                        }
+                        className="w-full rounded-2xl border border-slate-200 px-4 py-4 text-3xl text-slate-800 outline-none"
+                      />
+                    </div>
+                  </div>
+                </section>
+
                 <div className="sticky bottom-0 flex justify-end border-t border-slate-100 bg-white/95 px-2 pt-4 backdrop-blur">
                   <button
                     type="button"
@@ -1360,7 +1601,7 @@ export default function Dashboard() {
               </p>
             </div>
 
-            <div className="space-y-5 p-6">
+            <div className="max-h-[720px] space-y-5 overflow-y-auto p-6">
               {Object.entries(medicalActivitiesByDate).map(([date, entries]) => (
                 <div
                   key={date}
@@ -1378,8 +1619,16 @@ export default function Dashboard() {
                     {entries.map((entry) => (
                       <div
                         key={entry.id}
-                        className="grid gap-3 px-5 py-4 md:grid-cols-[180px_180px_1fr]"
+                        className="grid gap-3 px-5 py-4 md:grid-cols-[180px_180px_180px_1fr]"
                       >
+                        <div>
+                          <div className="text-xs font-medium text-slate-500">
+                            อำเภอ
+                          </div>
+                          <div className="mt-1 font-semibold text-slate-900">
+                            {entry.district}
+                          </div>
+                        </div>
                         <div>
                           <div className="text-xs font-medium text-slate-500">
                             หมวด
