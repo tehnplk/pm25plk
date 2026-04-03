@@ -52,6 +52,7 @@ type DashboardPayload = {
     stationName: string;
     areaName: string;
     pm25: number;
+    pm10: number;
     aqi: number | null;
     updatedAt: string;
     updatedLabel: string;
@@ -1212,6 +1213,15 @@ export default function Dashboard() {
             <div className="mt-4 inline-flex w-fit items-center gap-1.5 rounded-full bg-orange-100 px-2.5 py-1 text-xs font-semibold text-orange-700">
               <AlertTriangle className="h-3.5 w-3.5" />
               ข้อมูลของจังหวัด
+            </div>
+            <div className="mt-3 text-xs font-medium text-slate-500">
+              PM10{" "}
+              {loading
+                ? "--"
+                : data?.provinceSource?.pm10 !== undefined
+                  ? formatPmValue(data.provinceSource.pm10)
+                  : "--"}{" "}
+              ug/m3
             </div>
           </motion.div>
 
