@@ -1,0 +1,1721 @@
+- generic [active] [ref=e1]:
+  - generic [ref=e4]:
+    - paragraph [ref=e7]:
+      - link "ดาวน์โหลดรายงานคุณภาพอากาศโลกปี 2025 ของเราตอนนี้!" [ref=e8] [cursor=pointer]:
+        - /url: /th/world-air-quality-report
+        - strong [ref=e10]: ดาวน์โหลดรายงานคุณภาพอากาศโลกปี 2025 ของเราตอนนี้!
+    - button "ก่อนหน้า" [ref=e11] [cursor=pointer]:
+      - img [ref=e12]
+    - button "ต่อไป" [ref=e14] [cursor=pointer]:
+      - img [ref=e15]
+    - button "หยุดสไลด์โชว์ชั่วคราว เล่นสไลด์โชว์" [ref=e17] [cursor=pointer]:
+      - generic [ref=e18]:
+        - img [ref=e19]
+        - generic [ref=e20]: หยุดสไลด์โชว์ชั่วคราว
+      - generic [ref=e21]:
+        - img [ref=e22]
+        - generic [ref=e24]: เล่นสไลด์โชว์
+  - banner [ref=e26]:
+    - link "IQAir Global EUR IQairLogo IQairLogo" [ref=e28] [cursor=pointer]:
+      - /url: /th/
+      - generic [ref=e29]: IQAir Global EUR
+      - img "IQairLogo" [ref=e30]
+      - img "IQairLogo" [ref=e31]
+    - navigation "Primary" [ref=e33]:
+      - list [ref=e34]:
+        - listitem [ref=e35]:
+          - group [ref=e36]:
+            - generic "ข้อมูลคุณภาพอากาศ ข้อมูลคุณภาพอากาศ" [ref=e37]:
+              - link "ข้อมูลคุณภาพอากาศ ข้อมูลคุณภาพอากาศ" [ref=e38] [cursor=pointer]:
+                - /url: /th/world-air-quality
+                - button "ข้อมูลคุณภาพอากาศ ข้อมูลคุณภาพอากาศ" [ref=e39]:
+                  - generic: ข้อมูลคุณภาพอากาศ
+                  - generic: ข้อมูลคุณภาพอากาศ
+        - listitem [ref=e40]:
+          - group [ref=e41]:
+            - generic "เรียนรู้ เรียนรู้" [ref=e42]:
+              - link "เรียนรู้ เรียนรู้" [ref=e43] [cursor=pointer]:
+                - /url: /th/air-quality-monitors
+                - button "เรียนรู้ เรียนรู้" [ref=e44]:
+                  - generic: เรียนรู้
+                  - generic: เรียนรู้
+        - listitem [ref=e45]:
+          - group [ref=e46]:
+            - generic "ข่าว ข่าว" [ref=e47]:
+              - link "ข่าว ข่าว" [ref=e48] [cursor=pointer]:
+                - /url: /th/newsroom
+                - button "ข่าว ข่าว" [ref=e49]:
+                  - generic: ข่าว
+                  - generic: ข่าว
+        - listitem [ref=e50]:
+          - group [ref=e51]:
+            - generic "ผลกระทบ ผลกระทบ" [ref=e52]:
+              - link "ผลกระทบ ผลกระทบ" [ref=e53] [cursor=pointer]:
+                - /url: /th/about-iqair/our-causes
+                - button "ผลกระทบ ผลกระทบ" [ref=e54]:
+                  - generic: ผลกระทบ
+                  - generic: ผลกระทบ
+        - listitem [ref=e55]:
+          - group [ref=e56]:
+            - generic "สนับสนุน สนับสนุน" [ref=e57]:
+              - link "สนับสนุน สนับสนุน" [ref=e58] [cursor=pointer]:
+                - /url: /th/support
+                - button "สนับสนุน สนับสนุน" [ref=e59]:
+                  - generic: สนับสนุน
+                  - generic: สนับสนุน
+        - listitem [ref=e60]:
+          - group [ref=e61]:
+            - generic "ร้านค้า ร้านค้า" [ref=e62]:
+              - link "ร้านค้า ร้านค้า" [ref=e63] [cursor=pointer]:
+                - /url: /th/products/air-purifiers
+                - button "ร้านค้า ร้านค้า" [ref=e64]:
+                  - generic: ร้านค้า
+                  - generic: ร้านค้า
+    - generic [ref=e66]:
+      - link "Search" [ref=e67] [cursor=pointer]:
+        - generic [ref=e68]: Search
+        - img [ref=e69]
+      - list [ref=e72]:
+        - listitem [ref=e73]:
+          - generic "เลือกภูมิภาคหรือประเทศของคุณ" [ref=e74] [cursor=pointer]:
+            - link "เลือก Thailand" [ref=e75]:
+              - /url: /th/choose-country-region
+              - img "ธงThailand" [ref=e76]
+              - img [ref=e77]
+      - link "Log in" [ref=e82] [cursor=pointer]:
+        - /url: /th/account/login
+        - generic [ref=e83]: Log in
+        - img [ref=e84]
+      - link "Cart" [ref=e87] [cursor=pointer]:
+        - /url: /th/cart
+        - generic [ref=e88]: Cart
+        - img [ref=e89]
+    - generic:
+      - img
+    - generic:
+      - img
+  - generic [ref=e91]:
+    - main [ref=e92]:
+      - generic [ref=e96]:
+        - generic [ref=e97]:
+          - generic [ref=e98]:
+            - generic [ref=e99]:
+              - generic [ref=e101] [cursor=pointer]:
+                - img [ref=e102]
+                - combobox "ประเทศ เมือง หรือสถานที่ของคุณ..." [ref=e107]
+              - button "Open resources dialog" [ref=e108] [cursor=pointer]:
+                - img "Open resources dialog" [ref=e109]
+              - button "Open settings dialog" [ref=e111] [cursor=pointer]:
+                - img "Open settings dialog" [ref=e112]
+              - button "Open settings dialog" [ref=e114] [cursor=pointer]:
+                - img "Open settings dialog" [ref=e115]
+            - link "Add to favorites เพิ่ม" [ref=e118] [cursor=pointer]:
+              - /url: /th/account/login
+              - img "Add to favorites" [ref=e119]
+              - text: เพิ่ม
+          - generic [ref=e120]:
+            - generic [ref=e121]:
+              - generic [ref=e123]:
+                - generic [ref=e125]:
+                  - link "โลก" [ref=e126] [cursor=pointer]:
+                    - /url: /th/world-air-quality
+                  - generic [ref=e127]: /
+                  - link "ไทย" [ref=e128] [cursor=pointer]:
+                    - /url: /th/thailand
+                  - generic [ref=e129]: /
+                  - link "จังหวัดพิษณุโลก" [ref=e130] [cursor=pointer]:
+                    - /url: /th/thailand/phitsanulok
+                  - generic [ref=e131]: /
+                  - link "พิษณุโลก" [ref=e132] [cursor=pointer]:
+                    - /url: /th/thailand/phitsanulok/phitsanulok
+                - generic [ref=e133]:
+                  - heading "คุณภาพอากาศใน พิษณุโลก" [level=1] [ref=e135]
+                  - heading "ดัชนีคุณภาพอากาศ (AQI⁺) และมลพิษทางอากาศ PM2.5 ใน พิษณุโลก • 541.5K ผู้ติดตาม • 10:00, เม.ย. 02" [level=2] [ref=e136]
+              - button "การระบุแหล่งที่มาของข้อมูล ลูกศรชี้ไปทางขวา IQAir ไอคอนผู้ร่วมสมทบ ไอคอนผู้ร่วมสมทบ ไอคอนผู้ร่วมสมทบ 3 สถานีจาก 3 ร่วมสมทบ" [ref=e140] [cursor=pointer]:
+                - generic [ref=e141]:
+                  - paragraph [ref=e142]: การระบุแหล่งที่มาของข้อมูล
+                  - img "ลูกศรชี้ไปทางขวา IQAir" [ref=e143]
+                - generic [ref=e144]:
+                  - generic [ref=e145]:
+                    - img "ไอคอนผู้ร่วมสมทบ" [ref=e146]
+                    - img "ไอคอนผู้ร่วมสมทบ" [ref=e147]
+                    - img "ไอคอนผู้ร่วมสมทบ" [ref=e148]
+                  - paragraph [ref=e149]: 3 สถานีจาก 3 ร่วมสมทบ
+            - generic [ref=e151]:
+              - generic [ref=e152]:
+                - generic [ref=e153]:
+                  - generic [ref=e154]:
+                    - generic [ref=e155]:
+                      - paragraph [ref=e156]: "113"
+                      - generic [ref=e157]: US AQI⁺
+                    - paragraph [ref=e158]: มีผลกระทบต่อผู้ป่วยหรือร่างกายอ่อนแอ
+                  - img "face expression based on aqi value" [ref=e159]
+                - generic [ref=e161]:
+                  - generic [ref=e162]:
+                    - paragraph [ref=e163]: "สารมลพิษหลัก:"
+                    - paragraph [ref=e164]: PM2.5
+                  - paragraph [ref=e165]: 40.5 µg/m³
+              - generic [ref=e166]:
+                - generic [ref=e167]:
+                  - img "weather condition icon" [ref=e168]
+                  - paragraph [ref=e169]: 35°
+                - generic [ref=e170]:
+                  - img "wind direction icon" [ref=e171]
+                  - paragraph [ref=e172]: 17 km/h
+                - generic [ref=e173]:
+                  - img "weather humid icon" [ref=e174]
+                  - paragraph [ref=e175]: 37 %
+        - generic [ref=e176]:
+          - generic [ref=e177]:
+            - generic [ref=e178]:
+              - generic [ref=e179]:
+                - heading "พยากรณ์อากาศรายชั่วโมง" [level=2] [ref=e180]
+                - paragraph [ref=e181]: พยากรณ์ดัชนีคุณภาพอากาศ (AQI⁺) พิษณุโลก
+              - table [ref=e183]:
+                - rowgroup [ref=e184]:
+                  - row [ref=e185]:
+                    - cell "ขณะนี้ 113 ไอคอนสภาพอากาศ 35° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 183 องศา 17 km/h ไอคอนความชื้น 37%" [ref=e186]:
+                      - generic [ref=e188]:
+                        - paragraph [ref=e189]: ขณะนี้
+                        - paragraph [ref=e191]: "113"
+                        - img "ไอคอนสภาพอากาศ" [ref=e193]
+                        - paragraph [ref=e194]: 35°
+                        - generic [ref=e195]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 183 องศา" [ref=e196]
+                          - paragraph [ref=e197]: "17"
+                          - paragraph [ref=e198]: km/h
+                        - generic [ref=e199]:
+                          - img "ไอคอนความชื้น" [ref=e200]
+                          - paragraph [ref=e201]: 37%
+                    - cell "11:00 113 ไอคอนสภาพอากาศ 37° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 190 องศา 16 km/h ไอคอนความชื้น 30%" [ref=e202]:
+                      - generic [ref=e204]:
+                        - paragraph [ref=e205]: 11:00
+                        - paragraph [ref=e207]: "113"
+                        - img "ไอคอนสภาพอากาศ" [ref=e209]
+                        - paragraph [ref=e210]: 37°
+                        - generic [ref=e211]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 190 องศา" [ref=e212]
+                          - paragraph [ref=e213]: "16"
+                          - paragraph [ref=e214]: km/h
+                        - generic [ref=e215]:
+                          - img "ไอคอนความชื้น" [ref=e216]
+                          - paragraph [ref=e217]: 30%
+                    - cell "12:00 113 ไอคอนสภาพอากาศ 39° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 194 องศา 17 km/h ไอคอนความชื้น 26%" [ref=e218]:
+                      - generic [ref=e220]:
+                        - paragraph [ref=e221]: 12:00
+                        - paragraph [ref=e223]: "113"
+                        - img "ไอคอนสภาพอากาศ" [ref=e225]
+                        - paragraph [ref=e226]: 39°
+                        - generic [ref=e227]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 194 องศา" [ref=e228]
+                          - paragraph [ref=e229]: "17"
+                          - paragraph [ref=e230]: km/h
+                        - generic [ref=e231]:
+                          - img "ไอคอนความชื้น" [ref=e232]
+                          - paragraph [ref=e233]: 26%
+                    - cell "13:00 113 ไอคอนสภาพอากาศ 40° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 200 องศา 17 km/h ไอคอนความชื้น 23%" [ref=e234]:
+                      - generic [ref=e236]:
+                        - paragraph [ref=e237]: 13:00
+                        - paragraph [ref=e239]: "113"
+                        - img "ไอคอนสภาพอากาศ" [ref=e241]
+                        - paragraph [ref=e242]: 40°
+                        - generic [ref=e243]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 200 องศา" [ref=e244]
+                          - paragraph [ref=e245]: "17"
+                          - paragraph [ref=e246]: km/h
+                        - generic [ref=e247]:
+                          - img "ไอคอนความชื้น" [ref=e248]
+                          - paragraph [ref=e249]: 23%
+                    - cell "14:00 112 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 207 องศา 16 km/h ไอคอนความชื้น 20%" [ref=e250]:
+                      - generic [ref=e252]:
+                        - paragraph [ref=e253]: 14:00
+                        - paragraph [ref=e255]: "112"
+                        - img "ไอคอนสภาพอากาศ" [ref=e257]
+                        - paragraph [ref=e258]: 41°
+                        - generic [ref=e259]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 207 องศา" [ref=e260]
+                          - paragraph [ref=e261]: "16"
+                          - paragraph [ref=e262]: km/h
+                        - generic [ref=e263]:
+                          - img "ไอคอนความชื้น" [ref=e264]
+                          - paragraph [ref=e265]: 20%
+                    - cell "15:00 111 ไอคอนสภาพอากาศ 42° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 211 องศา 15 km/h ไอคอนความชื้น 18%" [ref=e266]:
+                      - generic [ref=e268]:
+                        - paragraph [ref=e269]: 15:00
+                        - paragraph [ref=e271]: "111"
+                        - img "ไอคอนสภาพอากาศ" [ref=e273]
+                        - paragraph [ref=e274]: 42°
+                        - generic [ref=e275]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 211 องศา" [ref=e276]
+                          - paragraph [ref=e277]: "15"
+                          - paragraph [ref=e278]: km/h
+                        - generic [ref=e279]:
+                          - img "ไอคอนความชื้น" [ref=e280]
+                          - paragraph [ref=e281]: 18%
+                    - cell "16:00 110 ไอคอนสภาพอากาศ 42° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 216 องศา 13 km/h ไอคอนความชื้น 16%" [ref=e282]:
+                      - generic [ref=e284]:
+                        - paragraph [ref=e285]: 16:00
+                        - paragraph [ref=e287]: "110"
+                        - img "ไอคอนสภาพอากาศ" [ref=e289]
+                        - paragraph [ref=e290]: 42°
+                        - generic [ref=e291]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 216 องศา" [ref=e292]
+                          - paragraph [ref=e293]: "13"
+                          - paragraph [ref=e294]: km/h
+                        - generic [ref=e295]:
+                          - img "ไอคอนความชื้น" [ref=e296]
+                          - paragraph [ref=e297]: 16%
+                    - cell "17:00 110 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 229 องศา 14 km/h ไอคอนความชื้น 15%" [ref=e298]:
+                      - generic [ref=e300]:
+                        - paragraph [ref=e301]: 17:00
+                        - paragraph [ref=e303]: "110"
+                        - img "ไอคอนสภาพอากาศ" [ref=e305]
+                        - paragraph [ref=e306]: 41°
+                        - generic [ref=e307]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 229 องศา" [ref=e308]
+                          - paragraph [ref=e309]: "14"
+                          - paragraph [ref=e310]: km/h
+                        - generic [ref=e311]:
+                          - img "ไอคอนความชื้น" [ref=e312]
+                          - paragraph [ref=e313]: 15%
+                    - cell "18:00 110 ไอคอนสภาพอากาศ 39° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 236 องศา 9 km/h ไอคอนความชื้น 18%" [ref=e314]:
+                      - generic [ref=e316]:
+                        - paragraph [ref=e317]: 18:00
+                        - paragraph [ref=e319]: "110"
+                        - img "ไอคอนสภาพอากาศ" [ref=e321]
+                        - paragraph [ref=e322]: 39°
+                        - generic [ref=e323]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 236 องศา" [ref=e324]
+                          - paragraph [ref=e325]: "9"
+                          - paragraph [ref=e326]: km/h
+                        - generic [ref=e327]:
+                          - img "ไอคอนความชื้น" [ref=e328]
+                          - paragraph [ref=e329]: 18%
+                    - cell "19:00 111 ไอคอนสภาพอากาศ 35° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 215 องศา 4 km/h ไอคอนความชื้น 21%" [ref=e330]:
+                      - generic [ref=e332]:
+                        - paragraph [ref=e333]: 19:00
+                        - paragraph [ref=e335]: "111"
+                        - img "ไอคอนสภาพอากาศ" [ref=e337]
+                        - paragraph [ref=e338]: 35°
+                        - generic [ref=e339]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 215 องศา" [ref=e340]
+                          - paragraph [ref=e341]: "4"
+                          - paragraph [ref=e342]: km/h
+                        - generic [ref=e343]:
+                          - img "ไอคอนความชื้น" [ref=e344]
+                          - paragraph [ref=e345]: 21%
+                    - cell "20:00 112 ไอคอนสภาพอากาศ 34° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 221 องศา 4 km/h ไอคอนความชื้น 22%" [ref=e346]:
+                      - generic [ref=e348]:
+                        - paragraph [ref=e349]: 20:00
+                        - paragraph [ref=e351]: "112"
+                        - img "ไอคอนสภาพอากาศ" [ref=e353]
+                        - paragraph [ref=e354]: 34°
+                        - generic [ref=e355]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 221 องศา" [ref=e356]
+                          - paragraph [ref=e357]: "4"
+                          - paragraph [ref=e358]: km/h
+                        - generic [ref=e359]:
+                          - img "ไอคอนความชื้น" [ref=e360]
+                          - paragraph [ref=e361]: 22%
+                    - cell "21:00 114 ไอคอนสภาพอากาศ 33° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 272 องศา 11 km/h ไอคอนความชื้น 23%" [ref=e362]:
+                      - generic [ref=e364]:
+                        - paragraph [ref=e365]: 21:00
+                        - paragraph [ref=e367]: "114"
+                        - img "ไอคอนสภาพอากาศ" [ref=e369]
+                        - paragraph [ref=e370]: 33°
+                        - generic [ref=e371]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 272 องศา" [ref=e372]
+                          - paragraph [ref=e373]: "11"
+                          - paragraph [ref=e374]: km/h
+                        - generic [ref=e375]:
+                          - img "ไอคอนความชื้น" [ref=e376]
+                          - paragraph [ref=e377]: 23%
+                    - cell "22:00 117 ไอคอนสภาพอากาศ 31° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 176 องศา 9 km/h ไอคอนความชื้น 21%" [ref=e378]:
+                      - generic [ref=e380]:
+                        - paragraph [ref=e381]: 22:00
+                        - paragraph [ref=e383]: "117"
+                        - img "ไอคอนสภาพอากาศ" [ref=e385]
+                        - paragraph [ref=e386]: 31°
+                        - generic [ref=e387]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 176 องศา" [ref=e388]
+                          - paragraph [ref=e389]: "9"
+                          - paragraph [ref=e390]: km/h
+                        - generic [ref=e391]:
+                          - img "ไอคอนความชื้น" [ref=e392]
+                          - paragraph [ref=e393]: 21%
+                    - cell "23:00 115 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 161 องศา 10 km/h ไอคอนความชื้น 25% ศ." [ref=e394]:
+                      - generic [ref=e395]:
+                        - generic [ref=e396]:
+                          - paragraph [ref=e397]: 23:00
+                          - paragraph [ref=e399]: "115"
+                          - img "ไอคอนสภาพอากาศ" [ref=e401]
+                          - paragraph [ref=e402]: 30°
+                          - generic [ref=e403]:
+                            - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 161 องศา" [ref=e404]
+                            - paragraph [ref=e405]: "10"
+                            - paragraph [ref=e406]: km/h
+                          - generic [ref=e407]:
+                            - img "ไอคอนความชื้น" [ref=e408]
+                            - paragraph [ref=e409]: 25%
+                        - paragraph [ref=e411]: ศ.
+                    - cell "00:00 114 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 157 องศา 9 km/h ไอคอนความชื้น 35%" [ref=e413]:
+                      - generic [ref=e415]:
+                        - paragraph [ref=e416]: 00:00
+                        - paragraph [ref=e418]: "114"
+                        - img "ไอคอนสภาพอากาศ" [ref=e420]
+                        - paragraph [ref=e421]: 30°
+                        - generic [ref=e422]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 157 องศา" [ref=e423]
+                          - paragraph [ref=e424]: "9"
+                          - paragraph [ref=e425]: km/h
+                        - generic [ref=e426]:
+                          - img "ไอคอนความชื้น" [ref=e427]
+                          - paragraph [ref=e428]: 35%
+                    - cell "01:00 113 ไอคอนสภาพอากาศ 29° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 146 องศา 14 km/h ไอคอนความชื้น 49%" [ref=e429]:
+                      - generic [ref=e431]:
+                        - paragraph [ref=e432]: 01:00
+                        - paragraph [ref=e434]: "113"
+                        - img "ไอคอนสภาพอากาศ" [ref=e436]
+                        - paragraph [ref=e437]: 29°
+                        - generic [ref=e438]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 146 องศา" [ref=e439]
+                          - paragraph [ref=e440]: "14"
+                          - paragraph [ref=e441]: km/h
+                        - generic [ref=e442]:
+                          - img "ไอคอนความชื้น" [ref=e443]
+                          - paragraph [ref=e444]: 49%
+                    - cell "02:00 108 ไอคอนสภาพอากาศ 28° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 146 องศา 12 km/h ไอคอนความชื้น 50%" [ref=e445]:
+                      - generic [ref=e447]:
+                        - paragraph [ref=e448]: 02:00
+                        - paragraph [ref=e450]: "108"
+                        - img "ไอคอนสภาพอากาศ" [ref=e452]
+                        - paragraph [ref=e453]: 28°
+                        - generic [ref=e454]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 146 องศา" [ref=e455]
+                          - paragraph [ref=e456]: "12"
+                          - paragraph [ref=e457]: km/h
+                        - generic [ref=e458]:
+                          - img "ไอคอนความชื้น" [ref=e459]
+                          - paragraph [ref=e460]: 50%
+                    - cell "03:00 103 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 158 องศา 8 km/h ไอคอนความชื้น 55%" [ref=e461]:
+                      - generic [ref=e463]:
+                        - paragraph [ref=e464]: 03:00
+                        - paragraph [ref=e466]: "103"
+                        - img "ไอคอนสภาพอากาศ" [ref=e468]
+                        - paragraph [ref=e469]: 27°
+                        - generic [ref=e470]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 158 องศา" [ref=e471]
+                          - paragraph [ref=e472]: "8"
+                          - paragraph [ref=e473]: km/h
+                        - generic [ref=e474]:
+                          - img "ไอคอนความชื้น" [ref=e475]
+                          - paragraph [ref=e476]: 55%
+                    - cell "04:00 98 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 161 องศา 8 km/h ไอคอนความชื้น 59%" [ref=e477]:
+                      - generic [ref=e479]:
+                        - paragraph [ref=e480]: 04:00
+                        - paragraph [ref=e482]: "98"
+                        - img "ไอคอนสภาพอากาศ" [ref=e484]
+                        - paragraph [ref=e485]: 27°
+                        - generic [ref=e486]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 161 องศา" [ref=e487]
+                          - paragraph [ref=e488]: "8"
+                          - paragraph [ref=e489]: km/h
+                        - generic [ref=e490]:
+                          - img "ไอคอนความชื้น" [ref=e491]
+                          - paragraph [ref=e492]: 59%
+                    - cell "05:00 99 ไอคอนสภาพอากาศ 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 145 องศา 10 km/h ไ��อคอนความชื้น 62%" [ref=e493]:
+                      - generic [ref=e495]:
+                        - paragraph [ref=e496]: 05:00
+                        - paragraph [ref=e498]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e500]
+                        - paragraph [ref=e501]: 26°
+                        - generic [ref=e502]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 145 องศา" [ref=e503]
+                          - paragraph [ref=e504]: "10"
+                          - paragraph [ref=e505]: km/h
+                        - generic [ref=e506]:
+                          - img "ไ��อคอนความชื้น" [ref=e507]
+                          - paragraph [ref=e508]: 62%
+                    - cell "06:00 100 ไอคอนสภาพอากาศ 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 137 องศา 11 km/h ไอคอนความชื้น 63%" [ref=e509]:
+                      - generic [ref=e511]:
+                        - paragraph [ref=e512]: 06:00
+                        - paragraph [ref=e514]: "100"
+                        - img "ไอคอนสภาพอากาศ" [ref=e516]
+                        - paragraph [ref=e517]: 26°
+                        - generic [ref=e518]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 137 องศา" [ref=e519]
+                          - paragraph [ref=e520]: "11"
+                          - paragraph [ref=e521]: km/h
+                        - generic [ref=e522]:
+                          - img "ไอคอนความชื้น" [ref=e523]
+                          - paragraph [ref=e524]: 63%
+                    - cell "07:00 102 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 145 องศา 13 km/h ไอคอนความชื้น 62%" [ref=e525]:
+                      - generic [ref=e527]:
+                        - paragraph [ref=e528]: 07:00
+                        - paragraph [ref=e530]: "102"
+                        - img "ไอคอนสภาพอากาศ" [ref=e532]
+                        - paragraph [ref=e533]: 27°
+                        - generic [ref=e534]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 145 องศา" [ref=e535]
+                          - paragraph [ref=e536]: "13"
+                          - paragraph [ref=e537]: km/h
+                        - generic [ref=e538]:
+                          - img "ไอคอนความชื้น" [ref=e539]
+                          - paragraph [ref=e540]: 62%
+                    - cell "08:00 101 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 160 องศา 17 km/h ไอคอนความชื้น 53%" [ref=e541]:
+                      - generic [ref=e543]:
+                        - paragraph [ref=e544]: 08:00
+                        - paragraph [ref=e546]: "101"
+                        - img "ไอคอนสภาพอากาศ" [ref=e548]
+                        - paragraph [ref=e549]: 30°
+                        - generic [ref=e550]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 160 องศา" [ref=e551]
+                          - paragraph [ref=e552]: "17"
+                          - paragraph [ref=e553]: km/h
+                        - generic [ref=e554]:
+                          - img "ไอคอนความชื้น" [ref=e555]
+                          - paragraph [ref=e556]: 53%
+                    - cell "09:00 100 ไอคอนสภาพอากาศ 33° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 179 องศา 14 km/h ไอคอนความชื้น 41%" [ref=e557]:
+                      - generic [ref=e559]:
+                        - paragraph [ref=e560]: 09:00
+                        - paragraph [ref=e562]: "100"
+                        - img "ไอคอนสภาพอากาศ" [ref=e564]
+                        - paragraph [ref=e565]: 33°
+                        - generic [ref=e566]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 179 องศา" [ref=e567]
+                          - paragraph [ref=e568]: "14"
+                          - paragraph [ref=e569]: km/h
+                        - generic [ref=e570]:
+                          - img "ไอคอนความชื้น" [ref=e571]
+                          - paragraph [ref=e572]: 41%
+                    - cell "10:00 99 ไอคอนสภาพอากาศ 35° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 221 องศา 12 km/h ไอคอนความชื้น 33%" [ref=e573]:
+                      - generic [ref=e575]:
+                        - paragraph [ref=e576]: 10:00
+                        - paragraph [ref=e578]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e580]
+                        - paragraph [ref=e581]: 35°
+                        - generic [ref=e582]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 221 องศา" [ref=e583]
+                          - paragraph [ref=e584]: "12"
+                          - paragraph [ref=e585]: km/h
+                        - generic [ref=e586]:
+                          - img "ไอคอนความชื้น" [ref=e587]
+                          - paragraph [ref=e588]: 33%
+                    - cell "11:00 99 ไอคอนสภาพอากาศ 37° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 238 องศา 12 km/h ไอคอนความชื้น 27%" [ref=e589]:
+                      - generic [ref=e591]:
+                        - paragraph [ref=e592]: 11:00
+                        - paragraph [ref=e594]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e596]
+                        - paragraph [ref=e597]: 37°
+                        - generic [ref=e598]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 238 องศา" [ref=e599]
+                          - paragraph [ref=e600]: "12"
+                          - paragraph [ref=e601]: km/h
+                        - generic [ref=e602]:
+                          - img "ไอคอนความชื้น" [ref=e603]
+                          - paragraph [ref=e604]: 27%
+                    - cell "12:00 99 ไอคอนสภาพอากาศ 39° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 244 องศา 12 km/h ไอคอนความชื้น 22%" [ref=e605]:
+                      - generic [ref=e607]:
+                        - paragraph [ref=e608]: 12:00
+                        - paragraph [ref=e610]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e612]
+                        - paragraph [ref=e613]: 39°
+                        - generic [ref=e614]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 244 องศา" [ref=e615]
+                          - paragraph [ref=e616]: "12"
+                          - paragraph [ref=e617]: km/h
+                        - generic [ref=e618]:
+                          - img "ไอคอนความชื้น" [ref=e619]
+                          - paragraph [ref=e620]: 22%
+                    - cell "13:00 99 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 245 องศา 15 km/h ไอคอนความชื้น 18%" [ref=e621]:
+                      - generic [ref=e623]:
+                        - paragraph [ref=e624]: 13:00
+                        - paragraph [ref=e626]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e628]
+                        - paragraph [ref=e629]: 41°
+                        - generic [ref=e630]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 245 องศา" [ref=e631]
+                          - paragraph [ref=e632]: "15"
+                          - paragraph [ref=e633]: km/h
+                        - generic [ref=e634]:
+                          - img "ไอคอนความชื้น" [ref=e635]
+                          - paragraph [ref=e636]: 18%
+                    - cell "14:00 98 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 237 องศา 17 km/h ไอคอนความชื้น 16%" [ref=e637]:
+                      - generic [ref=e639]:
+                        - paragraph [ref=e640]: 14:00
+                        - paragraph [ref=e642]: "98"
+                        - img "ไอคอนสภาพอากาศ" [ref=e644]
+                        - paragraph [ref=e645]: 41°
+                        - generic [ref=e646]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 237 องศา" [ref=e647]
+                          - paragraph [ref=e648]: "17"
+                          - paragraph [ref=e649]: km/h
+                        - generic [ref=e650]:
+                          - img "ไอคอนความชื้น" [ref=e651]
+                          - paragraph [ref=e652]: 16%
+                    - cell "15:00 97 ไอคอนสภาพอากาศ 42° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 222 องศา 16 km/h ไอคอนความชื้น 15%" [ref=e653]:
+                      - generic [ref=e655]:
+                        - paragraph [ref=e656]: 15:00
+                        - paragraph [ref=e658]: "97"
+                        - img "ไอคอนสภาพอากาศ" [ref=e660]
+                        - paragraph [ref=e661]: 42°
+                        - generic [ref=e662]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 222 องศา" [ref=e663]
+                          - paragraph [ref=e664]: "16"
+                          - paragraph [ref=e665]: km/h
+                        - generic [ref=e666]:
+                          - img "ไอคอนความชื้น" [ref=e667]
+                          - paragraph [ref=e668]: 15%
+                    - cell "16:00 96 ไอคอนสภาพอากาศ 42° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 207 องศา 15 km/h ไอคอนความชื้น 14%" [ref=e669]:
+                      - generic [ref=e671]:
+                        - paragraph [ref=e672]: 16:00
+                        - paragraph [ref=e674]: "96"
+                        - img "ไอคอนสภาพอากาศ" [ref=e676]
+                        - paragraph [ref=e677]: 42°
+                        - generic [ref=e678]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 207 องศา" [ref=e679]
+                          - paragraph [ref=e680]: "15"
+                          - paragraph [ref=e681]: km/h
+                        - generic [ref=e682]:
+                          - img "ไอคอนความชื้น" [ref=e683]
+                          - paragraph [ref=e684]: 14%
+                    - cell "17:00 97 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 193 องศา 16 km/h ไอคอนความชื้น 14%" [ref=e685]:
+                      - generic [ref=e687]:
+                        - paragraph [ref=e688]: 17:00
+                        - paragraph [ref=e690]: "97"
+                        - img "ไอคอนสภาพอากาศ" [ref=e692]
+                        - paragraph [ref=e693]: 41°
+                        - generic [ref=e694]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 193 องศา" [ref=e695]
+                          - paragraph [ref=e696]: "16"
+                          - paragraph [ref=e697]: km/h
+                        - generic [ref=e698]:
+                          - img "ไอคอนความชื้น" [ref=e699]
+                          - paragraph [ref=e700]: 14%
+                    - cell "18:00 98 ไอคอนสภาพอากาศ 39° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 168 องศา 14 km/h ไอคอนความชื้น 17%" [ref=e701]:
+                      - generic [ref=e703]:
+                        - paragraph [ref=e704]: 18:00
+                        - paragraph [ref=e706]: "98"
+                        - img "ไอคอนสภาพอากาศ" [ref=e708]
+                        - paragraph [ref=e709]: 39°
+                        - generic [ref=e710]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 168 องศา" [ref=e711]
+                          - paragraph [ref=e712]: "14"
+                          - paragraph [ref=e713]: km/h
+                        - generic [ref=e714]:
+                          - img "ไอคอนความชื้น" [ref=e715]
+                          - paragraph [ref=e716]: 17%
+                    - cell "19:00 100 ไอคอนสภาพอากาศ 35° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 154 องศา 14 km/h ไอคอนความชื้น 21%" [ref=e717]:
+                      - generic [ref=e719]:
+                        - paragraph [ref=e720]: 19:00
+                        - paragraph [ref=e722]: "100"
+                        - img "ไอคอนสภาพอากาศ" [ref=e724]
+                        - paragraph [ref=e725]: 35°
+                        - generic [ref=e726]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 154 องศา" [ref=e727]
+                          - paragraph [ref=e728]: "14"
+                          - paragraph [ref=e729]: km/h
+                        - generic [ref=e730]:
+                          - img "ไอคอนความชื้น" [ref=e731]
+                          - paragraph [ref=e732]: 21%
+                    - cell "20:00 102 ไอคอนสภาพอากาศ 34° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 143 องศา 12 km/h ไอคอนความชื้น 22%" [ref=e733]:
+                      - generic [ref=e735]:
+                        - paragraph [ref=e736]: 20:00
+                        - paragraph [ref=e738]: "102"
+                        - img "ไอคอนสภาพอากาศ" [ref=e740]
+                        - paragraph [ref=e741]: 34°
+                        - generic [ref=e742]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 143 องศา" [ref=e743]
+                          - paragraph [ref=e744]: "12"
+                          - paragraph [ref=e745]: km/h
+                        - generic [ref=e746]:
+                          - img "ไอคอนความชื้น" [ref=e747]
+                          - paragraph [ref=e748]: 22%
+                    - cell "21:00 104 ไอคอนสภาพอากาศ 33° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 204 องศา 11 km/h ไอคอนความชื้น 23%" [ref=e749]:
+                      - generic [ref=e751]:
+                        - paragraph [ref=e752]: 21:00
+                        - paragraph [ref=e754]: "104"
+                        - img "ไอคอนสภาพอากาศ" [ref=e756]
+                        - paragraph [ref=e757]: 33°
+                        - generic [ref=e758]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 204 องศา" [ref=e759]
+                          - paragraph [ref=e760]: "11"
+                          - paragraph [ref=e761]: km/h
+                        - generic [ref=e762]:
+                          - img "ไอคอนความชื้น" [ref=e763]
+                          - paragraph [ref=e764]: 23%
+                    - cell "22:00 106 ไอคอนสภาพอากาศ 31° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 226 องศา 11 km/h ไอคอนความชื้น 26%" [ref=e765]:
+                      - generic [ref=e767]:
+                        - paragraph [ref=e768]: 22:00
+                        - paragraph [ref=e770]: "106"
+                        - img "ไอคอนสภาพอากาศ" [ref=e772]
+                        - paragraph [ref=e773]: 31°
+                        - generic [ref=e774]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 226 องศา" [ref=e775]
+                          - paragraph [ref=e776]: "11"
+                          - paragraph [ref=e777]: km/h
+                        - generic [ref=e778]:
+                          - img "ไอคอนความชื้น" [ref=e779]
+                          - paragraph [ref=e780]: 26%
+                    - cell "23:00 105 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 171 องศา 15 km/h ไอคอนความชื้น 28% ส." [ref=e781]:
+                      - generic [ref=e782]:
+                        - generic [ref=e783]:
+                          - paragraph [ref=e784]: 23:00
+                          - paragraph [ref=e786]: "105"
+                          - img "ไอคอนสภาพอากาศ" [ref=e788]
+                          - paragraph [ref=e789]: 30°
+                          - generic [ref=e790]:
+                            - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 171 องศา" [ref=e791]
+                            - paragraph [ref=e792]: "15"
+                            - paragraph [ref=e793]: km/h
+                          - generic [ref=e794]:
+                            - img "ไอคอนความชื้น" [ref=e795]
+                            - paragraph [ref=e796]: 28%
+                        - paragraph [ref=e798]: ส.
+                    - cell "00:00 105 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 165 องศา 18 km/h ไอคอนความชื้น 45%" [ref=e800]:
+                      - generic [ref=e802]:
+                        - paragraph [ref=e803]: 00:00
+                        - paragraph [ref=e805]: "105"
+                        - img "ไอคอนสภาพอากาศ" [ref=e807]
+                        - paragraph [ref=e808]: 30°
+                        - generic [ref=e809]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 165 องศา" [ref=e810]
+                          - paragraph [ref=e811]: "18"
+                          - paragraph [ref=e812]: km/h
+                        - generic [ref=e813]:
+                          - img "ไอคอนความชื้น" [ref=e814]
+                          - paragraph [ref=e815]: 45%
+                    - cell "01:00 105 ไอคอนสภาพอากาศ 29° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 162 องศา 17 km/h ไอคอนความชื้น 58%" [ref=e816]:
+                      - generic [ref=e818]:
+                        - paragraph [ref=e819]: 01:00
+                        - paragraph [ref=e821]: "105"
+                        - img "ไอคอนสภาพอากาศ" [ref=e823]
+                        - paragraph [ref=e824]: 29°
+                        - generic [ref=e825]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 162 องศา" [ref=e826]
+                          - paragraph [ref=e827]: "17"
+                          - paragraph [ref=e828]: km/h
+                        - generic [ref=e829]:
+                          - img "ไอคอนความชื้น" [ref=e830]
+                          - paragraph [ref=e831]: 58%
+                    - cell "02:00 101 ไอคอนสภาพอากาศ 28° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 157 องศา 16 km/h ไอคอนความชื้น 63%" [ref=e832]:
+                      - generic [ref=e834]:
+                        - paragraph [ref=e835]: 02:00
+                        - paragraph [ref=e837]: "101"
+                        - img "ไอคอนสภาพอากาศ" [ref=e839]
+                        - paragraph [ref=e840]: 28°
+                        - generic [ref=e841]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 157 องศา" [ref=e842]
+                          - paragraph [ref=e843]: "16"
+                          - paragraph [ref=e844]: km/h
+                        - generic [ref=e845]:
+                          - img "ไอคอนความชื้น" [ref=e846]
+                          - paragraph [ref=e847]: 63%
+                    - cell "03:00 97 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 155 องศา 12 km/h ไอคอนความชื้น 67%" [ref=e848]:
+                      - generic [ref=e850]:
+                        - paragraph [ref=e851]: 03:00
+                        - paragraph [ref=e853]: "97"
+                        - img "ไอคอนสภาพอากาศ" [ref=e855]
+                        - paragraph [ref=e856]: 27°
+                        - generic [ref=e857]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 155 องศา" [ref=e858]
+                          - paragraph [ref=e859]: "12"
+                          - paragraph [ref=e860]: km/h
+                        - generic [ref=e861]:
+                          - img "ไอคอนความชื้น" [ref=e862]
+                          - paragraph [ref=e863]: 67%
+                    - cell "04:00 94 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 153 องศา 10 km/h ไอคอนความชื้น 70%" [ref=e864]:
+                      - generic [ref=e866]:
+                        - paragraph [ref=e867]: 04:00
+                        - paragraph [ref=e869]: "94"
+                        - img "ไอคอนสภาพอากาศ" [ref=e871]
+                        - paragraph [ref=e872]: 27°
+                        - generic [ref=e873]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 153 องศา" [ref=e874]
+                          - paragraph [ref=e875]: "10"
+                          - paragraph [ref=e876]: km/h
+                        - generic [ref=e877]:
+                          - img "ไอคอนความชื้น" [ref=e878]
+                          - paragraph [ref=e879]: 70%
+                    - cell "05:00 97 ไอค��อนสภาพอากาศ 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 140 องศา 10 km/h ไอคอนความชื้น 72%" [ref=e880]:
+                      - generic [ref=e882]:
+                        - paragraph [ref=e883]: 05:00
+                        - paragraph [ref=e885]: "97"
+                        - img "ไอค��อนสภาพอากาศ" [ref=e887]
+                        - paragraph [ref=e888]: 26°
+                        - generic [ref=e889]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 140 องศา" [ref=e890]
+                          - paragraph [ref=e891]: "10"
+                          - paragraph [ref=e892]: km/h
+                        - generic [ref=e893]:
+                          - img "ไอคอนความชื้น" [ref=e894]
+                          - paragraph [ref=e895]: 72%
+                    - cell "06:00 100 ไอคอนสภาพอากาศ 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 133 องศา 11 km/h ไอคอนความชื้น 73%" [ref=e896]:
+                      - generic [ref=e898]:
+                        - paragraph [ref=e899]: 06:00
+                        - paragraph [ref=e901]: "100"
+                        - img "ไอคอนสภาพอากาศ" [ref=e903]
+                        - paragraph [ref=e904]: 26°
+                        - generic [ref=e905]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 133 องศา" [ref=e906]
+                          - paragraph [ref=e907]: "11"
+                          - paragraph [ref=e908]: km/h
+                        - generic [ref=e909]:
+                          - img "ไอคอนความชื้น" [ref=e910]
+                          - paragraph [ref=e911]: 73%
+                    - cell "07:00 104 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 140 องศา 11 km/h ไอคอนความชื้น 69%" [ref=e912]:
+                      - generic [ref=e914]:
+                        - paragraph [ref=e915]: 07:00
+                        - paragraph [ref=e917]: "104"
+                        - img "ไอคอนสภาพอากาศ" [ref=e919]
+                        - paragraph [ref=e920]: 27°
+                        - generic [ref=e921]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 140 องศา" [ref=e922]
+                          - paragraph [ref=e923]: "11"
+                          - paragraph [ref=e924]: km/h
+                        - generic [ref=e925]:
+                          - img "ไอคอนความชื้น" [ref=e926]
+                          - paragraph [ref=e927]: 69%
+                    - cell "08:00 102 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 147 องศา 16 km/h ไอคอนความชื้น 59%" [ref=e928]:
+                      - generic [ref=e930]:
+                        - paragraph [ref=e931]: 08:00
+                        - paragraph [ref=e933]: "102"
+                        - img "ไอคอนสภาพอากาศ" [ref=e935]
+                        - paragraph [ref=e936]: 30°
+                        - generic [ref=e937]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 147 องศา" [ref=e938]
+                          - paragraph [ref=e939]: "16"
+                          - paragraph [ref=e940]: km/h
+                        - generic [ref=e941]:
+                          - img "ไอคอนความชื้น" [ref=e942]
+                          - paragraph [ref=e943]: 59%
+                    - cell "09:00 101 ไอคอนสภาพอากาศ 32° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 162 องศา 13 km/h ไอคอนความชื้น 46%" [ref=e944]:
+                      - generic [ref=e946]:
+                        - paragraph [ref=e947]: 09:00
+                        - paragraph [ref=e949]: "101"
+                        - img "ไอคอนสภาพอากาศ" [ref=e951]
+                        - paragraph [ref=e952]: 32°
+                        - generic [ref=e953]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 162 องศา" [ref=e954]
+                          - paragraph [ref=e955]: "13"
+                          - paragraph [ref=e956]: km/h
+                        - generic [ref=e957]:
+                          - img "ไอคอนความชื้น" [ref=e958]
+                          - paragraph [ref=e959]: 46%
+                    - cell "10:00 100 ไอคอนสภาพอากาศ 34° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 198 องศา 11 km/h ไอคอนความชื้น 38%" [ref=e960]:
+                      - generic [ref=e962]:
+                        - paragraph [ref=e963]: 10:00
+                        - paragraph [ref=e965]: "100"
+                        - img "ไอคอนสภาพอากาศ" [ref=e967]
+                        - paragraph [ref=e968]: 34°
+                        - generic [ref=e969]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 198 องศา" [ref=e970]
+                          - paragraph [ref=e971]: "11"
+                          - paragraph [ref=e972]: km/h
+                        - generic [ref=e973]:
+                          - img "ไอคอนความชื้น" [ref=e974]
+                          - paragraph [ref=e975]: 38%
+                    - cell "11:00 99 ไอคอนสภาพอากาศ 36° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 219 องศา 11 km/h ไอคอนความชื้น 32%" [ref=e976]:
+                      - generic [ref=e978]:
+                        - paragraph [ref=e979]: 11:00
+                        - paragraph [ref=e981]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e983]
+                        - paragraph [ref=e984]: 36°
+                        - generic [ref=e985]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 219 องศา" [ref=e986]
+                          - paragraph [ref=e987]: "11"
+                          - paragraph [ref=e988]: km/h
+                        - generic [ref=e989]:
+                          - img "ไอคอนความชื้น" [ref=e990]
+                          - paragraph [ref=e991]: 32%
+                    - cell "12:00 99 ไอคอนสภาพอากาศ 38° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 230 องศา 12 km/h ไอคอนความชื้น 28%" [ref=e992]:
+                      - generic [ref=e994]:
+                        - paragraph [ref=e995]: 12:00
+                        - paragraph [ref=e997]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e999]
+                        - paragraph [ref=e1000]: 38°
+                        - generic [ref=e1001]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 230 องศา" [ref=e1002]
+                          - paragraph [ref=e1003]: "12"
+                          - paragraph [ref=e1004]: km/h
+                        - generic [ref=e1005]:
+                          - img "ไอคอนความชื้น" [ref=e1006]
+                          - paragraph [ref=e1007]: 28%
+                    - cell "13:00 99 ไอคอนสภาพอากาศ 39° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 231 องศา 13 km/h ไอคอนความชื้น 25%" [ref=e1008]:
+                      - generic [ref=e1010]:
+                        - paragraph [ref=e1011]: 13:00
+                        - paragraph [ref=e1013]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1015]
+                        - paragraph [ref=e1016]: 39°
+                        - generic [ref=e1017]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 231 องศา" [ref=e1018]
+                          - paragraph [ref=e1019]: "13"
+                          - paragraph [ref=e1020]: km/h
+                        - generic [ref=e1021]:
+                          - img "ไอคอนความชื้น" [ref=e1022]
+                          - paragraph [ref=e1023]: 25%
+                    - cell "14:00 99 ไอคอนสภาพอากาศ 40° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 231 องศา 13 km/h ไอคอนความชื้น 22%" [ref=e1024]:
+                      - generic [ref=e1026]:
+                        - paragraph [ref=e1027]: 14:00
+                        - paragraph [ref=e1029]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1031]
+                        - paragraph [ref=e1032]: 40°
+                        - generic [ref=e1033]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 231 องศา" [ref=e1034]
+                          - paragraph [ref=e1035]: "13"
+                          - paragraph [ref=e1036]: km/h
+                        - generic [ref=e1037]:
+                          - img "ไอคอนความชื้น" [ref=e1038]
+                          - paragraph [ref=e1039]: 22%
+                    - cell "15:00 99 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 227 องศา 12 km/h ไอคอนความชื้น 21%" [ref=e1040]:
+                      - generic [ref=e1042]:
+                        - paragraph [ref=e1043]: 15:00
+                        - paragraph [ref=e1045]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1047]
+                        - paragraph [ref=e1048]: 41°
+                        - generic [ref=e1049]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 227 องศา" [ref=e1050]
+                          - paragraph [ref=e1051]: "12"
+                          - paragraph [ref=e1052]: km/h
+                        - generic [ref=e1053]:
+                          - img "ไอคอนความชื้น" [ref=e1054]
+                          - paragraph [ref=e1055]: 21%
+                    - cell "16:00 99 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 226 องศา 10 km/h ไอคอนความชื้น 19%" [ref=e1056]:
+                      - generic [ref=e1058]:
+                        - paragraph [ref=e1059]: 16:00
+                        - paragraph [ref=e1061]: "99"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1063]
+                        - paragraph [ref=e1064]: 41°
+                        - generic [ref=e1065]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 226 องศา" [ref=e1066]
+                          - paragraph [ref=e1067]: "10"
+                          - paragraph [ref=e1068]: km/h
+                        - generic [ref=e1069]:
+                          - img "ไอคอนความชื้น" [ref=e1070]
+                          - paragraph [ref=e1071]: 19%
+                    - cell "17:00 98 ไอคอนสภาพอากาศ 41° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 222 องศา 9 km/h ไอคอนความชื้น 18%" [ref=e1072]:
+                      - generic [ref=e1074]:
+                        - paragraph [ref=e1075]: 17:00
+                        - paragraph [ref=e1077]: "98"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1079]
+                        - paragraph [ref=e1080]: 41°
+                        - generic [ref=e1081]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 222 องศา" [ref=e1082]
+                          - paragraph [ref=e1083]: "9"
+                          - paragraph [ref=e1084]: km/h
+                        - generic [ref=e1085]:
+                          - img "ไอคอนความชื้น" [ref=e1086]
+                          - paragraph [ref=e1087]: 18%
+                    - cell "18:00 98 ไอคอนสภาพอากาศ 39° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 192 องศา 7 km/h ไอคอนความชื้น 21%" [ref=e1088]:
+                      - generic [ref=e1090]:
+                        - paragraph [ref=e1091]: 18:00
+                        - paragraph [ref=e1093]: "98"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1095]
+                        - paragraph [ref=e1096]: 39°
+                        - generic [ref=e1097]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 192 องศา" [ref=e1098]
+                          - paragraph [ref=e1099]: "7"
+                          - paragraph [ref=e1100]: km/h
+                        - generic [ref=e1101]:
+                          - img "ไอคอนความชื้น" [ref=e1102]
+                          - paragraph [ref=e1103]: 21%
+                    - cell "19:00 98 ไอคอนสภาพอากาศ 35° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 149 องศา 9 km/h ไอคอนความชื้น 25%" [ref=e1104]:
+                      - generic [ref=e1106]:
+                        - paragraph [ref=e1107]: 19:00
+                        - paragraph [ref=e1109]: "98"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1111]
+                        - paragraph [ref=e1112]: 35°
+                        - generic [ref=e1113]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 149 องศา" [ref=e1114]
+                          - paragraph [ref=e1115]: "9"
+                          - paragraph [ref=e1116]: km/h
+                        - generic [ref=e1117]:
+                          - img "ไอคอนความชื้น" [ref=e1118]
+                          - paragraph [ref=e1119]: 25%
+                    - cell "20:00 102 ไอคอนสภาพอากาศ 34° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 164 องศา 12 km/h ไอคอนความชื้น 28%" [ref=e1120]:
+                      - generic [ref=e1122]:
+                        - paragraph [ref=e1123]: 20:00
+                        - paragraph [ref=e1125]: "102"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1127]
+                        - paragraph [ref=e1128]: 34°
+                        - generic [ref=e1129]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 164 องศา" [ref=e1130]
+                          - paragraph [ref=e1131]: "12"
+                          - paragraph [ref=e1132]: km/h
+                        - generic [ref=e1133]:
+                          - img "ไอคอนความชื้น" [ref=e1134]
+                          - paragraph [ref=e1135]: 28%
+                    - cell "21:00 107 ไอคอนสภาพอากาศ 33° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 195 องศา 10 km/h ไอคอนความชื้น 30%" [ref=e1136]:
+                      - generic [ref=e1138]:
+                        - paragraph [ref=e1139]: 21:00
+                        - paragraph [ref=e1141]: "107"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1143]
+                        - paragraph [ref=e1144]: 33°
+                        - generic [ref=e1145]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 195 องศา" [ref=e1146]
+                          - paragraph [ref=e1147]: "10"
+                          - paragraph [ref=e1148]: km/h
+                        - generic [ref=e1149]:
+                          - img "ไอคอนความชื้น" [ref=e1150]
+                          - paragraph [ref=e1151]: 30%
+                    - cell "22:00 112 ไอคอนสภาพอากาศ 31° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 259 องศา 11 km/h ไอคอนความชื้น 32%" [ref=e1152]:
+                      - generic [ref=e1154]:
+                        - paragraph [ref=e1155]: 22:00
+                        - paragraph [ref=e1157]: "112"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1159]
+                        - paragraph [ref=e1160]: 31°
+                        - generic [ref=e1161]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 259 องศา" [ref=e1162]
+                          - paragraph [ref=e1163]: "11"
+                          - paragraph [ref=e1164]: km/h
+                        - generic [ref=e1165]:
+                          - img "ไอคอนความชื้น" [ref=e1166]
+                          - paragraph [ref=e1167]: 32%
+                    - cell "23:00 113 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 207 องศา 5 km/h ไอคอนความชื้น 36% อา." [ref=e1168]:
+                      - generic [ref=e1169]:
+                        - generic [ref=e1170]:
+                          - paragraph [ref=e1171]: 23:00
+                          - paragraph [ref=e1173]: "113"
+                          - img "ไอคอนสภาพอากาศ" [ref=e1175]
+                          - paragraph [ref=e1176]: 30°
+                          - generic [ref=e1177]:
+                            - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 207 องศา" [ref=e1178]
+                            - paragraph [ref=e1179]: "5"
+                            - paragraph [ref=e1180]: km/h
+                          - generic [ref=e1181]:
+                            - img "ไอคอนความชื้น" [ref=e1182]
+                            - paragraph [ref=e1183]: 36%
+                        - paragraph [ref=e1185]: อา.
+                    - cell "00:00 114 ไอคอนสภาพอากาศ 29° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 149 องศา 11 km/h ไอคอนความชื้น 37%" [ref=e1187]:
+                      - generic [ref=e1189]:
+                        - paragraph [ref=e1190]: 00:00
+                        - paragraph [ref=e1192]: "114"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1194]
+                        - paragraph [ref=e1195]: 29°
+                        - generic [ref=e1196]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 149 องศา" [ref=e1197]
+                          - paragraph [ref=e1198]: "11"
+                          - paragraph [ref=e1199]: km/h
+                        - generic [ref=e1200]:
+                          - img "ไอคอนความชื้น" [ref=e1201]
+                          - paragraph [ref=e1202]: 37%
+                    - cell "01:00 115 ไอคอนสภาพอากาศ 29° แผนที่คุณภาพอา��กาศ IQAir AirVisual ลมหมุน 135 องศา 10 km/h ไอคอนความชื้น 39%" [ref=e1203]:
+                      - generic [ref=e1205]:
+                        - paragraph [ref=e1206]: 01:00
+                        - paragraph [ref=e1208]: "115"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1210]
+                        - paragraph [ref=e1211]: 29°
+                        - generic [ref=e1212]:
+                          - img "แผนที่คุณภาพอา��กาศ IQAir AirVisual ลมหมุน 135 องศา" [ref=e1213]
+                          - paragraph [ref=e1214]: "10"
+                          - paragraph [ref=e1215]: km/h
+                        - generic [ref=e1216]:
+                          - img "ไอคอนความชื้น" [ref=e1217]
+                          - paragraph [ref=e1218]: 39%
+                    - cell "02:00 113 ไอคอนสภาพอากาศ 28° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 141 องศา 14 km/h ไอคอนความชื้น 50%" [ref=e1219]:
+                      - generic [ref=e1221]:
+                        - paragraph [ref=e1222]: 02:00
+                        - paragraph [ref=e1224]: "113"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1226]
+                        - paragraph [ref=e1227]: 28°
+                        - generic [ref=e1228]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 141 องศา" [ref=e1229]
+                          - paragraph [ref=e1230]: "14"
+                          - paragraph [ref=e1231]: km/h
+                        - generic [ref=e1232]:
+                          - img "ไอคอนความชื้น" [ref=e1233]
+                          - paragraph [ref=e1234]: 50%
+                    - cell "03:00 112 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 152 องศา 13 km/h ไอคอนความชื้น 61%" [ref=e1235]:
+                      - generic [ref=e1237]:
+                        - paragraph [ref=e1238]: 03:00
+                        - paragraph [ref=e1240]: "112"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1242]
+                        - paragraph [ref=e1243]: 27°
+                        - generic [ref=e1244]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 152 องศา" [ref=e1245]
+                          - paragraph [ref=e1246]: "13"
+                          - paragraph [ref=e1247]: km/h
+                        - generic [ref=e1248]:
+                          - img "ไอคอนความชื้น" [ref=e1249]
+                          - paragraph [ref=e1250]: 61%
+                    - cell "04:00 111 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 150 องศา 11 km/h ไอคอนความชื้น 66%" [ref=e1251]:
+                      - generic [ref=e1253]:
+                        - paragraph [ref=e1254]: 04:00
+                        - paragraph [ref=e1256]: "111"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1258]
+                        - paragraph [ref=e1259]: 27°
+                        - generic [ref=e1260]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 150 องศา" [ref=e1261]
+                          - paragraph [ref=e1262]: "11"
+                          - paragraph [ref=e1263]: km/h
+                        - generic [ref=e1264]:
+                          - img "ไอคอนความชื้น" [ref=e1265]
+                          - paragraph [ref=e1266]: 66%
+                    - cell "05:00 110 ไอคอนสภาพอากาศ 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 149 องศา 9 km/h ไอคอนความชื้น 71%" [ref=e1267]:
+                      - generic [ref=e1269]:
+                        - paragraph [ref=e1270]: 05:00
+                        - paragraph [ref=e1272]: "110"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1274]
+                        - paragraph [ref=e1275]: 26°
+                        - generic [ref=e1276]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 149 องศา" [ref=e1277]
+                          - paragraph [ref=e1278]: "9"
+                          - paragraph [ref=e1279]: km/h
+                        - generic [ref=e1280]:
+                          - img "ไอคอนความชื้น" [ref=e1281]
+                          - paragraph [ref=e1282]: 71%
+                    - cell "06:00 109 ไอคอนสภาพอากาศ 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 141 องศา 9 km/h ไอคอนความชื้น 75%" [ref=e1283]:
+                      - generic [ref=e1285]:
+                        - paragraph [ref=e1286]: 06:00
+                        - paragraph [ref=e1288]: "109"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1290]
+                        - paragraph [ref=e1291]: 26°
+                        - generic [ref=e1292]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 141 องศา" [ref=e1293]
+                          - paragraph [ref=e1294]: "9"
+                          - paragraph [ref=e1295]: km/h
+                        - generic [ref=e1296]:
+                          - img "ไอคอนความชื้น" [ref=e1297]
+                          - paragraph [ref=e1298]: 75%
+                    - cell "07:00 108 ไอคอนสภาพอากาศ 27° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 150 องศา 8 km/h ไอคอนความชื้น 72%" [ref=e1299]:
+                      - generic [ref=e1301]:
+                        - paragraph [ref=e1302]: 07:00
+                        - paragraph [ref=e1304]: "108"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1306]
+                        - paragraph [ref=e1307]: 27°
+                        - generic [ref=e1308]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 150 องศา" [ref=e1309]
+                          - paragraph [ref=e1310]: "8"
+                          - paragraph [ref=e1311]: km/h
+                        - generic [ref=e1312]:
+                          - img "ไอคอนความชื้น" [ref=e1313]
+                          - paragraph [ref=e1314]: 72%
+                    - cell "08:00 105 ไอคอนสภาพอากาศ 30° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 168 องศา 13 km/h ไอคอนความชื้น 63%" [ref=e1315]:
+                      - generic [ref=e1317]:
+                        - paragraph [ref=e1318]: 08:00
+                        - paragraph [ref=e1320]: "105"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1322]
+                        - paragraph [ref=e1323]: 30°
+                        - generic [ref=e1324]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 168 องศา" [ref=e1325]
+                          - paragraph [ref=e1326]: "13"
+                          - paragraph [ref=e1327]: km/h
+                        - generic [ref=e1328]:
+                          - img "ไอคอนความชื้น" [ref=e1329]
+                          - paragraph [ref=e1330]: 63%
+                    - cell "09:00 102 ไอคอนสภาพอากาศ 32° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 183 องศา 10 km/h ไอคอนความชื้น 52%" [ref=e1331]:
+                      - generic [ref=e1333]:
+                        - paragraph [ref=e1334]: 09:00
+                        - paragraph [ref=e1336]: "102"
+                        - img "ไอคอนสภาพอากาศ" [ref=e1338]
+                        - paragraph [ref=e1339]: 32°
+                        - generic [ref=e1340]:
+                          - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 183 องศา" [ref=e1341]
+                          - paragraph [ref=e1342]: "10"
+                          - paragraph [ref=e1343]: km/h
+                        - generic [ref=e1344]:
+                          - img "ไอคอนความชื้น" [ref=e1345]
+                          - paragraph [ref=e1346]: 52%
+            - generic [ref=e1347]:
+              - generic [ref=e1349]:
+                - generic [ref=e1350]:
+                  - heading "พยากรณ์อากาศประจำวัน" [level=2] [ref=e1352]
+                  - paragraph [ref=e1353]: พยากรณ์ดัชนีคุณภาพอากาศ (AQI⁺) พิษณุโลก
+                - table [ref=e1355]:
+                  - rowgroup [ref=e1356]:
+                    - row "วันนี้ 116 ไอคอนสภาพอากาศ 42° 27° แผนที่คุณภา�พอากาศ IQAir AirVisual ลมหมุน 225 องศา 19 km/h ไอคอนความชื้น 29%" [ref=e1357]:
+                      - cell "วันนี้" [ref=e1358]
+                      - cell "116" [ref=e1359]:
+                        - paragraph [ref=e1361]: "116"
+                      - cell "ไอคอนสภาพอากาศ" [ref=e1362]:
+                        - img "ไอคอนสภาพอากาศ" [ref=e1363]
+                      - cell "42° 27°" [ref=e1364]:
+                        - paragraph [ref=e1365]: 42°
+                        - paragraph [ref=e1366]: 27°
+                      - cell "แผนที่คุณภา�พอากาศ IQAir AirVisual ลมหมุน 225 องศา 19 km/h" [ref=e1367]:
+                        - img "แผนที่คุณภา�พอากาศ IQAir AirVisual ลมหมุน 225 องศา" [ref=e1368]
+                        - paragraph [ref=e1369]: "19"
+                        - paragraph [ref=e1370]: km/h
+                      - cell "ไอคอนความชื้น 29%" [ref=e1371]:
+                        - img "ไอคอนความชื้น" [ref=e1372]
+                        - paragraph [ref=e1373]: 29%
+                    - row "ศ. 101 ไอคอนสภาพอากาศ 42° 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 225 องศา 17 km/h ไอคอนความชื้น 29%" [ref=e1374]:
+                      - cell "ศ." [ref=e1375]
+                      - cell "101" [ref=e1376]:
+                        - paragraph [ref=e1378]: "101"
+                      - cell "ไอคอนสภาพอากาศ" [ref=e1379]:
+                        - img "ไอคอนสภาพอากาศ" [ref=e1380]
+                      - cell "42° 26°" [ref=e1381]:
+                        - paragraph [ref=e1382]: 42°
+                        - paragraph [ref=e1383]: 26°
+                      - cell "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 225 องศา 17 km/h" [ref=e1384]:
+                        - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 225 องศา" [ref=e1385]
+                        - paragraph [ref=e1386]: "17"
+                        - paragraph [ref=e1387]: km/h
+                      - cell "ไอคอนความชื้น 29%" [ref=e1388]:
+                        - img "ไอคอนความชื้น" [ref=e1389]
+                        - paragraph [ref=e1390]: 29%
+                    - row "ส. 105 ไอคอนสภาพอากาศ 41° 26° แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 225 องศา 16 km/h ไอคอนความชื้น 34%" [ref=e1391]:
+                      - cell "ส." [ref=e1392]
+                      - cell "105" [ref=e1393]:
+                        - paragraph [ref=e1395]: "105"
+                      - cell "ไอคอนสภาพอากาศ" [ref=e1396]:
+                        - img "ไอคอนสภาพอากาศ" [ref=e1397]
+                      - cell "41° 26°" [ref=e1398]:
+                        - paragraph [ref=e1399]: 41°
+                        - paragraph [ref=e1400]: 26°
+                      - cell "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 225 องศา 16 km/h" [ref=e1401]:
+                        - img "แผนที่คุณภาพอากาศ IQAir AirVisual ลมหมุน 225 องศา" [ref=e1402]
+                        - paragraph [ref=e1403]: "16"
+                        - paragraph [ref=e1404]: km/h
+                      - cell "ไอคอนความชื้น 34%" [ref=e1405]:
+                        - img "ไอคอนความชื้น" [ref=e1406]
+                        - paragraph [ref=e1407]: 34%
+              - generic [ref=e1409]:
+                - generic [ref=e1410]:
+                  - heading "มลพิษทางอากาศ" [level=2] [ref=e1411]
+                  - paragraph [ref=e1412]: คุณภาพอากาศขณะนี้ใน พิษณุโลก เป็นอย่างไร
+                - table "มลพิษทางอากาศ" [ref=e1414]:
+                  - rowgroup [ref=e1415]:
+                    - row "PM2.5 ฝุ่นละอองขนาดเล็ก (≤ 2.5 ไมโครเมตร) 40.5 µg/m³" [ref=e1416] [cursor=pointer]:
+                      - cell "PM2.5 ฝุ่นละอองขนาดเล็ก (≤ 2.5 ไมโครเมตร) 40.5 µg/m³" [ref=e1417]:
+                        - button "PM2.5 ฝุ่นละอองขนาดเล็ก (≤ 2.5 ไมโครเมตร) 40.5 µg/m³" [ref=e1418]:
+                          - generic [ref=e1420]:
+                            - text: PM2.5
+                            - generic [ref=e1421]: ฝุ่นละอองขนาดเล็ก (≤ 2.5 ไมโครเมตร)
+                          - generic [ref=e1422]:
+                            - generic [ref=e1424]: "40.5"
+                            - generic [ref=e1425]: µg/m³
+                    - row "PM10 อนุภาคหยาบ (≤ 10 ไมครอน) 154 µg/m³" [ref=e1426] [cursor=pointer]:
+                      - cell "PM10 อนุภาคหยาบ (≤ 10 ไมครอน) 154 µg/m³" [ref=e1427]:
+                        - button "PM10 อนุภาคหยาบ (≤ 10 ไมครอน) 154 µg/m³" [ref=e1428]:
+                          - generic [ref=e1430]:
+                            - text: PM10
+                            - generic [ref=e1431]: อนุภาคหยาบ (≤ 10 ไมครอน)
+                          - generic [ref=e1432]:
+                            - generic [ref=e1434]: "154"
+                            - generic [ref=e1435]: µg/m³
+                    - row "NO₂ ไนโตรเจนไดออกไซด์ 24.4 µg/m³" [ref=e1436] [cursor=pointer]:
+                      - cell "NO₂ ไนโตรเจนไดออกไซด์ 24.4 µg/m³" [ref=e1437]:
+                        - button "NO₂ ไนโตรเจนไดออกไซด์ 24.4 µg/m³" [ref=e1438]:
+                          - generic [ref=e1440]:
+                            - text: NO₂
+                            - generic [ref=e1441]: ไนโตรเจนไดออกไซด์
+                          - generic [ref=e1442]:
+                            - generic [ref=e1444]: "24.4"
+                            - generic [ref=e1445]: µg/m³
+              - generic [ref=e1447]:
+                - img "ไอคอนอัศเจรีย์ IQAir" [ref=e1448]
+                - paragraph [ref=e1449]:
+                  - text: ความเข้มข้น PM2.5 ขณะนี้เป็น
+                  - generic [ref=e1450]: "8.1"
+                  - text: เท่าของค่าแนวทาง PM2.5 ประจำปีขององค์การอนามัยโลก.
+            - generic [ref=e1451]:
+              - generic [ref=e1453]:
+                - paragraph [ref=e1454]: คำแนะนำด้านสุขภาพ
+                - table "จะป้องกันตัวจากมลพิษทางอากาศใน พิษณุโลก ได้อย่างไร" [ref=e1455]:
+                  - rowgroup [ref=e1456]:
+                    - row "common.healthRecommendationComp.icons.exerciseAlt ลดการออกกำลังกายกลางแจ้ง" [ref=e1457]:
+                      - cell "common.healthRecommendationComp.icons.exerciseAlt ลดการออกกำลังกายกลางแจ้ง" [ref=e1458]:
+                        - generic [ref=e1459]:
+                          - img "common.healthRecommendationComp.icons.exerciseAlt" [ref=e1461]
+                          - paragraph [ref=e1463]: ลดการออกกำลังกายกลางแจ้ง
+                    - row "common.healthRecommendationComp.icons.windowAlt ปิดหน้าต่างของคุณเพื่อหลีกเลี่ยงอากาศภายนอกบ้านที่สกปรก รับเครื่องตรวจวัด" [ref=e1464]:
+                      - cell "common.healthRecommendationComp.icons.windowAlt ปิดหน้าต่างของคุณเพื่อหลีกเลี่ยงอากาศภายนอกบ้านที่สกปรก รับเครื่องตรวจวัด" [ref=e1465]:
+                        - generic [ref=e1466]:
+                          - img "common.healthRecommendationComp.icons.windowAlt" [ref=e1468]
+                          - generic [ref=e1469]:
+                            - paragraph [ref=e1470]: ปิดหน้าต่างของคุณเพื่อหลีกเลี่ยงอากาศภายนอกบ้านที่สกปรก
+                            - link "รับเครื่องตรวจวัด" [ref=e1471] [cursor=pointer]:
+                              - /url: /th/commercial-air-quality-monitors
+                    - row "common.healthRecommendationComp.icons.maskAlt กลุ่มที่อ่อนไหวควรสวมหน้ากากภายนอกบ้าน หาหน้ากากอนามัย" [ref=e1472]:
+                      - cell "common.healthRecommendationComp.icons.maskAlt กลุ่มที่อ่อนไหวควรสวมหน้ากากภายนอกบ้าน หาหน้ากากอนามัย" [ref=e1473]:
+                        - generic [ref=e1474]:
+                          - img "common.healthRecommendationComp.icons.maskAlt" [ref=e1476]
+                          - generic [ref=e1477]:
+                            - paragraph [ref=e1478]: กลุ่มที่อ่อนไหวควรสวมหน้ากากภายนอกบ้าน
+                            - link "หาหน้ากากอนามัย" [ref=e1479] [cursor=pointer]:
+                              - /url: /th/commercial-face-masks
+                    - row "common.healthRecommendationComp.icons.airPurifierAlt เปิดเครื่องฟอกอากาศ รับเครื่องฟอกอากาศ" [ref=e1480]:
+                      - cell "common.healthRecommendationComp.icons.airPurifierAlt เปิดเครื่องฟอกอากาศ รับเครื่องฟอกอากาศ" [ref=e1481]:
+                        - generic [ref=e1482]:
+                          - img "common.healthRecommendationComp.icons.airPurifierAlt" [ref=e1484]
+                          - generic [ref=e1485]:
+                            - paragraph [ref=e1486]: เปิดเครื่องฟอกอากาศ
+                            - link "รับเครื่องฟอกอากาศ" [ref=e1487] [cursor=pointer]:
+                              - /url: /th/products/air-purifiers
+              - link "air quality map แผนที่มลพิษทางอากาศพิษณุโลกแบบเรียลไทม์" [ref=e1489] [cursor=pointer]:
+                - /url: /th/air-quality-map/thailand/phitsanulok/phitsanulok
+                - generic [ref=e1490]:
+                  - img "air quality map" [ref=e1491]
+                  - generic:
+                    - generic:
+                      - img
+                    - heading "แผนที่มลพิษทางอากาศพิษณุโลกแบบเรียลไทม์" [level=2]
+              - generic [ref=e1495]:
+                - generic [ref=e1496]:
+                  - heading "ป้องกันตัวคุณเองจากมลพิษทางอากาศใน พิษณุโลก" [level=2] [ref=e1498]:
+                    - generic [ref=e1500]: ป้องกันตัวคุณเองจากมลพิษทางอากาศใน พิษณุโลก
+                  - paragraph [ref=e1501]:
+                    - link "SHOP IQAIR PRODUCTS" [ref=e1502] [cursor=pointer]:
+                      - /url: /th/products/air-purifiers
+                      - generic:
+                        - text: SHOP IQAIR PRODUCTS
+                        - img
+                - generic [ref=e1505]:
+                  - generic [ref=e1507]:
+                    - link "ตรวจสอบคุณภาพอากาศที่คุณหายใจเข้าไป" [ref=e1508] [cursor=pointer]:
+                      - /url: /th/air-quality-monitors?utm_source=web&utm_medium=city_page_gallery&utm_campaign=airvisual_pages
+                    - generic [ref=e1509]:
+                      - paragraph [ref=e1510]: ตรวจสอบคุณภาพอากาศที่คุณหายใจเข้าไป
+                      - paragraph [ref=e1512]: ได้ผลลัพธ์ที่แม่นยำ AirVisual การตรวจวัดคุณภาพอากาศและข้อมูลเชิงลึกแบบเรียลไทม์เพื่ออากาศที่สะอาดขึ้น เครื่องมือตรวจสอบที่เผยให้เห็นแหล่งที่มาของมลพิษ และแจ้งเตือนเมื่อจำเป็นต้องใช้เครื่องฟอกอากาศ
+                      - paragraph [ref=e1513]:
+                        - link "AirVisual Series" [ref=e1514] [cursor=pointer]:
+                          - /url: /th/air-quality-monitors?utm_source=web&utm_medium=city_page_gallery&utm_campaign=airvisual_pages
+                          - generic:
+                            - text: AirVisual Series
+                            - img
+                  - generic [ref=e1517]:
+                    - link "เครื่องฟอกอากาศทางการแพทย์" [ref=e1518] [cursor=pointer]:
+                      - /url: https://www.iqair.คอม/ผลิตภัณฑ์/healthpro-series?utm_source=web&utm_medium=city_page_gallery&utm_campaign=airvisual_pages
+                    - generic [ref=e1519]:
+                      - paragraph [ref=e1520]: เครื่องฟอกอากาศทางการแพทย์
+                      - paragraph [ref=e1522]: ได้รับความไว้วางใจทั่วโลก HealthPro Series ใช้ HyperHEPA เทคโนโลยีนี้กรองอนุภาคขนาดเล็กมากที่เครื่องฟอกอากาศทั่วไปกรองไม่หมด จึงให้การปกป้องในระดับเดียวกับที่ใช้ในทางการแพทย์
+                      - paragraph [ref=e1523]:
+                        - link "HealthPro Series" [ref=e1524] [cursor=pointer]:
+                          - /url: https://www.iqair.คอม/ผลิตภัณฑ์/healthpro-series?utm_source=web&utm_medium=city_page_gallery&utm_campaign=airvisual_pages
+                          - generic:
+                            - text: HealthPro Series
+                            - img
+                  - generic [ref=e1527]:
+                    - link "เครื่องฟอกอากาศทรงพลัง ดีไซน์สวยงาม" [ref=e1528] [cursor=pointer]:
+                      - /url: https://www.iqair.คอม/ผลิตภัณฑ์/atem-series?utm_source=web&utm_medium=city_page_gallery&utm_campaign=airvisual_pages
+                    - generic [ref=e1529]:
+                      - paragraph [ref=e1530]: เครื่องฟอกอากาศทรงพลัง ดีไซน์สวยงาม
+                      - paragraph [ref=e1532]: กะทัดรัดและทรงพลัง Atem ซีรีส์นี้ผสานวิศวกรรมสวิสเข้ากับระบบฟอกอากาศประสิทธิภาพสูง สามารถกรองอนุภาคขนาดเล็กมากได้อย่างมีประสิทธิภาพ HyperHEPA เทคโนโลยี.
+                      - paragraph [ref=e1533]:
+                        - link "Atem ชุด" [ref=e1534] [cursor=pointer]:
+                          - /url: https://www.iqair.คอม/ผลิตภัณฑ์/atem-series?utm_source=web&utm_medium=city_page_gallery&utm_campaign=airvisual_pages
+                          - generic:
+                            - text: Atem ชุด
+                            - img
+          - generic [ref=e1536]:
+            - generic [ref=e1537]:
+              - heading "คุณภาพอากาศย้อนหลังใกล้กับ พิษณุโลก" [level=2] [ref=e1538]
+              - generic [ref=e1539]:
+                - generic [ref=e1540]:
+                  - heading "ข้อมูลย้อนหลัง" [level=2] [ref=e1541]
+                  - paragraph [ref=e1542]: กราฟคุณภาพอากาศย้อนหลังของ พิษณุโลก
+                - generic [ref=e1543]:
+                  - generic [ref=e1544]:
+                    - generic [ref=e1546]:
+                      - generic [ref=e1548]:
+                        - generic [ref=e1551]: 113 US AQI⁺
+                        - generic [ref=e1552]: มีผลกระทบต่อผู้ป่วยหรือร่างกายอ่อนแอ
+                      - generic [ref=e1553]: 09:00–10:00 02 เม.ย. เวลาท้องถิ่น
+                    - generic [ref=e1554]:
+                      - button "รายชั่วโมง Arrow icon" [ref=e1556] [cursor=pointer]:
+                        - paragraph [ref=e1557]: รายชั่วโมง
+                        - img "Arrow icon" [ref=e1558]
+                      - button "US AQI⁺ Arrow icon" [ref=e1560] [cursor=pointer]:
+                        - paragraph [ref=e1561]: US AQI⁺
+                        - img "Arrow icon" [ref=e1562]
+                  - generic [ref=e1564]: US AQI⁺
+            - generic [ref=e1570]:
+              - generic [ref=e1571]:
+                - heading "สถานที่ที่มีมลพิษมากที่สุดใกล้ พิษณุโลก" [level=2] [ref=e1572]
+                - link "อันดับ AQI⁺ ทั่วโลก Arrow icon" [ref=e1573] [cursor=pointer]:
+                  - /url: /th/world-air-quality-ranking
+                  - text: อันดับ AQI⁺ ทั่วโลก
+                  - img "Arrow icon" [ref=e1574]
+              - generic [ref=e1575]:
+                - generic [ref=e1576]:
+                  - generic [ref=e1577]:
+                    - paragraph [ref=e1578]: อันดับสถานี
+                    - heading "จัดอันดับสถานี AQI⁺ ไทย แบบเรียลไทม์" [level=2] [ref=e1579]
+                  - table [ref=e1581]:
+                    - rowgroup [ref=e1582]:
+                      - row "# สถานี US AQI⁺" [ref=e1583]:
+                        - columnheader "#" [ref=e1584]
+                        - columnheader "สถานี" [ref=e1585]
+                        - columnheader "US AQI⁺" [ref=e1586]
+                    - rowgroup [ref=e1587]:
+                      - row "1 ธงชาติ ไทย Chom Nan Chaloem Phrakiat Public Park 152 To go /thailand/phitsanulok/phitsanulok/chom-nan-chaloem-phrakiat-public-park" [ref=e1588] [cursor=pointer]:
+                        - rowheader "1" [ref=e1589]
+                        - cell "ธงชาติ ไทย Chom Nan Chaloem Phrakiat Public Park" [ref=e1590]:
+                          - generic [ref=e1591]:
+                            - img "ธงชาติ ไทย" [ref=e1592]
+                            - paragraph [ref=e1593]: Chom Nan Chaloem Phrakiat Public Park
+                        - cell "152" [ref=e1594]:
+                          - paragraph [ref=e1596]: "152"
+                        - cell "To go /thailand/phitsanulok/phitsanulok/chom-nan-chaloem-phrakiat-public-park" [ref=e1597]:
+                          - link "To go /thailand/phitsanulok/phitsanulok/chom-nan-chaloem-phrakiat-public-park" [ref=e1598]:
+                            - /url: /th/thailand/phitsanulok/phitsanulok/chom-nan-chaloem-phrakiat-public-park
+                      - row "2 ธงชาติ ไทย Bueng Phra 122 To go /thailand/phitsanulok/phitsanulok/bueng-phra" [ref=e1599] [cursor=pointer]:
+                        - rowheader "2" [ref=e1600]
+                        - cell "ธงชาติ ไทย Bueng Phra" [ref=e1601]:
+                          - generic [ref=e1602]:
+                            - img "ธงชาติ ไทย" [ref=e1603]
+                            - paragraph [ref=e1604]: Bueng Phra
+                        - cell "122" [ref=e1605]:
+                          - paragraph [ref=e1607]: "122"
+                        - cell "To go /thailand/phitsanulok/phitsanulok/bueng-phra" [ref=e1608]:
+                          - link "To go /thailand/phitsanulok/phitsanulok/bueng-phra" [ref=e1609]:
+                            - /url: /th/thailand/phitsanulok/phitsanulok/bueng-phra
+                      - row "3 ธงชาติ ไทย The Horizon Groove 105 To go /thailand/phitsanulok/phitsanulok/the-horizon-groove" [ref=e1610] [cursor=pointer]:
+                        - rowheader "3" [ref=e1611]
+                        - cell "ธงชาติ ไทย The Horizon Groove" [ref=e1612]:
+                          - generic [ref=e1613]:
+                            - img "ธงชาติ ไทย" [ref=e1614]
+                            - paragraph [ref=e1615]: The Horizon Groove
+                        - cell "105" [ref=e1616]:
+                          - paragraph [ref=e1618]: "105"
+                        - cell "To go /thailand/phitsanulok/phitsanulok/the-horizon-groove" [ref=e1619]:
+                          - link "To go /thailand/phitsanulok/phitsanulok/the-horizon-groove" [ref=e1620]:
+                            - /url: /th/thailand/phitsanulok/phitsanulok/the-horizon-groove
+                - generic [ref=e1621]:
+                  - generic [ref=e1622]:
+                    - paragraph [ref=e1623]: อันดับเมือง
+                    - heading "จัดอันดับเมือง ไทย AQI⁺ แบบเรียลไทม์" [level=2] [ref=e1624]
+                  - table [ref=e1626]:
+                    - rowgroup [ref=e1627]:
+                      - row "# เมือง US AQI⁺" [ref=e1628]:
+                        - columnheader "#" [ref=e1629]
+                        - columnheader "เมือง" [ref=e1630]
+                        - columnheader "US AQI⁺" [ref=e1631]
+                    - rowgroup [ref=e1632]:
+                      - row "1 ธงชาติ ไทย เวียงเหนือ, จังหวัดแม่ฮ่องสอน 605 To go /thailand/mae-hong-son/wiang-nuea" [ref=e1633] [cursor=pointer]:
+                        - rowheader "1" [ref=e1634]
+                        - cell "ธงชาติ ไทย เวียงเหนือ, จังหวัดแม่ฮ่องสอน" [ref=e1635]:
+                          - generic [ref=e1636]:
+                            - img "ธงชาติ ไทย" [ref=e1637]
+                            - paragraph [ref=e1638]: เวียงเหนือ, จังหวัดแม่ฮ่องสอน
+                        - cell "605" [ref=e1639]:
+                          - paragraph [ref=e1641]: "605"
+                        - cell "To go /thailand/mae-hong-son/wiang-nuea" [ref=e1642]:
+                          - link "To go /thailand/mae-hong-son/wiang-nuea" [ref=e1643]:
+                            - /url: /th/thailand/mae-hong-son/wiang-nuea
+                      - row "2 ธงชาติ ไทย Mae Hi, จังหวัดแม่ฮ่องสอน 515 To go /thailand/mae-hong-son/mae-hi" [ref=e1644] [cursor=pointer]:
+                        - rowheader "2" [ref=e1645]
+                        - cell "ธงชาติ ไทย Mae Hi, จังหวัดแม่ฮ่องสอน" [ref=e1646]:
+                          - generic [ref=e1647]:
+                            - img "ธงชาติ ไทย" [ref=e1648]
+                            - paragraph [ref=e1649]: Mae Hi, จังหวัดแม่ฮ่องสอน
+                        - cell "515" [ref=e1650]:
+                          - paragraph [ref=e1652]: "515"
+                        - cell "To go /thailand/mae-hong-son/mae-hi" [ref=e1653]:
+                          - link "To go /thailand/mae-hong-son/mae-hi" [ref=e1654]:
+                            - /url: /th/thailand/mae-hong-son/mae-hi
+                      - row "3 ธงชาติ ไทย Pai, จังหวัดแม่ฮ่องสอน 490 To go /thailand/mae-hong-son/pai" [ref=e1655] [cursor=pointer]:
+                        - rowheader "3" [ref=e1656]
+                        - cell "ธงชาติ ไทย Pai, จังหวัดแม่ฮ่องสอน" [ref=e1657]:
+                          - generic [ref=e1658]:
+                            - img "ธงชาติ ไทย" [ref=e1659]
+                            - paragraph [ref=e1660]: Pai, จังหวัดแม่ฮ่องสอน
+                        - cell "490" [ref=e1661]:
+                          - paragraph [ref=e1663]: "490"
+                        - cell "To go /thailand/mae-hong-son/pai" [ref=e1664]:
+                          - link "To go /thailand/mae-hong-son/pai" [ref=e1665]:
+                            - /url: /th/thailand/mae-hong-son/pai
+                      - row "4 ธงชาติ ไทย สันทราย, จังหวัดเชียงใหม่ 363 To go /thailand/chiang-mai/san-sai" [ref=e1666] [cursor=pointer]:
+                        - rowheader "4" [ref=e1667]
+                        - cell "ธงชาติ ไทย สันทราย, จังหวัดเชียงใหม่" [ref=e1668]:
+                          - generic [ref=e1669]:
+                            - img "ธงชาติ ไทย" [ref=e1670]
+                            - paragraph [ref=e1671]: สันทราย, จังหวัดเชียงใหม่
+                        - cell "363" [ref=e1672]:
+                          - paragraph [ref=e1674]: "363"
+                        - cell "To go /thailand/chiang-mai/san-sai" [ref=e1675]:
+                          - link "To go /thailand/chiang-mai/san-sai" [ref=e1676]:
+                            - /url: /th/thailand/chiang-mai/san-sai
+                      - row "5 ธงชาติ ไทย Mae On, จังหวัดเชียงใหม่ 356 To go /thailand/chiang-mai/mae-on" [ref=e1677] [cursor=pointer]:
+                        - rowheader "5" [ref=e1678]
+                        - cell "ธงชาติ ไทย Mae On, จังหวัดเชียงใหม่" [ref=e1679]:
+                          - generic [ref=e1680]:
+                            - img "ธงชาติ ไทย" [ref=e1681]
+                            - paragraph [ref=e1682]: Mae On, จังหวัดเชียงใหม่
+                        - cell "356" [ref=e1683]:
+                          - paragraph [ref=e1685]: "356"
+                        - cell "To go /thailand/chiang-mai/mae-on" [ref=e1686]:
+                          - link "To go /thailand/chiang-mai/mae-on" [ref=e1687]:
+                            - /url: /th/thailand/chiang-mai/mae-on
+                      - row "6 ธงชาติ ไทย ดอยสะเก็ด, จังหวัดเชียงใหม่ 350 To go /thailand/chiang-mai/doi-saket" [ref=e1688] [cursor=pointer]:
+                        - rowheader "6" [ref=e1689]
+                        - cell "ธงชาติ ไทย ดอยสะเก็ด, จังหวัดเชียงใหม่" [ref=e1690]:
+                          - generic [ref=e1691]:
+                            - img "ธงชาติ ไทย" [ref=e1692]
+                            - paragraph [ref=e1693]: ดอยสะเก็ด, จังหวัดเชียงใหม่
+                        - cell "350" [ref=e1694]:
+                          - paragraph [ref=e1696]: "350"
+                        - cell "To go /thailand/chiang-mai/doi-saket" [ref=e1697]:
+                          - link "To go /thailand/chiang-mai/doi-saket" [ref=e1698]:
+                            - /url: /th/thailand/chiang-mai/doi-saket
+                      - row "7 ธงชาติ ไทย Mae Rim, จังหวัดเชียงใหม่ 340 To go /thailand/chiang-mai/mae-rim" [ref=e1699] [cursor=pointer]:
+                        - rowheader "7" [ref=e1700]
+                        - cell "ธงชาติ ไทย Mae Rim, จังหวัดเชียงใหม่" [ref=e1701]:
+                          - generic [ref=e1702]:
+                            - img "ธงชาติ ไทย" [ref=e1703]
+                            - paragraph [ref=e1704]: Mae Rim, จังหวัดเชียงใหม่
+                        - cell "340" [ref=e1705]:
+                          - paragraph [ref=e1707]: "340"
+                        - cell "To go /thailand/chiang-mai/mae-rim" [ref=e1708]:
+                          - link "To go /thailand/chiang-mai/mae-rim" [ref=e1709]:
+                            - /url: /th/thailand/chiang-mai/mae-rim
+                      - row "8 ธงชาติ ไทย เชียงราย, จังหวัดเชียงราย 272 To go /thailand/chiang-rai/chiang-rai" [ref=e1710] [cursor=pointer]:
+                        - rowheader "8" [ref=e1711]
+                        - cell "ธงชาติ ไทย เชียงราย, จังหวัดเชียงราย" [ref=e1712]:
+                          - generic [ref=e1713]:
+                            - img "ธงชาติ ไทย" [ref=e1714]
+                            - paragraph [ref=e1715]: เชียงราย, จังหวัดเชียงราย
+                        - cell "272" [ref=e1716]:
+                          - paragraph [ref=e1718]: "272"
+                        - cell "To go /thailand/chiang-rai/chiang-rai" [ref=e1719]:
+                          - link "To go /thailand/chiang-rai/chiang-rai" [ref=e1720]:
+                            - /url: /th/thailand/chiang-rai/chiang-rai
+                      - row "9 ธงชาติ ไทย เทศบาลนครเชียงใหม่, จังหวัดเชียงใหม่ 250 To go /thailand/chiang-mai/chiang-mai" [ref=e1721] [cursor=pointer]:
+                        - rowheader "9" [ref=e1722]
+                        - cell "ธงชาติ ไทย เทศบาลนครเชียงใหม่, จังหวัดเชียงใหม่" [ref=e1723]:
+                          - generic [ref=e1724]:
+                            - img "ธงชาติ ไทย" [ref=e1725]
+                            - paragraph [ref=e1726]: เทศบาลนครเชียงใหม่, จังหวัดเชียงใหม่
+                        - cell "250" [ref=e1727]:
+                          - paragraph [ref=e1729]: "250"
+                        - cell "To go /thailand/chiang-mai/chiang-mai" [ref=e1730]:
+                          - link "To go /thailand/chiang-mai/chiang-mai" [ref=e1731]:
+                            - /url: /th/thailand/chiang-mai/chiang-mai
+                      - row "10 ธงชาติ ไทย Chang Phueak, Chiang Mai 243 To go /thailand/chiang-mai/chang-phueak" [ref=e1732] [cursor=pointer]:
+                        - rowheader "10" [ref=e1733]
+                        - cell "ธงชาติ ไทย Chang Phueak, Chiang Mai" [ref=e1734]:
+                          - generic [ref=e1735]:
+                            - img "ธงชาติ ไทย" [ref=e1736]
+                            - paragraph [ref=e1737]: Chang Phueak, Chiang Mai
+                        - cell "243" [ref=e1738]:
+                          - paragraph [ref=e1740]: "243"
+                        - cell "To go /thailand/chiang-mai/chang-phueak" [ref=e1741]:
+                          - link "To go /thailand/chiang-mai/chang-phueak" [ref=e1742]:
+                            - /url: /th/thailand/chiang-mai/chang-phueak
+          - generic [ref=e1743]:
+            - heading "ดูข้อมูลคุณภาพอากาศแบบครอบคลุมใน พิษณุโลก" [level=2] [ref=e1744]
+            - generic [ref=e1746]:
+              - link "IQAir AirVisual app IQAir AirVisual app ติดตามข่าวสารเกี่ยวกับคุณภาพอากาศ ณ สถานที่โปรดของคุณ การจัดอันดับดาวสีเหลือง IQAir การจัดอันดับดาวสีเหลือง IQAir การจัดอันดับดาวสีเหลือง IQAir การจัดอันดับดาวสีเหลือง IQAir คะแนนดาวสีเหลืองครึ่งดวงของ IQAir คะแนน 4.8" [ref=e1747] [cursor=pointer]:
+                - /url: /th/air-quality-monitors/air-quality-app
+                - img "IQAir AirVisual app" [ref=e1749]
+                - generic [ref=e1750]:
+                  - paragraph [ref=e1751]: IQAir AirVisual app
+                  - paragraph [ref=e1752]: ติดตามข่าวสารเกี่ยวกับคุณภาพอากาศ ณ สถานที่โปรดของคุณ
+                  - generic [ref=e1753]:
+                    - img "การจัดอันดับดาวสีเหลือง IQAir" [ref=e1754]
+                    - img "การจัดอันดับดาวสีเหลือง IQAir" [ref=e1755]
+                    - img "การจัดอันดับดาวสีเหลือง IQAir" [ref=e1756]
+                    - img "การจัดอันดับดาวสีเหลือง IQAir" [ref=e1757]
+                    - img "คะแนนดาวสีเหลืองครึ่งดวงของ IQAir" [ref=e1758]
+                    - generic [ref=e1759]: คะแนน 4.8
+              - link "IQAir Earth IQAir Earth แผนที่มลพิษทางอากาศเคลื่อนไหว 3 มิติแบบเรียลไทม์" [ref=e1760] [cursor=pointer]:
+                - /url: /th/earth
+                - img "IQAir Earth" [ref=e1762]
+                - generic [ref=e1763]:
+                  - paragraph [ref=e1764]: IQAir Earth
+                  - paragraph [ref=e1765]: แผนที่มลพิษทางอากาศเคลื่อนไหว 3 มิติแบบเรียลไทม์
+              - link "จัดวางสถานีของคุณเองbanner image จัดวางสถานีของคุณเอง รับเครื่องตรวจวัดและร่วมสมทบข้อมูลคุณภาพอากาศในเมืองของคุณ" [ref=e1766] [cursor=pointer]:
+                - /url: /th/air-quality-community
+                - img "จัดวางสถานีของคุณเองbanner image" [ref=e1768]
+                - generic [ref=e1769]:
+                  - paragraph [ref=e1770]: จัดวางสถานีของคุณเอง
+                  - paragraph [ref=e1771]: รับเครื่องตรวจวัดและร่วมสมทบข้อมูลคุณภาพอากาศในเมืองของคุณ
+          - generic [ref=e1772]:
+            - heading "เรียนรู้เพิ่มเติมเกี่ยวกับคุณภาพอากาศทั่วโลก" [level=2] [ref=e1773]
+            - generic [ref=e1774]:
+              - 'link "external link icon ประกาศเตือนคุณภาพอากาศหมู่เกาะคานารี: พายุฝุ่นจากทะเลทรายซาฮารา" [ref=e1775] [cursor=pointer]':
+                - /url: /th/newsroom/canary-islands-air-quality-alert-saharan-dust-storm
+                - generic [ref=e1776]:
+                  - img "external link icon" [ref=e1777]
+                  - paragraph [ref=e1778]: "ประกาศเตือนคุณภาพอากาศหมู่เกาะคานารี: พายุฝุ่นจากทะเลทรายซาฮารา"
+              - link "external link icon ประกาศแจ้งเตือนคุณภาพอากาศของปากีสถาน" [ref=e1779] [cursor=pointer]:
+                - /url: /th/newsroom/pakistan-air-quality-alert
+                - generic [ref=e1780]:
+                  - img "external link icon" [ref=e1781]
+                  - paragraph [ref=e1782]: ประกาศแจ้งเตือนคุณภาพอากาศของปากีสถาน
+              - link "external link icon คำเตือนคุณภาพอากาศในอินเดีย" [ref=e1783] [cursor=pointer]:
+                - /url: /th/newsroom/india-air-quality-alert
+                - generic [ref=e1784]:
+                  - img "external link icon" [ref=e1785]
+                  - paragraph [ref=e1786]: คำเตือนคุณภาพอากาศในอินเดีย
+        - generic [ref=e1787]:
+          - heading "สถานที่ใดในพิษณุโลกมีคุณภาพอากาศดีที่สุด" [level=2] [ref=e1788]
+          - list [ref=e1789]:
+            - listitem [ref=e1790]:
+              - link "The Horizon Groove 105" [ref=e1791] [cursor=pointer]:
+                - /url: /th/thailand/phitsanulok/phitsanulok/the-horizon-groove
+                - generic [ref=e1792]: The Horizon Groove
+                - generic [ref=e1794]: "105"
+            - listitem [ref=e1795]:
+              - link "Bueng Phra 122" [ref=e1796] [cursor=pointer]:
+                - /url: /th/thailand/phitsanulok/phitsanulok/bueng-phra
+                - generic [ref=e1797]: Bueng Phra
+                - generic [ref=e1799]: "122"
+            - listitem [ref=e1800]:
+              - link "Chom Nan Chaloem Phrakiat Public Park 152" [ref=e1801] [cursor=pointer]:
+                - /url: /th/thailand/phitsanulok/phitsanulok/chom-nan-chaloem-phrakiat-public-park
+                - generic [ref=e1802]: Chom Nan Chaloem Phrakiat Public Park
+                - generic [ref=e1804]: "152"
+    - generic [ref=e1805]:
+      - generic:
+        - img
+      - generic [ref=e1806]:
+        - heading "เชื่อมต่อกับ IQAir" [level=2] [ref=e1807]
+        - paragraph [ref=e1808]: ลงทะเบียนด้านล่างเพื่อเข้าร่วมชุมชนอากาศสะอาดและรับข่าวสารล่าสุดเกี่ยวกับคุณภาพอากาศและข้อมูลทางวิทยาศาสตร์ที่จะช่วยปรับปรุงอากาศรอบตัวคุณ
+        - generic [ref=e1809]:
+          - generic [ref=e1810]: Email address
+          - textbox "Email address" [ref=e1811]:
+            - /placeholder: Email
+          - button "Subscribe" [ref=e1812] [cursor=pointer]:
+            - img [ref=e1813]
+        - generic [ref=e1815]:
+          - link "Facebook" [ref=e1816] [cursor=pointer]:
+            - /url: https://www.facebook.com/iqair/
+            - img [ref=e1817]
+          - link "X" [ref=e1819] [cursor=pointer]:
+            - /url: https://x.com/IQAir
+            - img [ref=e1820]
+          - link "YouTube" [ref=e1822] [cursor=pointer]:
+            - /url: https://www.youtube.com/user/IQAir
+            - img [ref=e1823]
+          - link "Instagram" [ref=e1825] [cursor=pointer]:
+            - /url: https://www.instagram.com/iqair/
+            - img [ref=e1826]
+    - generic [ref=e1828]:
+      - contentinfo [ref=e1829]:
+        - generic [ref=e1832]:
+          - generic [ref=e1834]:
+            - heading "เกี่ยวกับ IQAir" [level=3] [ref=e1835]
+            - navigation [ref=e1836]:
+              - link "เกี่ยวกับเรา" [ref=e1837] [cursor=pointer]:
+                - /url: /th/about-iqair
+              - link "ติดต่อเรา" [ref=e1838] [cursor=pointer]:
+                - /url: /th/support/contact-us
+              - link "อาชีพ" [ref=e1839] [cursor=pointer]:
+                - /url: https://jobs.iqair.com/
+              - link "สอบถามข้อมูลสื่อ" [ref=e1840] [cursor=pointer]:
+                - /url: /th/media-contact
+              - link "IQAir มูลนิธิ" [ref=e1841] [cursor=pointer]:
+                - /url: https://www.iqairfoundation.org/
+              - link "รางวัลและความร่วมมือ" [ref=e1842] [cursor=pointer]:
+                - /url: /th/about-iqair/awards-partnerships
+              - link "ศูนย์ประสบการณ์อากาศบริสุทธิ์" [ref=e1843] [cursor=pointer]:
+                - /url: /th/experience-center
+          - generic [ref=e1845]:
+            - heading "สนับสนุน" [level=3] [ref=e1846]
+            - navigation [ref=e1847]:
+              - link "สนับสนุนผลิตภัณฑ์" [ref=e1848] [cursor=pointer]:
+                - /url: /th/support
+              - link "ลงทะเบียนรับประกัน" [ref=e1849] [cursor=pointer]:
+                - /url: /th/support/warranty
+              - link "ฐานความรู้" [ref=e1850] [cursor=pointer]:
+                - /url: /th/support/knowledge-base
+              - link "นโยบายการคืนสินค้า" [ref=e1851] [cursor=pointer]:
+                - /url: /th/support/iqair-warranty-coverage
+          - generic [ref=e1853]:
+            - heading "ข่าว" [level=3] [ref=e1854]
+            - navigation [ref=e1855]:
+              - link "ข่าวคุณภาพอากาศ" [ref=e1856] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Air%20Quality
+              - link "ชุมชน" [ref=e1857] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Community
+              - link "ทรัพยากรคุณภาพอากาศ" [ref=e1858] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Resources
+              - link "ผู้ร่วมเขียนที่โดดเด่น" [ref=e1859] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Featured%20Contributor
+              - link "สุขภาพและความเป็นอยู่ที่ดี" [ref=e1860] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Health%20And%20Wellness
+              - link "เรื่องราวความสำเร็จ" [ref=e1861] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Success%20Stories
+              - link "รางวัลและบทวิจารณ์" [ref=e1862] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Awards%20And%20Reviews
+              - link "ข่าวประชาสัมพันธ์" [ref=e1863] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Press%20Releases
+              - link "เทคโนโลยีการทำความสะอาดอากาศ" [ref=e1864] [cursor=pointer]:
+                - /url: /th/newsroom?tag=Air%20Cleaning%20Technology
+          - generic [ref=e1866]:
+            - heading "โซลูชันธุรกิจ" [level=3] [ref=e1867]
+            - navigation [ref=e1868]:
+              - link "การฟอกอากาศเชิงพาณิชย์" [ref=e1869] [cursor=pointer]:
+                - /url: /th/commercial-air-purifiers
+              - link "ขอเสนอราคา" [ref=e1870] [cursor=pointer]:
+                - /url: /th/commercial/request-a-bid
+              - link "คุยกับผู้เชี่ยวชาญ" [ref=e1871] [cursor=pointer]:
+                - /url: /th/support/contact-us
+              - link "ศูนย์อากาศบริสุทธิ์" [ref=e1872] [cursor=pointer]:
+                - /url: /th/commercial-applications/clean-air-facilities
+              - link "โรงเรียนอากาศบริสุทธิ์" [ref=e1873] [cursor=pointer]:
+                - /url: /th/commercial-applications/clean-air-school
+              - link "แดชบอร์ด" [ref=e1874] [cursor=pointer]:
+                - /url: /th/commercial-air-quality-monitors/enterprise-dashboard
+          - generic [ref=e1876]:
+            - heading "คุณภาพอากาศ" [level=3] [ref=e1877]
+            - navigation [ref=e1878]:
+              - link "แอปคุณภาพอากาศ" [ref=e1879] [cursor=pointer]:
+                - /url: /th/air-quality-monitors/air-quality-app
+              - link "แพลตฟอร์ม AirVisual" [ref=e1880] [cursor=pointer]:
+                - /url: /th/commercial-air-quality-monitors/airvisual-platform
+              - link "ข้อมูลคุณภาพอากาศในอดีต" [ref=e1881] [cursor=pointer]:
+                - /url: /th/world-most-polluted-cities
+              - link "อันดับเมืองคุณภาพอากาศแบบสด AQI⁺" [ref=e1882] [cursor=pointer]:
+                - /url: /th/world-air-quality-ranking
+              - link "รายงานคุณภาพอากาศโลก" [ref=e1883] [cursor=pointer]:
+                - /url: /th/world-air-quality-report
+              - link "คุณภาพอากาศโลก" [ref=e1884] [cursor=pointer]:
+                - /url: /th/world-air-quality
+          - generic [ref=e1886]:
+            - heading "ช้อปสินค้าของเรา" [level=3] [ref=e1887]
+            - navigation [ref=e1888]:
+              - link "เกี่ยวกับเครื่องฟอกอากาศ IQAir" [ref=e1889] [cursor=pointer]:
+                - /url: /th/products/air-purifiers
+              - link "หน้ากากอนามัย" [ref=e1890] [cursor=pointer]:
+                - /url: /th/commercial-face-masks
+              - link "เครื่องตรวจวัดคุณภาพอากาศ" [ref=e1891] [cursor=pointer]:
+                - /url: /th/products/air-quality-monitors
+              - link "ไส้กรองทดแทน" [ref=e1892] [cursor=pointer]:
+                - /url: /th/products/replacement-filters
+              - link "เครื่องฟอกอากาศ" [ref=e1893] [cursor=pointer]:
+                - /url: /th/products/air-purifiers
+          - generic [ref=e1895]:
+            - heading "ช็อปโซลูชันของเรา" [level=3] [ref=e1896]
+            - navigation [ref=e1897]:
+              - link "เครื่องฟอกอากาศสำหรับโรคหืด" [ref=e1898] [cursor=pointer]:
+                - /url: /th/products/air-purifiers-for-asthma
+              - link "เครื่องฟอกอากาศสำหรับเชื้อรา" [ref=e1899] [cursor=pointer]:
+                - /url: /th/products/air-purifiers-for-mold
+              - link "เครื่องฟอกอากาศสำหรับควัน" [ref=e1900] [cursor=pointer]:
+                - /url: /th/products/air-purifiers-for-wildfire-smoke
+              - link "เครื่องฟอกอากาศสำหรับสัตว์เลี้ยง" [ref=e1901] [cursor=pointer]:
+                - /url: /th/products/air-purifiers-for-pets
+              - link "เครื่องฟอกอากาศสำหรับฝุ่น" [ref=e1902] [cursor=pointer]:
+                - /url: /th/products/air-purifiers-for-dust
+              - link "เครื่องฟอกอากาศสำหรับกลิ่น" [ref=e1903] [cursor=pointer]:
+                - /url: /th/products/air-purifiers-for-odor
+              - link "เครื่องฟอกอากาศสำหรับควันไฟป่า" [ref=e1904] [cursor=pointer]:
+                - /url: /th/air-purifiers-for-wildfire-smoke
+      - generic [ref=e1905]:
+        - generic [ref=e1906]:
+          - link "IWBI Logo" [ref=e1908] [cursor=pointer]:
+            - /url: /th/newsroom/iqair-international-well-building-institute-member
+            - img "IWBI Logo" [ref=e1909]
+          - generic [ref=e1910]:
+            - link "เลือก Thailand" [ref=e1911] [cursor=pointer]:
+              - /url: /th/choose-country-region
+              - img "ธงThailand" [ref=e1912]
+              - generic [ref=e1913]: Thailand
+            - button "Settings Icon US AQI⁺, metric" [ref=e1915] [cursor=pointer]:
+              - img "Settings Icon" [ref=e1916]
+              - generic [ref=e1917]: US AQI⁺, metric
+        - generic [ref=e1918]:
+          - link "ข้อกำหนดการใช้งาน" [ref=e1920] [cursor=pointer]:
+            - /url: /th/legal/terms-conditions
+          - link "ดูนโยบายความเป็นส่วนตัว นโยบายความเป็นส่วนตัว" [ref=e1921] [cursor=pointer]:
+            - /url: /th/privacy-policy
+            - img "ดูนโยบายความเป็นส่วนตัว" [ref=e1922]
+            - generic [ref=e1923]: นโยบายความเป็นส่วนตัว
+          - generic [ref=e1924]: © 2026 IQAir สงวนสิทธิ์ทั้งหมด
+  - generic:
+    - generic:
+      - img

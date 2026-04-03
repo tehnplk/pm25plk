@@ -3,16 +3,6 @@
 import React, { useEffect, useMemo, useState } from "react";
 import { motion } from "motion/react";
 import {
-  Bar,
-  BarChart,
-  CartesianGrid,
-  Cell,
-  ResponsiveContainer,
-  Tooltip,
-  XAxis,
-  YAxis,
-} from "recharts";
-import {
   Activity,
   AlertTriangle,
   MapPin,
@@ -124,22 +114,24 @@ const targetedGroupMeta = [
   {
     id: "elderly",
     title: "2.3 กลุ่มผู้สูงอายุ",
-    surgicalCumulative: "5,970",
-    n95Cumulative: "463",
+    surgicalCumulative: "0",
+    n95Cumulative: "0",
   },
   {
     id: "heart",
     title: "2.4 กลุ่มผู้ที่มีโรคหัวใจ",
-    surgicalCumulative: "100",
-    n95Cumulative: "50",
+    surgicalCumulative: "0",
+    n95Cumulative: "0",
   },
   {
     id: "respiratory",
     title: "2.5 กลุ่มผู้ที่มีโรคระบบทางเดินหายใจ",
-    surgicalCumulative: "2,310",
-    n95Cumulative: "340",
+    surgicalCumulative: "0",
+    n95Cumulative: "0",
   },
 ] as const;
+
+type TargetedGroupId = (typeof targetedGroupMeta)[number]["id"];
 
 const cleanRoomMeta = [
   {
@@ -197,19 +189,19 @@ const vulnerableServiceMeta = [
 ] as const;
 
 const initialGeneralPublicForm = {
-  surgicalDaily: "250",
-  surgicalCumulative: "20,420",
-  n95Daily: "100",
-  n95Cumulative: "350",
+  surgicalDaily: "0",
+  surgicalCumulative: "0",
+  n95Daily: "0",
+  n95Cumulative: "0",
 };
 
 const initialTargetedGroupForm: Record<
-  (typeof targetedGroupMeta)[number]["id"],
+  TargetedGroupId,
   MedicalMaskGroup
 > = {
   children: { surgicalDaily: "0", n95Daily: "0" },
   pregnant: { surgicalDaily: "0", n95Daily: "0" },
-  elderly: { surgicalDaily: "250", n95Daily: "0" },
+  elderly: { surgicalDaily: "0", n95Daily: "0" },
   heart: { surgicalDaily: "0", n95Daily: "0" },
   respiratory: { surgicalDaily: "0", n95Daily: "0" },
 };
@@ -218,21 +210,21 @@ const initialCleanRoomForm: Record<
   (typeof cleanRoomMeta)[number]["id"],
   CleanRoomEntry
 > = {
-  advanced: { standardRooms: "1" },
+  advanced: { standardRooms: "0" },
   general: { standardRooms: "0" },
-  community: { standardRooms: "8" },
-  subdistrict: { standardRooms: "107" },
+  community: { standardRooms: "0" },
+  subdistrict: { standardRooms: "0" },
 };
 
 const initialVulnerableServiceForm: Record<
   (typeof vulnerableServiceMeta)[number]["id"],
   VulnerableDailyEntry
 > = {
-  children: { dailyServed: "594" },
+  children: { dailyServed: "0" },
   pregnant: { dailyServed: "0" },
-  elderly: { dailyServed: "4732" },
+  elderly: { dailyServed: "0" },
   heart: { dailyServed: "0" },
-  respiratory: { dailyServed: "2385" },
+  respiratory: { dailyServed: "0" },
 };
 
 const initialInventorySuppliesForm: InventorySupplyForm = {
@@ -255,21 +247,6 @@ function getStatusColor(status: string) {
   }
 }
 
-function getChartColor(status: string) {
-  switch (status) {
-    case "Red":
-      return "#ef4444";
-    case "Orange":
-      return "#f97316";
-    case "Yellow":
-      return "#facc15";
-    case "Green":
-      return "#10b981";
-    default:
-      return "#cbd5e1";
-  }
-}
-
 function formatPmValue(value: number) {
   return value.toLocaleString("en-US", {
     minimumFractionDigits: 2,
@@ -288,6 +265,94 @@ function parseNumberString(value: string) {
   return Number.isFinite(normalized) ? normalized : 0;
 }
 
+function normalizeNumericString(value: unknown) {
+  const raw = typeof value === "string" ? value : "";
+  const digitsOnly = raw.replace(/[^\d]/g, "");
+  return digitsOnly.length > 0 ? digitsOnly : "0";
+}
+
+function normalizeMedicalPayload(
+  payload?: Partial<MedicalPublicHealthPayload>,
+): MedicalPublicHealthPayload {
+  const general: Partial<typeof initialGeneralPublicForm> =
+    payload?.generalPublicForm ?? {};
+  const targeted: Partial<Record<TargetedGroupId, Partial<MedicalMaskGroup>>> =
+    payload?.targetedGroupForm ?? {};
+  const cleanRoom: Partial<
+    Record<(typeof cleanRoomMeta)[number]["id"], Partial<CleanRoomEntry>>
+  > = payload?.cleanRoomForm ?? {};
+  const vulnerable: Partial<
+    Record<
+      (typeof vulnerableServiceMeta)[number]["id"],
+      Partial<VulnerableDailyEntry>
+    >
+  > = payload?.vulnerableServiceForm ?? {};
+  const inventory: Partial<typeof initialInventorySuppliesForm> =
+    payload?.inventorySuppliesForm ?? {};
+
+  const targetedGroupForm = targetedGroupMeta.reduce<
+    Record<TargetedGroupId, MedicalMaskGroup>
+  >((acc, group) => {
+    const entry = targeted[group.id];
+    acc[group.id] = {
+      surgicalDaily: normalizeNumericString(entry?.surgicalDaily),
+      n95Daily: normalizeNumericString(entry?.n95Daily),
+    };
+    return acc;
+  }, {} as Record<TargetedGroupId, MedicalMaskGroup>);
+
+  const cleanRoomForm = cleanRoomMeta.reduce<
+    Record<(typeof cleanRoomMeta)[number]["id"], CleanRoomEntry>
+  >((acc, row) => {
+    const entry = cleanRoom[row.id];
+    acc[row.id] = {
+      standardRooms: normalizeNumericString(entry?.standardRooms),
+    };
+    return acc;
+  }, {} as Record<(typeof cleanRoomMeta)[number]["id"], CleanRoomEntry>);
+
+  const vulnerableServiceForm = vulnerableServiceMeta.reduce<
+    Record<(typeof vulnerableServiceMeta)[number]["id"], VulnerableDailyEntry>
+  >((acc, row) => {
+    const entry = vulnerable[row.id];
+    acc[row.id] = {
+      dailyServed: normalizeNumericString(entry?.dailyServed),
+    };
+    return acc;
+  }, {} as Record<(typeof vulnerableServiceMeta)[number]["id"], VulnerableDailyEntry>);
+
+  return {
+    generalPublicForm: {
+      surgicalDaily: normalizeNumericString(general.surgicalDaily),
+      surgicalCumulative: normalizeNumericString(general.surgicalCumulative),
+      n95Daily: normalizeNumericString(general.n95Daily),
+      n95Cumulative: normalizeNumericString(general.n95Cumulative),
+    },
+    targetedGroupForm,
+    cleanRoomForm,
+    cleanRoomVisitors: normalizeNumericString(payload?.cleanRoomVisitors),
+    vulnerableServiceForm,
+    inventorySuppliesForm: {
+      maskDistributed: normalizeNumericString(inventory.maskDistributed),
+      n95Distributed: normalizeNumericString(inventory.n95Distributed),
+    },
+  };
+}
+
+function parseActivityValueAmount(value?: string) {
+  if (!value) return 0;
+  const match = value.match(/-?\d[\d,]*(?:\.\d+)?/);
+  if (!match) return 0;
+  return parseNumberString(match[0]);
+}
+
+function parseActivityValueUnit(value?: string) {
+  if (!value) return "";
+  const match = value.match(/-?\d[\d,]*(?:\.\d+)?/);
+  if (!match) return "";
+  return value.replace(match[0], "").trim();
+}
+
 export default function Dashboard() {
   const [data, setData] = useState<DashboardPayload | null>(null);
   const [loading, setLoading] = useState(true);
@@ -302,7 +367,7 @@ export default function Dashboard() {
     initialTargetedGroupForm,
   );
   const [cleanRoomForm, setCleanRoomForm] = useState(initialCleanRoomForm);
-  const [cleanRoomVisitors, setCleanRoomVisitors] = useState("750");
+  const [cleanRoomVisitors, setCleanRoomVisitors] = useState("0");
   const [vulnerableServiceForm, setVulnerableServiceForm] = useState(
     initialVulnerableServiceForm,
   );
@@ -318,6 +383,7 @@ export default function Dashboard() {
   const [allMedicalRecords, setAllMedicalRecords] = useState<
     MedicalPublicHealthRecord[]
   >([]);
+  const [selectedActivityDistrict, setSelectedActivityDistrict] = useState("");
   const [selectedActivityDate, setSelectedActivityDate] = useState("");
   const districtData = useMemo(() => data?.districts ?? [], [data]);
 
@@ -376,24 +442,21 @@ export default function Dashboard() {
         inventorySuppliesForm?: typeof initialInventorySuppliesForm;
       };
 
-      if (parsed.generalPublicForm) {
-        setGeneralPublicForm(parsed.generalPublicForm);
-      }
-      if (parsed.targetedGroupForm) {
-        setTargetedGroupForm(parsed.targetedGroupForm);
-      }
-      if (parsed.cleanRoomForm) {
-        setCleanRoomForm(parsed.cleanRoomForm);
-      }
-      if (typeof parsed.cleanRoomVisitors === "string") {
-        setCleanRoomVisitors(parsed.cleanRoomVisitors);
-      }
-      if (parsed.vulnerableServiceForm) {
-        setVulnerableServiceForm(parsed.vulnerableServiceForm);
-      }
-      if (parsed.inventorySuppliesForm) {
-        setInventorySuppliesForm(parsed.inventorySuppliesForm);
-      }
+      const normalizedPayload = normalizeMedicalPayload({
+        generalPublicForm: parsed.generalPublicForm,
+        targetedGroupForm: parsed.targetedGroupForm,
+        cleanRoomForm: parsed.cleanRoomForm,
+        cleanRoomVisitors: parsed.cleanRoomVisitors,
+        vulnerableServiceForm: parsed.vulnerableServiceForm,
+        inventorySuppliesForm: parsed.inventorySuppliesForm,
+      });
+
+      setGeneralPublicForm(normalizedPayload.generalPublicForm);
+      setTargetedGroupForm(normalizedPayload.targetedGroupForm);
+      setCleanRoomForm(normalizedPayload.cleanRoomForm);
+      setCleanRoomVisitors(normalizedPayload.cleanRoomVisitors);
+      setVulnerableServiceForm(normalizedPayload.vulnerableServiceForm);
+      setInventorySuppliesForm(normalizedPayload.inventorySuppliesForm);
     } catch {
       window.localStorage.removeItem(medicalStorageKey);
     }
@@ -440,12 +503,13 @@ export default function Dashboard() {
 
         setMedicalReportDate(result.reportDate);
         setSelectedMedicalDistrict(result.districtName);
-        setGeneralPublicForm(result.payload.generalPublicForm);
-        setTargetedGroupForm(result.payload.targetedGroupForm);
-        setCleanRoomForm(result.payload.cleanRoomForm);
-        setCleanRoomVisitors(result.payload.cleanRoomVisitors);
-        setVulnerableServiceForm(result.payload.vulnerableServiceForm);
-        setInventorySuppliesForm(result.payload.inventorySuppliesForm);
+        const normalizedPayload = normalizeMedicalPayload(result.payload);
+        setGeneralPublicForm(normalizedPayload.generalPublicForm);
+        setTargetedGroupForm(normalizedPayload.targetedGroupForm);
+        setCleanRoomForm(normalizedPayload.cleanRoomForm);
+        setCleanRoomVisitors(normalizedPayload.cleanRoomVisitors);
+        setVulnerableServiceForm(normalizedPayload.vulnerableServiceForm);
+        setInventorySuppliesForm(normalizedPayload.inventorySuppliesForm);
       } catch {
         if (!cancelled) {
           setMedicalSaveMessage(
@@ -684,13 +748,108 @@ export default function Dashboard() {
     vulnerableServiceForm,
   ]);
 
+  const activeMedicalDate = medicalReportDate || new Date().toISOString().slice(0, 10);
+  const activeMedicalDistrict = selectedMedicalDistrict || "เมืองพิษณุโลก";
+
+  const savedRecordForSelectedDate = useMemo(
+    () =>
+      allMedicalRecords.find(
+        (record) =>
+          record.reportDate === activeMedicalDate &&
+          record.districtName === activeMedicalDistrict,
+      ) ?? null,
+    [activeMedicalDate, activeMedicalDistrict, allMedicalRecords],
+  );
+
+  const cumulativeMaskSummary = useMemo(() => {
+    const baseTargeted = targetedGroupMeta.reduce<
+      Record<TargetedGroupId, { surgical: number; n95: number }>
+    >((acc, group) => {
+      acc[group.id] = { surgical: 0, n95: 0 };
+      return acc;
+    }, {} as Record<TargetedGroupId, { surgical: number; n95: number }>);
+
+    const summary = {
+      general: {
+        surgical: 0,
+        n95: 0,
+      },
+      targeted: baseTargeted,
+    };
+
+    for (const record of allMedicalRecords) {
+      if (
+        record.districtName !== activeMedicalDistrict ||
+        record.reportDate > activeMedicalDate
+      ) {
+        continue;
+      }
+
+      summary.general.surgical += parseNumberString(
+        record.payload.generalPublicForm?.surgicalDaily ?? "0",
+      );
+      summary.general.n95 += parseNumberString(
+        record.payload.generalPublicForm?.n95Daily ?? "0",
+      );
+
+      for (const group of targetedGroupMeta) {
+        summary.targeted[group.id].surgical += parseNumberString(
+          record.payload.targetedGroupForm?.[group.id]?.surgicalDaily ?? "0",
+        );
+        summary.targeted[group.id].n95 += parseNumberString(
+          record.payload.targetedGroupForm?.[group.id]?.n95Daily ?? "0",
+        );
+      }
+    }
+
+    return summary;
+  }, [activeMedicalDate, activeMedicalDistrict, allMedicalRecords]);
+
+  const activityDistrictOptions = useMemo(() => {
+    const districtSet = new Set<string>();
+
+    Object.values(medicalActivitiesByDate).forEach((entries) => {
+      entries.forEach((entry) => districtSet.add(entry.district));
+    });
+
+    if (districtSet.size === 0) {
+      districtData.forEach((district) => districtSet.add(district.name));
+      if (selectedMedicalDistrict) {
+        districtSet.add(selectedMedicalDistrict);
+      }
+    }
+
+    return Array.from(districtSet).sort((left, right) =>
+      left.localeCompare(right, "th"),
+    );
+  }, [districtData, medicalActivitiesByDate, selectedMedicalDistrict]);
+
   const activityDateOptions = useMemo(
     () =>
-      Object.keys(medicalActivitiesByDate).sort((left, right) =>
-        right.localeCompare(left),
-      ),
-    [medicalActivitiesByDate],
+      Object.entries(medicalActivitiesByDate)
+        .filter(([, entries]) =>
+          selectedActivityDistrict
+            ? entries.some((entry) => entry.district === selectedActivityDistrict)
+            : true,
+        )
+        .map(([date]) => date)
+        .sort((left, right) => right.localeCompare(left)),
+    [medicalActivitiesByDate, selectedActivityDistrict],
   );
+
+  useEffect(() => {
+    if (activityDistrictOptions.length === 0) {
+      setSelectedActivityDistrict("");
+      return;
+    }
+
+    if (
+      selectedActivityDistrict &&
+      !activityDistrictOptions.includes(selectedActivityDistrict)
+    ) {
+      setSelectedActivityDistrict("");
+    }
+  }, [activityDistrictOptions, selectedActivityDistrict]);
 
   useEffect(() => {
     if (activityDateOptions.length === 0) {
@@ -704,13 +863,25 @@ export default function Dashboard() {
   }, [activityDateOptions, selectedActivityDate]);
 
   const filteredActivityEntries = useMemo(
-    () =>
-      selectedActivityDate ? (medicalActivitiesByDate[selectedActivityDate] ?? []) : [],
-    [medicalActivitiesByDate, selectedActivityDate],
+    () => {
+      if (!selectedActivityDate) {
+        return [];
+      }
+
+      const dateEntries = medicalActivitiesByDate[selectedActivityDate] ?? [];
+      if (!selectedActivityDistrict) {
+        return dateEntries;
+      }
+
+      return dateEntries.filter(
+        (entry) => entry.district === selectedActivityDistrict,
+      );
+    },
+    [medicalActivitiesByDate, selectedActivityDate, selectedActivityDistrict],
   );
 
   const activityEntriesByCategory = useMemo(() => {
-    return filteredActivityEntries.reduce<
+    const groupedEntries = filteredActivityEntries.reduce<
       Record<
         string,
         Array<{
@@ -730,7 +901,83 @@ export default function Dashboard() {
       acc[entry.category].push(entry);
       return acc;
     }, {});
-  }, [filteredActivityEntries]);
+
+    if (selectedActivityDistrict) {
+      return groupedEntries;
+    }
+
+    return Object.entries(groupedEntries).reduce<
+      Record<
+        string,
+        Array<{
+          id: string;
+          district: string;
+          category: string;
+          title: string;
+          details: string;
+          value?: string;
+        }>
+      >
+    >((categoryAcc, [category, entries]) => {
+      const groupedByTitle = entries.reduce<Record<string, typeof entries>>(
+        (titleAcc, entry) => {
+          if (!titleAcc[entry.title]) {
+            titleAcc[entry.title] = [];
+          }
+          titleAcc[entry.title].push(entry);
+          return titleAcc;
+        },
+        {},
+      );
+
+      categoryAcc[category] = Object.entries(groupedByTitle).map(
+        ([title, titleEntries]) => {
+          const valueUnit = parseActivityValueUnit(titleEntries[0]?.value);
+          const valueTotal = titleEntries.reduce(
+            (sum, entry) => sum + parseActivityValueAmount(entry.value),
+            0,
+          );
+          const hasValue = titleEntries.some((entry) => entry.value);
+          const normalizedDetails = Array.from(
+            new Set(
+              titleEntries
+                .map((entry) => entry.details.trim())
+                .filter((detail) => detail.length > 0),
+            ),
+          );
+
+          return {
+            id: `${selectedActivityDate}-${category}-${title}-all`,
+            district: "",
+            category,
+            title,
+            details:
+              normalizedDetails.length === 1
+                ? normalizedDetails[0]
+                : `สรุปภาพรวมจาก ${titleEntries.length.toLocaleString()} อำเภอ`,
+            value: hasValue
+              ? `${valueTotal.toLocaleString()}${valueUnit ? ` ${valueUnit}` : ""}`
+              : undefined,
+          };
+        },
+      );
+
+      return categoryAcc;
+    }, {});
+  }, [filteredActivityEntries, selectedActivityDate, selectedActivityDistrict]);
+
+  const displayedActivityCount = useMemo(
+    () =>
+      Object.values(activityEntriesByCategory).reduce(
+        (sum, entries) => sum + entries.length,
+        0,
+      ),
+    [activityEntriesByCategory],
+  );
+
+  const activityScopeLabel = selectedActivityDistrict
+    ? `แสดงข้อมูลอำเภอ ${selectedActivityDistrict}`
+    : "แสดงข้อมูลรวมทุกอำเภอ";
 
   function openForecastModal(districtId: number) {
     setActiveDistrictId(districtId);
@@ -753,7 +1000,10 @@ export default function Dashboard() {
     field: keyof typeof initialGeneralPublicForm,
     value: string,
   ) {
-    setGeneralPublicForm((current) => ({ ...current, [field]: value }));
+    setGeneralPublicForm((current) => ({
+      ...current,
+      [field]: normalizeNumericString(value),
+    }));
   }
 
   function handleTargetedGroupChange(
@@ -765,7 +1015,7 @@ export default function Dashboard() {
       ...current,
       [groupId]: {
         ...current[groupId],
-        [field]: value,
+        [field]: normalizeNumericString(value),
       },
     }));
   }
@@ -778,7 +1028,7 @@ export default function Dashboard() {
       ...current,
       [rowId]: {
         ...current[rowId],
-        standardRooms: value,
+        standardRooms: normalizeNumericString(value),
       },
     }));
   }
@@ -791,7 +1041,7 @@ export default function Dashboard() {
       ...current,
       [rowId]: {
         ...current[rowId],
-        dailyServed: value,
+        dailyServed: normalizeNumericString(value),
       },
     }));
   }
@@ -800,7 +1050,10 @@ export default function Dashboard() {
     field: keyof typeof initialInventorySuppliesForm,
     value: string,
   ) {
-    setInventorySuppliesForm((current) => ({ ...current, [field]: value }));
+    setInventorySuppliesForm((current) => ({
+      ...current,
+      [field]: normalizeNumericString(value),
+    }));
   }
 
   async function handleMedicalSave() {
@@ -808,13 +1061,52 @@ export default function Dashboard() {
       setIsMedicalSaving(true);
       setMedicalSaveMessage(null);
 
-      const payload: MedicalPublicHealthPayload = {
+      const previousGeneralSurgical = savedRecordForSelectedDate
+        ? parseNumberString(savedRecordForSelectedDate.payload.generalPublicForm.surgicalDaily)
+        : 0;
+      const previousGeneralN95 = savedRecordForSelectedDate
+        ? parseNumberString(savedRecordForSelectedDate.payload.generalPublicForm.n95Daily)
+        : 0;
+
+      const recalculatedGeneralSurgicalCumulative =
+        cumulativeMaskSummary.general.surgical -
+        previousGeneralSurgical +
+        parseNumberString(generalPublicForm.surgicalDaily);
+      const recalculatedGeneralN95Cumulative =
+        cumulativeMaskSummary.general.n95 -
+        previousGeneralN95 +
+        parseNumberString(generalPublicForm.n95Daily);
+
+      const normalizedPayload = normalizeMedicalPayload({
         generalPublicForm,
         targetedGroupForm,
         cleanRoomForm,
         cleanRoomVisitors,
         vulnerableServiceForm,
         inventorySuppliesForm,
+      });
+
+      const payload: MedicalPublicHealthPayload = {
+        generalPublicForm: {
+          ...normalizedPayload.generalPublicForm,
+          surgicalCumulative: String(
+            Math.max(
+              0,
+              recalculatedGeneralSurgicalCumulative,
+            ),
+          ),
+          n95Cumulative: String(
+            Math.max(
+              0,
+              recalculatedGeneralN95Cumulative,
+            ),
+          ),
+        },
+        targetedGroupForm: normalizedPayload.targetedGroupForm,
+        cleanRoomForm: normalizedPayload.cleanRoomForm,
+        cleanRoomVisitors: normalizedPayload.cleanRoomVisitors,
+        vulnerableServiceForm: normalizedPayload.vulnerableServiceForm,
+        inventorySuppliesForm: normalizedPayload.inventorySuppliesForm,
       };
 
       const response = await fetch("/api/medical-public-health", {
@@ -871,10 +1163,10 @@ export default function Dashboard() {
             </div>
             <div>
               <h1 className="text-xl font-bold leading-tight text-white">
-                ระบบเฝ้าระวังสถานการณ์ฝุ่น PM 2.5
+                Dabboard เฝ้าระวังสถานการณ์ฝุ่น จังหวัดพิษณุโลก
               </h1>
               <p className="text-xs font-medium text-orange-100">
-                Phitsanulok PM 2.5 Dashboard จากข้อมูล GISTDA
+                Dabboard เฝ้าระวังสถานการณ์ฝุ่น จังหวัดพิษณุโลก
               </p>
             </div>
           </div>
@@ -894,7 +1186,7 @@ export default function Dashboard() {
           </div>
         ) : null}
 
-        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-3">
+        <div className="grid grid-cols-1 gap-4 md:grid-cols-2 xl:grid-cols-2">
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
@@ -948,31 +1240,6 @@ export default function Dashboard() {
                 : formatPmValue(data?.province.pm25Avg24hr ?? 0)}{" "}
               ug/m3
             </div>
-          </motion.div>
-
-          <motion.div
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
-            transition={{ delay: 0.3 }}
-          >
-            <button
-              type="button"
-              onClick={openMedicalModal}
-              className="flex h-full w-full items-start justify-between rounded-2xl border border-orange-100 bg-white p-6 text-left shadow-sm transition hover:border-orange-300 hover:bg-orange-50/30"
-            >
-              <div>
-                <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                  <Activity className="h-5 w-5 text-orange-500" />
-                  {medicalCardTitle}
-                </h3>
-                <p className="mt-2 text-sm text-slate-500">
-                  กดเพื่อเปิด pop-up และกรอกรายละเอียดของหมวดงานด้านการแพทย์/สาธารณสุข
-                </p>
-              </div>
-              <span className="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700">
-                เปิดรายละเอียด
-              </span>
-            </button>
           </motion.div>
         </div>
 
@@ -1070,50 +1337,18 @@ export default function Dashboard() {
                 ผู้ป่วยรายอำเภอ
               </h2>
               <p className="mt-1 text-xs text-slate-500">
-                แสดงเทียบกับสีความเสี่ยงจาก AQI ของ GISTDA
+                ข้อมูลส่วนนี้อยู่ระหว่างเชื่อมต่อเข้าสู่ระบบ
               </p>
             </div>
-            <div className="h-[420px] min-h-[350px] flex-1 p-6">
-              <ResponsiveContainer width="100%" height={350}>
-                <BarChart
-                  data={districtData}
-                  layout="vertical"
-                  margin={{ top: 0, right: 20, left: 20, bottom: 0 }}
-                >
-                  <CartesianGrid
-                    stroke="#ffedd5"
-                    strokeDasharray="3 3"
-                    horizontal
-                    vertical={false}
-                  />
-                  <XAxis hide type="number" />
-                  <YAxis
-                    dataKey="name"
-                    type="category"
-                    axisLine={false}
-                    tickLine={false}
-                    tick={{ fill: "#64748b", fontSize: 12 }}
-                    width={88}
-                  />
-                  <Tooltip
-                    cursor={{ fill: "#fff7ed" }}
-                    contentStyle={{
-                      borderRadius: "8px",
-                      border: "1px solid #ffedd5",
-                      boxShadow: "0 4px 6px -1px rgb(0 0 0 / 0.1)",
-                    }}
-                    formatter={(value) => [`${value ?? 0} ราย`, "จำนวนผู้ป่วย"]}
-                  />
-                  <Bar dataKey="patients" radius={[0, 4, 4, 0]} barSize={20}>
-                    {districtData.map((entry, index) => (
-                      <Cell
-                        key={`cell-${index}`}
-                        fill={getChartColor(entry.status)}
-                      />
-                    ))}
-                  </Bar>
-                </BarChart>
-              </ResponsiveContainer>
+            <div className="flex min-h-[350px] flex-1 items-center justify-center p-6">
+              <div className="w-full rounded-2xl border border-dashed border-orange-200 bg-orange-50/50 px-6 py-10 text-center">
+                <div className="text-lg font-semibold text-orange-700">
+                  กำลังเชื่อมต่อข้อมูล
+                </div>
+                <p className="mt-2 text-sm text-slate-500">
+                  ระบบจะแสดงข้อมูลผู้ป่วยรายอำเภอเมื่อเชื่อมต่อแหล่งข้อมูลเรียบร้อยแล้ว
+                </p>
+              </div>
             </div>
           </motion.div>
         </div>
@@ -1340,7 +1575,7 @@ export default function Dashboard() {
                           className="w-full flex-1 px-4 py-4 text-3xl text-slate-800 outline-none"
                         />
                         <div className="flex items-center border-l border-slate-200 bg-slate-50 px-4 text-base text-slate-600">
-                          สะสม: {generalPublicForm.surgicalCumulative}
+                          สะสม: {cumulativeMaskSummary.general.surgical.toLocaleString()}
                         </div>
                       </div>
                     </div>
@@ -1366,7 +1601,7 @@ export default function Dashboard() {
                           className="w-full flex-1 px-4 py-4 text-3xl text-slate-800 outline-none"
                         />
                         <div className="flex items-center border-l border-slate-200 bg-slate-50 px-4 text-base text-slate-600">
-                          สะสม: {generalPublicForm.n95Cumulative}
+                          สะสม: {cumulativeMaskSummary.general.n95.toLocaleString()}
                         </div>
                       </div>
                     </div>
@@ -1413,7 +1648,7 @@ export default function Dashboard() {
                                 className="w-full flex-1 px-4 py-3 text-2xl text-slate-800 outline-none"
                               />
                               <div className="flex items-center bg-slate-50 px-4 text-sm text-slate-600">
-                                สะสม: {group.surgicalCumulative}
+                                สะสม: {cumulativeMaskSummary.targeted[group.id].surgical.toLocaleString()}
                               </div>
                             </div>
                           </div>
@@ -1437,7 +1672,7 @@ export default function Dashboard() {
                                 className="w-full flex-1 px-4 py-3 text-2xl text-slate-800 outline-none"
                               />
                               <div className="flex items-center bg-slate-50 px-4 text-sm text-slate-600">
-                                สะสม: {group.n95Cumulative}
+                                สะสม: {cumulativeMaskSummary.targeted[group.id].n95.toLocaleString()}
                               </div>
                             </div>
                           </div>
@@ -1512,7 +1747,9 @@ export default function Dashboard() {
                       type="text"
                       inputMode="numeric"
                       value={cleanRoomVisitors}
-                      onChange={(event) => setCleanRoomVisitors(event.target.value)}
+                      onChange={(event) =>
+                        setCleanRoomVisitors(normalizeNumericString(event.target.value))
+                      }
                       className="mt-4 w-full rounded-2xl border border-slate-200 px-4 py-4 text-3xl text-slate-800 outline-none"
                     />
                   </div>
@@ -1637,22 +1874,53 @@ export default function Dashboard() {
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.7 }}
-          className="grid grid-cols-1 gap-6"
+          className="grid grid-cols-1 gap-6 xl:grid-cols-[360px_1fr]"
         >
-          <section className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm">
-            <div className="border-b border-orange-100 p-6">
-              <div className="flex flex-col gap-4 lg:flex-row lg:items-end lg:justify-between">
+          <div className="space-y-6">
+            <button
+              type="button"
+              onClick={openMedicalModal}
+              className="flex w-full items-start justify-between rounded-2xl border border-orange-100 bg-white p-6 text-left shadow-sm transition hover:border-orange-300 hover:bg-orange-50/30"
+            >
+              <div>
+                <h3 className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                  <Activity className="h-5 w-5 text-orange-500" />
+                  บันทึกกิจกรรม
+                </h3>
+              </div>
+              <span className="rounded-full bg-orange-100 px-3 py-1 text-xs font-semibold text-orange-700">
+                คลิกเพิ่มกิจกรรม
+              </span>
+            </button>
+
+            <div className="rounded-2xl border border-orange-100 bg-white p-6 shadow-sm">
+              <div className="space-y-4">
                 <div>
-                  <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
-                    <ShieldCheck className="h-5 w-5 text-orange-500" />
-                    รายการกิจกรรมรายวัน
-                  </h2>
-                  <p className="mt-1 text-xs text-slate-500">
-                    แสดงสรุปรายการจากข้อมูลที่บันทึกในแบบฟอร์มด้านการแพทย์/สาธารณสุข
-                  </p>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">
+                    เลือกอำเภอ
+                  </label>
+                  <select
+                    value={selectedActivityDistrict}
+                    onChange={(event) =>
+                      setSelectedActivityDistrict(event.target.value)
+                    }
+                    className="w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-orange-400"
+                  >
+                    <option value="">ทั้งหมดทุกอำเภอ</option>
+                    {activityDistrictOptions.length > 0 ? (
+                      activityDistrictOptions.map((district) => (
+                        <option key={district} value={district}>
+                          {district}
+                        </option>
+                      ))
+                    ) : (
+                      <option value="">ไม่มีข้อมูลอำเภอ</option>
+                    )}
+                  </select>
                 </div>
-                <div className="w-full max-w-xs">
-                  <label className="mb-2 block text-xs font-semibold text-slate-500">
+
+                <div>
+                  <label className="mb-2 block text-sm font-semibold text-slate-700">
                     เลือกวันที่
                   </label>
                   <select
@@ -1660,14 +1928,33 @@ export default function Dashboard() {
                     onChange={(event) => setSelectedActivityDate(event.target.value)}
                     className="w-full rounded-xl border border-orange-200 bg-white px-4 py-3 text-sm text-slate-900 outline-none transition focus:border-orange-400"
                   >
-                    {activityDateOptions.map((date) => (
-                      <option key={date} value={date}>
-                        {formatDailyLabel(date)}
-                      </option>
-                    ))}
+                    {activityDateOptions.length > 0 ? (
+                      activityDateOptions.map((date) => (
+                        <option key={date} value={date}>
+                          {formatDailyLabel(date)}
+                        </option>
+                      ))
+                    ) : (
+                      <option value="">ไม่มีข้อมูลวันที่</option>
+                    )}
                   </select>
                 </div>
               </div>
+              <p className="mt-3 text-xs text-slate-500">
+                กรองรายการกิจกรรมตามอำเภอและวันที่
+              </p>
+            </div>
+          </div>
+
+          <section className="overflow-hidden rounded-2xl border border-orange-100 bg-white shadow-sm">
+            <div className="border-b border-orange-100 p-6">
+              <h2 className="flex items-center gap-2 text-lg font-bold text-slate-900">
+                <ShieldCheck className="h-5 w-5 text-orange-500" />
+                รายการกิจกรรมรายวัน
+              </h2>
+              <p className="mt-1 text-xs text-slate-500">
+                แสดงสรุปรายการจากข้อมูลที่บันทึกในแบบฟอร์มด้านการแพทย์/สาธารณสุข
+              </p>
             </div>
 
             <div className="max-h-[720px] space-y-5 overflow-y-auto p-6">
@@ -1678,8 +1965,11 @@ export default function Dashboard() {
                       {formatDailyLabel(selectedActivityDate)}
                     </div>
                     <div className="text-xs font-medium text-slate-500">
-                      {filteredActivityEntries.length} รายการ
+                      {displayedActivityCount} รายการ
                     </div>
+                  </div>
+                  <div className="border-b border-orange-100 bg-orange-50/40 px-5 py-3 text-xs font-medium text-slate-600">
+                    {activityScopeLabel}
                   </div>
                   <div className="space-y-5 bg-white p-5">
                     {Object.entries(activityEntriesByCategory).map(
@@ -1695,16 +1985,8 @@ export default function Dashboard() {
                             {entries.map((entry) => (
                               <div
                                 key={entry.id}
-                                className="grid gap-3 px-5 py-4 md:grid-cols-[180px_220px_1fr]"
+                                className="grid gap-3 px-5 py-4 md:grid-cols-[220px_1fr]"
                               >
-                                <div>
-                                  <div className="text-xs font-medium text-slate-500">
-                                    อำเภอ
-                                  </div>
-                                  <div className="mt-1 font-semibold text-slate-900">
-                                    {entry.district}
-                                  </div>
-                                </div>
                                 <div>
                                   <div className="text-xs font-medium text-slate-500">
                                     รายการ

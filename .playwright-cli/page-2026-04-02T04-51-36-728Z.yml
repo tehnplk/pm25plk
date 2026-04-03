@@ -1,0 +1,132 @@
+- generic [ref=e2]:
+  - banner [ref=e3]:
+    - generic [ref=e4]:
+      - generic [ref=e5]:
+        - img [ref=e7]
+        - generic [ref=e11]:
+          - heading "ระบบเฝ้าระวังสถานการณ์ฝุ่น PM 2.5" [level=1] [ref=e12]
+          - paragraph [ref=e13]: Phitsanulok PM 2.5 Dashboard จากข้อมูล GISTDA
+      - generic [ref=e14]:
+        - paragraph [ref=e15]: อัปเดตล่าสุด
+        - paragraph [ref=e16]: กำลังโหลดข้อมูล...
+  - main [ref=e17]:
+    - generic [ref=e18]:
+      - generic [ref=e19]:
+        - generic [ref=e20]:
+          - heading "ค่าเฉลี่ย PM 2.5 วันนี้" [level=3] [ref=e21]
+          - img [ref=e22]
+        - generic [ref=e26]:
+          - generic [ref=e27]: "--"
+          - generic [ref=e28]: ug/m3
+        - generic [ref=e29]:
+          - img [ref=e30]
+          - text: ข้อมูลของจังหวัด
+      - generic [ref=e32]:
+        - generic [ref=e33]:
+          - heading "AQI ของจังหวัด" [level=3] [ref=e34]
+          - img [ref=e35]
+        - generic [ref=e37]:
+          - generic [ref=e38]: "--"
+          - generic [ref=e39]: AQI
+        - generic [ref=e40]: จังหวัดพิษณุโลก PM2.5 เฉลี่ย 24 ชม. -- ug/m3
+    - generic [ref=e41]:
+      - generic [ref=e42]:
+        - generic [ref=e44]:
+          - heading "ค่า PM2.5 และ AQI รายอำเภอ จังหวัดพิษณุโลก" [level=2] [ref=e45]:
+            - img [ref=e46]
+            - text: ค่า PM2.5 และ AQI รายอำเภอ จังหวัดพิษณุโลก
+          - paragraph [ref=e49]: PM2.5 ปัจจุบันจาก GISTDA และ AQI คำนวณจากค่าเฉลี่ย 24 ชั่วโมง
+        - table [ref=e51]:
+          - rowgroup [ref=e52]:
+            - row "อำเภอ PM2.5 (ชม.ล่าสุด) PM2.5 เฉลี่ย 24 ชม. AQI ประชากรได้รับผลกระทบ" [ref=e53]:
+              - columnheader "อำเภอ" [ref=e54]
+              - columnheader "PM2.5 (ชม.ล่าสุด)" [ref=e55]
+              - columnheader "PM2.5 เฉลี่ย 24 ชม." [ref=e56]
+              - columnheader "AQI" [ref=e57]
+              - columnheader "ประชากรได้รับผลกระทบ" [ref=e58]
+          - rowgroup
+      - generic [ref=e60]:
+        - heading "ผู้ป่วยรายอำเภอ" [level=2] [ref=e61]:
+          - img [ref=e62]
+          - text: ผู้ป่วยรายอำเภอ
+        - paragraph [ref=e64]: แสดงเทียบกับสีความเสี่ยงจาก AQI ของ GISTDA
+    - generic [ref=e67]:
+      - generic [ref=e68]:
+        - generic [ref=e69]:
+          - heading "รายการกิจกรรมรายวัน" [level=2] [ref=e70]:
+            - img [ref=e71]
+            - text: รายการกิจกรรมรายวัน
+          - paragraph [ref=e74]: แสดงกิจกรรมรายอำเภอแบบแยกตามวัน และรวมรายการที่เพิ่มจากฟอร์มด้านขวา
+        - generic [ref=e75]:
+          - generic [ref=e76]:
+            - generic [ref=e77]:
+              - generic [ref=e78]: 27 มีนาคม 2569
+              - generic [ref=e79]: 2 รายการ
+            - generic [ref=e80]:
+              - generic [ref=e81]:
+                - generic [ref=e82]:
+                  - generic [ref=e83]: อำเภอ
+                  - generic [ref=e84]: บางระกำ
+                - generic [ref=e85]:
+                  - generic [ref=e86]: กิจกรรม
+                  - generic [ref=e87]: ทำห้องปลอดฝุ่น
+                - generic [ref=e88]:
+                  - generic [ref=e89]: รายละเอียด
+                  - generic [ref=e90]: เตรียมห้องปลอดฝุ่นให้ชุมชนใช้งานชั่วคราว
+                  - generic [ref=e91]: ผู้รับบริการ 8,500 คน
+              - generic [ref=e92]:
+                - generic [ref=e93]:
+                  - generic [ref=e94]: อำเภอ
+                  - generic [ref=e95]: เมืองพิษณุโลก
+                - generic [ref=e96]:
+                  - generic [ref=e97]: กิจกรรม
+                  - generic [ref=e98]: แจก masks
+                - generic [ref=e99]:
+                  - generic [ref=e100]: รายละเอียด
+                  - generic [ref=e101]: แจกหน้ากาก N95 ให้กลุ่มเปราะบาง
+                  - generic [ref=e102]: ผู้รับบริการ 15,000 คน
+          - generic [ref=e103]:
+            - generic [ref=e104]:
+              - generic [ref=e105]: 26 มีนาคม 2569
+              - generic [ref=e106]: 1 รายการ
+            - generic [ref=e108]:
+              - generic [ref=e109]:
+                - generic [ref=e110]: อำเภอ
+                - generic [ref=e111]: วังทอง
+              - generic [ref=e112]:
+                - generic [ref=e113]: กิจกรรม
+                - generic [ref=e114]: ศูนย์เด็กปลอดฝุ่น
+              - generic [ref=e115]:
+                - generic [ref=e116]: รายละเอียด
+                - generic [ref=e117]: จัดตั้งศูนย์เด็กปลอดฝุ่นในพื้นที่เสี่ยง
+                - generic [ref=e118]: ผู้รับบริการ 3,200 คน
+      - complementary [ref=e119]:
+        - generic [ref=e120]:
+          - heading "เพิ่มกิจกรรมรายอำเภอ" [level=2] [ref=e121]:
+            - img [ref=e122]
+            - text: เพิ่มกิจกรรมรายอำเภอ
+          - paragraph [ref=e124]: เลือกอำเภอก่อน แล้วบันทึกกิจกรรมเป็นรายวันทางด้านขวามือ
+        - generic [ref=e125]:
+          - generic [ref=e126]:
+            - text: อำเภอ
+            - combobox [ref=e127]:
+              - option "เลือกอำเภอ" [disabled] [selected]
+          - generic [ref=e128]:
+            - text: วันที่บันทึก
+            - textbox [ref=e129]: 2026-04-02
+          - generic [ref=e130]:
+            - text: ประเภทกิจกรรม
+            - generic [ref=e131]:
+              - generic [ref=e132] [cursor=pointer]:
+                - radio "แจก masks" [checked] [ref=e133]
+                - generic [ref=e134]: แจก masks
+              - generic [ref=e135] [cursor=pointer]:
+                - radio "ทำห้องปลอดฝุ่น" [ref=e136]
+                - generic [ref=e137]: ทำห้องปลอดฝุ่น
+              - generic [ref=e138] [cursor=pointer]:
+                - radio "ศูนย์เด็กปลอดฝุ่น" [ref=e139]
+                - generic [ref=e140]: ศูนย์เด็กปลอดฝุ่น
+          - generic [ref=e141]:
+            - text: รายละเอียดกิจกรรม
+            - textbox "ระบุรายละเอียดเพิ่มเติมของกิจกรรม" [ref=e142]
+          - button "บันทึกกิจกรรมรายวัน" [ref=e143]

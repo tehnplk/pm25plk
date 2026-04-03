@@ -1,0 +1,172 @@
+- generic [ref=e2]:
+  - generic:
+    - navigation [ref=e3]:
+      - generic [ref=e5]:
+        - generic [ref=e8]:
+          - img "logo" [ref=e10]
+          - generic [ref=e11]:
+            - generic [ref=e12]: ระบบติดตาม PM2.5
+            - generic [ref=e13]:
+              - img "ตรากระทรวงการอุดมศึกษา วิทยาศาสตร์ วิจัยและนวัตกรรม (อว.)" [ref=e14]
+              - img "ตราสำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ (องค์การมหาชน) :GISTDA" [ref=e15]
+              - img "ตราสำนักงานการวิจัยแห่งชาติ (วช.)" [ref=e16]
+              - img "ตราหน่วยบริหารและจัดการทุนด้านการพัฒนากำลังคนและทุนด้านการพัฒนาสถาบันอุดมศึกษาการวิจัยและการสร้างนวัตกรรม (บพค.)" [ref=e17]
+        - generic [ref=e18]:
+          - generic [ref=e20]:
+            - paragraph [ref=e22]: สีตัวอักษร
+            - button "เปลี่ยนธีมหน้าเว็บเป็นธีมสว่าง" [ref=e23] [cursor=pointer]:
+              - img "เปลี่ยนธีมหน้าเว็บเป็นธีมสว่าง" [ref=e24]
+            - button "เปลี่ยนธีมหน้าเว็บเป็นธีมมืด" [ref=e25] [cursor=pointer]:
+              - img "เปลี่ยนธีมหน้าเว็บเป็นธีมมืด" [ref=e26]
+            - button "เปลี่ยนธีมหน้าเว็บเป็นธีมเหลือง" [ref=e27] [cursor=pointer]:
+              - img "เปลี่ยนธีมหน้าเว็บเป็นธีมเหลือง" [ref=e28]
+          - generic [ref=e29]:
+            - link "หน้าแรก" [ref=e30] [cursor=pointer]:
+              - /url: /
+              - button "หน้าแรก" [ref=e31]:
+                - paragraph [ref=e32]: หน้าแรก
+            - link "ดาวน์โหลดข้อมูล" [ref=e33] [cursor=pointer]:
+              - /url: /download
+              - button "ดาวน์โหลดข้อมูล" [ref=e34]:
+                - paragraph [ref=e35]: ดาวน์โหลดข้อมูล
+            - link "ติดต่อเรา" [ref=e36] [cursor=pointer]:
+              - /url: /contact
+              - button "ติดต่อเรา" [ref=e37]:
+                - paragraph [ref=e38]: ติดต่อเรา
+    - navigation
+  - generic [ref=e41]:
+    - generic [ref=e43]:
+      - paragraph [ref=e44]: พิมพ์ค้นหาด้วยชื่อ ตำบล อำเภอ หรือจังหวัด และดูข้อมูล PM2.5 ทั่วประเทศไทยได้ที่ตารางด้านล่าง
+      - generic [ref=e46]:
+        - generic: ค้นหาด้วยชื่อ ตำบล อำเภอ หรือจังหวัดของคุณ
+        - generic [ref=e47]:
+          - combobox "ค้นหาด้วยชื่อ ตำบล อำเภอ หรือจังหวัดของคุณ" [ref=e48]
+          - button "Open" [ref=e50] [cursor=pointer]:
+            - img [ref=e51]
+          - group:
+            - generic: ค้นหาด้วยชื่อ ตำบล อำเภอ หรือจังหวัดของคุณ
+    - generic [ref=e54]:
+      - img "กดเพื่อปิด" [ref=e56]
+      - img "ภาพโทรศัพท์สมาร์ทโฟน" [ref=e58]
+      - img "ภาพตราเช็คฝุ่น" [ref=e60]
+      - paragraph [ref=e61]: แอปพลิเคชัน
+      - paragraph [ref=e62]: ดาวน์โหลดเลย
+      - link "คลิกเพื่อดาวน์โหลดแอปพลิเคชั่นเช็คฝุ่นผ่านแอปสโตร์ (iOS)" [ref=e64] [cursor=pointer]:
+        - /url: https://apps.apple.com/th/app/เช-คฝ-น/id1591356571
+        - img "คลิกเพื่อดาวน์โหลดแอปพลิเคชั่นเช็คฝุ่นผ่านแอปสโตร์ (iOS)" [ref=e65]
+      - link "คลิกเพื่อดาวน์โหลดแอปพลิเคชั่นเช็คฝุ่นผ่านกูเกิลเพลย์ (แอนดรอยด์)" [ref=e67] [cursor=pointer]:
+        - /url: https://play.google.com/store/apps/details?id=com.gistda.pm25check
+        - img "คลิกเพื่อดาวน์โหลดแอปพลิเคชั่นเช็คฝุ่นผ่านกูเกิลเพลย์ (แอนดรอยด์)" [ref=e68]
+    - generic [ref=e73]:
+      - generic:
+        - generic [ref=e74]:
+          - button "Zoom in" [ref=e75] [cursor=pointer]: +
+          - button "Zoom out" [ref=e76] [cursor=pointer]: −
+        - generic [ref=e77]:
+          - link "Leaflet" [ref=e78] [cursor=pointer]:
+            - /url: https://leafletjs.com
+            - img [ref=e79]
+            - text: Leaflet
+          - text: "| ©"
+          - link "OpenStreetMap" [ref=e83] [cursor=pointer]:
+            - /url: https://www.openstreetmap.org/copyright
+          - text: contributors
+      - paragraph [ref=e85]: ข้อมูล PM2.5 เฉลี่ย 24 ชั่วโมง
+      - img "แถบสี สีฟ้า(ดีมาก), สีเขียว(ดี), สีเหลือง(ปานกลาง), สีส้ม(เริ่มมีผล), สีแดง(มีผล)" [ref=e87]
+      - button "เปิด/ปิดชั้นข้อมูลแสดงแผนที่จุดความร้อน" [ref=e88] [cursor=pointer]:
+        - img [ref=e89]
+      - button "สลับชั้นข้อมูลแสดงแผนที่ข้อมูลPM2.5เฉลี่ยรายวัน/รายชั่วโมง" [ref=e92] [cursor=pointer]:
+        - img [ref=e93]
+    - generic [ref=e95]:
+      - heading "ชั่วโมงนี้อากาศเป็นอย่างไร? (PM2.5 ชั่วโมงล่าสุด)" [level=5] [ref=e97]
+      - generic [ref=e98]:
+        - generic [ref=e99]:
+          - generic [ref=e100]:
+            - paragraph [ref=e101]: ทุ่งสองห้อง หลักสี่ กรุงเทพมหานคร
+            - paragraph [ref=e102]: "*ไม่สามารถเข้าถึงตำแหน่งอุปกรณ์ของผู้ใช้"
+          - button "คำอธิบาย" [ref=e103] [cursor=pointer]:
+            - img [ref=e104]
+        - generic [ref=e106]:
+          - generic [ref=e107]:
+            - img "หน้ายิ้มสีเขียว (ดี)" [ref=e109]
+            - paragraph [ref=e111]: คุณภาพอากาศดี
+          - generic [ref=e112]:
+            - paragraph [ref=e114]: "17.5"
+            - paragraph [ref=e115]: µg/m³
+        - paragraph [ref=e117]: "*ข้อมูลแจ้งเตือนอย่างเป็นทางการ โปรดอ้างอิง Air4Thai และ AirBKK"
+      - generic [ref=e119]:
+        - paragraph [ref=e121]:
+          - img "อุณหภูมิ" [ref=e122]
+          - text: ไม่มีข้อมูล
+        - paragraph [ref=e124]:
+          - img "โอกาสฝนตก" [ref=e125]
+          - text: ไม่มีข้อมูล
+        - paragraph [ref=e127]:
+          - img "ความเร็วลม" [ref=e128]
+          - text: ไม่มีข้อมูล
+      - paragraph [ref=e130]: สถิติรายชั่วโมงและคาดการณ์
+      - generic "ข้อมูล PM2.5 รายชั่วโมง และคาดการณ์" [ref=e132]:
+        - progressbar [ref=e133]:
+          - img [ref=e134]
+        - paragraph [ref=e136]: เฉลี่ย 24 ชั่วโมงต่อเนื่อง = 13.9 µg/m³
+    - generic [ref=e141]:
+      - heading "Loading..." [level=5] [ref=e143]
+      - table [ref=e147]:
+        - rowgroup [ref=e148]:
+          - row "จังหวัด sorted ascending ชั่วโมงล่าสุด (µg/m³) คาดการณ์ เฉลี่ย 24 ชั่วโมง (µg/m³) รายอำเภอ ข้อมูลกราฟ" [ref=e149]:
+            - columnheader "จังหวัด sorted ascending" [ref=e150]:
+              - button "จังหวัด sorted ascending" [ref=e151] [cursor=pointer]:
+                - text: จังหวัด
+                - generic [ref=e152]: sorted ascending
+                - img [ref=e153]
+            - columnheader "ชั่วโมงล่าสุด (µg/m³)" [ref=e155]:
+              - button "ชั่วโมงล่าสุด (µg/m³)" [ref=e156] [cursor=pointer]:
+                - text: ชั่วโมงล่าสุด (µg/m³)
+                - img [ref=e157]
+            - columnheader "คาดการณ์" [ref=e159]:
+              - button "คาดการณ์" [ref=e160] [cursor=pointer]:
+                - generic [ref=e161]: คาดการณ์
+                - img [ref=e162]
+            - columnheader "เฉลี่ย 24 ชั่วโมง (µg/m³)" [ref=e164]:
+              - button "เฉลี่ย 24 ชั่วโมง (µg/m³)" [ref=e165] [cursor=pointer]:
+                - text: เฉลี่ย 24 ชั่วโมง (µg/m³)
+                - img [ref=e166]
+            - columnheader "รายอำเภอ" [ref=e168]:
+              - button "รายอำเภอ" [ref=e169] [cursor=pointer]:
+                - text: รายอำเภอ
+                - img [ref=e170]
+            - columnheader "ข้อมูลกราฟ" [ref=e172]:
+              - button "ข้อมูลกราฟ" [ref=e173] [cursor=pointer]:
+                - text: ข้อมูลกราฟ
+                - img [ref=e174]
+        - rowgroup [ref=e176]:
+          - row [ref=e177]:
+            - cell [ref=e178]
+            - cell [ref=e180]
+            - cell [ref=e182]
+            - cell [ref=e184]
+            - cell [ref=e186]
+            - cell [ref=e188]
+  - generic [ref=e194]:
+    - separator [ref=e195]
+    - img "GISTDA" [ref=e197]
+    - paragraph [ref=e200]: "ที่อยู่: สำนักงานพัฒนาเทคโนโลยีอวกาศและภูมิสารสนเทศ (องค์การมหาชน) สำนักงานใหญ่ (ศูนย์ราชการเฉลิมพระเกียรติ 80 พรรษา 5 ธันวาคม 2550) เลขที่ 120 อาคารรวมหน่วยราชการ (อาคารรัฐประศาสนภักดี) ชั้น 6 และชั้น 7 ถนนแจ้งวัฒนะ แขวงทุ่งสองห้อง เขตหลักสี่ กรุงเทพฯ 10210"
+    - generic [ref=e201]:
+      - paragraph [ref=e202]: Contact Us
+      - paragraph [ref=e203]: "อีเมล: disaster@gistda.or.th"
+    - generic [ref=e204]:
+      - paragraph [ref=e205]: Follow Us
+      - link "Facebook GISTDA" [ref=e206] [cursor=pointer]:
+        - /url: https://www.facebook.com/gistda
+        - img "Facebook GISTDA" [ref=e207]
+      - link "X GISTDA" [ref=e208] [cursor=pointer]:
+        - /url: https://x.com/GISTDA
+        - img "X GISTDA" [ref=e209]
+      - link "Instagram GISTDA" [ref=e210] [cursor=pointer]:
+        - /url: https://www.instagram.com/gistda_space/
+        - img "Instagram GISTDA" [ref=e211]
+      - link "Youtube GISTDA" [ref=e212] [cursor=pointer]:
+        - /url: https://www.youtube.com/c/GISTDAspace
+        - img "Youtube GISTDA" [ref=e213]
+    - separator [ref=e214]
+    - paragraph [ref=e216]: Copyright © 2024 Geo-Informatics and Space Technology Development Agency (Public Organization), สงวนสิทธิ์ทุกประการ

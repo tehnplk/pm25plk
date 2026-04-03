@@ -1,0 +1,299 @@
+- generic [ref=e1]:
+  - generic [ref=e2]:
+    - banner [ref=e3]:
+      - generic [ref=e4]:
+        - generic [ref=e5]:
+          - img [ref=e7]
+          - generic [ref=e11]:
+            - heading "ระบบเฝ้าระวังสถานการณ์ฝุ่น PM 2.5" [level=1] [ref=e12]
+            - paragraph [ref=e13]: Phitsanulok PM 2.5 Dashboard จากข้อมูล GISTDA
+        - generic [ref=e14]:
+          - paragraph [ref=e15]: อัปเดตล่าสุด
+          - paragraph [ref=e16]: วันพฤหัสบดีที่ 2 เมษายน 2569 เวลา 11:00 น.
+    - main [ref=e17]:
+      - generic [ref=e18]:
+        - generic [ref=e19]:
+          - generic [ref=e20]:
+            - heading "ค่าเฉลี่ย PM 2.5 วันนี้" [level=3] [ref=e21]
+            - img [ref=e22]
+          - generic [ref=e26]:
+            - generic [ref=e27]: "53.98"
+            - generic [ref=e28]: ug/m3
+          - generic [ref=e29]:
+            - img [ref=e30]
+            - text: ข้อมูลสดจาก GISTDA
+        - generic [ref=e32]:
+          - generic [ref=e33]:
+            - heading "AQI ของจังหวัด" [level=3] [ref=e34]
+            - img [ref=e35]
+          - generic [ref=e37]:
+            - generic [ref=e38]: "158"
+            - generic [ref=e39]: AQI
+          - generic [ref=e40]: จังหวัดพิษณุโลก PM2.5 เฉลี่ย 24 ชม. 68.54 ug/m3
+        - generic [ref=e41]:
+          - generic [ref=e42]:
+            - heading "ผู้ป่วยโรคที่เกี่ยวข้อง" [level=3] [ref=e43]
+            - img [ref=e44]
+          - generic [ref=e48]:
+            - generic [ref=e49]: 1,845
+            - generic [ref=e50]: ราย
+          - generic [ref=e51]: ใช้ข้อมูลประกอบเดิมเพื่อไม่ให้ส่วนสุขภาพหายไปจาก dashboard
+        - generic [ref=e52]:
+          - generic [ref=e53]:
+            - heading "ประชาชนที่ได้รับบริการ" [level=3] [ref=e54]
+            - img [ref=e55]
+          - generic [ref=e58]:
+            - generic [ref=e59]: 26,700
+            - generic [ref=e60]: คน
+          - generic [ref=e61]: รวมกิจกรรมเดิมและรายการที่เพิ่มเข้ามาแบบรายวัน
+      - generic [ref=e62]:
+        - generic [ref=e63]:
+          - generic [ref=e65]:
+            - heading "ค่า PM2.5 และ AQI รายอำเภอ จังหวัดพิษณุโลก" [level=2] [ref=e66]:
+              - img [ref=e67]
+              - text: ค่า PM2.5 และ AQI รายอำเภอ จังหวัดพิษณุโลก
+            - paragraph [ref=e70]: PM2.5 ปัจจุบันจาก GISTDA และ AQI คำนวณจากค่าเฉลี่ย 24 ชั่วโมง
+          - table [ref=e72]:
+            - rowgroup [ref=e73]:
+              - row "อำเภอ PM2.5 (ชม.ล่าสุด) PM2.5 เฉลี่ย 24 ชม. AQI ประชากรได้รับผลกระทบ" [ref=e74]:
+                - columnheader "อำเภอ" [ref=e75]
+                - columnheader "PM2.5 (ชม.ล่าสุด)" [ref=e76]
+                - columnheader "PM2.5 เฉลี่ย 24 ชม." [ref=e77]
+                - columnheader "AQI" [ref=e78]
+                - columnheader "ประชากรได้รับผลกระทบ" [ref=e79]
+            - rowgroup [ref=e165]:
+              - row "ชาติตระการ 73.98 74.59 161 30,000" [ref=e166]:
+                - cell "ชาติตระการ" [ref=e167]:
+                  - button "ชาติตระการ" [active] [ref=e168]
+                - cell "73.98" [ref=e169]
+                - cell "74.59" [ref=e170]
+                - cell "161" [ref=e171]:
+                  - generic [ref=e172]: "161"
+                - cell "30,000" [ref=e173]
+              - row "นครไทย 64.81 66.33 157 45,000" [ref=e174]:
+                - cell "นครไทย" [ref=e175]:
+                  - button "นครไทย" [ref=e176]
+                - cell "64.81" [ref=e177]
+                - cell "66.33" [ref=e178]
+                - cell "157" [ref=e179]:
+                  - generic [ref=e180]: "157"
+                - cell "45,000" [ref=e181]
+              - row "วัดโบสถ์ 60.10 72.31 160 32,000" [ref=e182]:
+                - cell "วัดโบสถ์" [ref=e183]:
+                  - button "วัดโบสถ์" [ref=e184]
+                - cell "60.10" [ref=e185]
+                - cell "72.31" [ref=e186]
+                - cell "160" [ref=e187]:
+                  - generic [ref=e188]: "160"
+                - cell "32,000" [ref=e189]
+              - row "พรหมพิราม 55.25 73.98 161 65,000" [ref=e190]:
+                - cell "พรหมพิราม" [ref=e191]:
+                  - button "พรหมพิราม" [ref=e192]
+                - cell "55.25" [ref=e193]
+                - cell "73.98" [ref=e194]
+                - cell "161" [ref=e195]:
+                  - generic [ref=e196]: "161"
+                - cell "65,000" [ref=e197]
+              - row "วังทอง 51.49 65.49 156 95,000" [ref=e198]:
+                - cell "วังทอง" [ref=e199]:
+                  - button "วังทอง" [ref=e200]
+                - cell "51.49" [ref=e201]
+                - cell "65.49" [ref=e202]
+                - cell "156" [ref=e203]:
+                  - generic [ref=e204]: "156"
+                - cell "95,000" [ref=e205]
+              - row "เนินมะปราง 50.14 58.88 153 28,000" [ref=e206]:
+                - cell "เนินมะปราง" [ref=e207]:
+                  - button "เนินมะปราง" [ref=e208]
+                - cell "50.14" [ref=e209]
+                - cell "58.88" [ref=e210]
+                - cell "153" [ref=e211]:
+                  - generic [ref=e212]: "153"
+                - cell "28,000" [ref=e213]
+              - row "บางระกำ 47.21 69.76 158 85,000" [ref=e214]:
+                - cell "บางระกำ" [ref=e215]:
+                  - button "บางระกำ" [ref=e216]
+                - cell "47.21" [ref=e217]
+                - cell "69.76" [ref=e218]
+                - cell "158" [ref=e219]:
+                  - generic [ref=e220]: "158"
+                - cell "85,000" [ref=e221]
+              - row "เมืองพิษณุโลก 44.36 73.25 160 125,000" [ref=e222]:
+                - cell "เมืองพิษณุโลก" [ref=e223]:
+                  - button "เมืองพิษณุโลก" [ref=e224]
+                - cell "44.36" [ref=e225]
+                - cell "73.25" [ref=e226]
+                - cell "160" [ref=e227]:
+                  - generic [ref=e228]: "160"
+                - cell "125,000" [ref=e229]
+              - row "บางกระทุ่ม 38.44 64.97 156 42,000" [ref=e230]:
+                - cell "บางกระทุ่ม" [ref=e231]:
+                  - button "บางกระทุ่ม" [ref=e232]
+                - cell "38.44" [ref=e233]
+                - cell "64.97" [ref=e234]
+                - cell "156" [ref=e235]:
+                  - generic [ref=e236]: "156"
+                - cell "42,000" [ref=e237]
+        - generic [ref=e80]:
+          - generic [ref=e81]:
+            - heading "ผู้ป่วยรายอำเภอ" [level=2] [ref=e82]:
+              - img [ref=e83]
+              - text: ผู้ป่วยรายอำเภอ
+            - paragraph [ref=e85]: แสดงเทียบกับสีความเสี่ยงจาก AQI ของ GISTDA
+          - application [ref=e239]:
+            - generic [ref=e275]:
+              - generic [ref=e277]: ชาติตระการ
+              - generic [ref=e279]: นครไทย
+              - generic [ref=e281]: วัดโบสถ์
+              - generic [ref=e283]: พรหมพิราม
+              - generic [ref=e285]: วังทอง
+              - generic [ref=e287]: เนินมะปราง
+              - generic [ref=e289]: บางระกำ
+              - generic [ref=e291]: เมืองพิษณุโลก
+              - generic [ref=e293]: บางกระทุ่ม
+      - generic [ref=e335]:
+        - generic [ref=e336]:
+          - generic [ref=e337]:
+            - heading "คาดการณ์ PM2.5 รายอำเภอ" [level=2] [ref=e338]
+            - paragraph [ref=e339]: ชาติตระการ จากข้อมูล GISTDA
+          - button "ปิดหน้าต่างคาดการณ์" [ref=e340]:
+            - img [ref=e341]
+        - generic [ref=e344]:
+          - generic [ref=e345]:
+            - generic [ref=e346]:
+              - generic [ref=e347]: PM2.5 (ชม.ล่าสุด)
+              - generic [ref=e348]: "73.98"
+              - generic [ref=e349]: ug/m3
+            - generic [ref=e350]:
+              - generic [ref=e351]: PM2.5 เฉลี่ย 24 ชม.
+              - generic [ref=e352]: "74.59"
+              - generic [ref=e353]: ug/m3
+            - generic [ref=e354]:
+              - generic [ref=e355]: AQI
+              - generic [ref=e357]: "161"
+          - generic [ref=e358]:
+            - generic [ref=e359]:
+              - generic [ref=e360]: 11:00
+              - generic [ref=e361]: "73.98"
+              - generic [ref=e362]: ชั่วโมงล่าสุด
+            - generic [ref=e363]:
+              - generic [ref=e364]: 12:00
+              - generic [ref=e365]: "77.19"
+              - generic [ref=e366]: คาดการณ์ GISTDA
+            - generic [ref=e367]:
+              - generic [ref=e368]: 13:00
+              - generic [ref=e369]: "74.93"
+              - generic [ref=e370]: คาดการณ์ GISTDA
+            - generic [ref=e371]:
+              - generic [ref=e372]: 14:00
+              - generic [ref=e373]: "73.03"
+              - generic [ref=e374]: คาดการณ์ GISTDA
+          - generic [ref=e375]:
+            - generic [ref=e376]: รายการคาดการณ์
+            - generic [ref=e377]:
+              - generic [ref=e378]:
+                - generic [ref=e379]: ชั่วโมงล่าสุด
+                - generic [ref=e380]: "11:00 : 73.98 ug/m3"
+              - generic [ref=e381]:
+                - generic [ref=e382]: 12:00
+                - generic [ref=e383]: 77.19 ug/m3
+              - generic [ref=e384]:
+                - generic [ref=e385]: 13:00
+                - generic [ref=e386]: 74.93 ug/m3
+              - generic [ref=e387]:
+                - generic [ref=e388]: 14:00
+                - generic [ref=e389]: 73.03 ug/m3
+      - generic [ref=e88]:
+        - generic [ref=e89]:
+          - generic [ref=e90]:
+            - heading "รายการกิจกรรมรายวัน" [level=2] [ref=e91]:
+              - img [ref=e92]
+              - text: รายการกิจกรรมรายวัน
+            - paragraph [ref=e95]: แสดงกิจกรรมรายอำเภอแบบแยกตามวัน และรวมรายการที่เพิ่มจากฟอร์มด้านขวา
+          - generic [ref=e96]:
+            - generic [ref=e97]:
+              - generic [ref=e98]:
+                - generic [ref=e99]: 27 มีนาคม 2569
+                - generic [ref=e100]: 2 รายการ
+              - generic [ref=e101]:
+                - generic [ref=e102]:
+                  - generic [ref=e103]:
+                    - generic [ref=e104]: อำเภอ
+                    - generic [ref=e105]: บางระกำ
+                  - generic [ref=e106]:
+                    - generic [ref=e107]: กิจกรรม
+                    - generic [ref=e108]: ทำห้องปลอดฝุ่น
+                  - generic [ref=e109]:
+                    - generic [ref=e110]: รายละเอียด
+                    - generic [ref=e111]: เตรียมห้องปลอดฝุ่นให้ชุมชนใช้งานชั่วคราว
+                    - generic [ref=e112]: ผู้รับบริการ 8,500 คน
+                - generic [ref=e113]:
+                  - generic [ref=e114]:
+                    - generic [ref=e115]: อำเภอ
+                    - generic [ref=e116]: เมืองพิษณุโลก
+                  - generic [ref=e117]:
+                    - generic [ref=e118]: กิจกรรม
+                    - generic [ref=e119]: แจก masks
+                  - generic [ref=e120]:
+                    - generic [ref=e121]: รายละเอียด
+                    - generic [ref=e122]: แจกหน้ากาก N95 ให้กลุ่มเปราะบาง
+                    - generic [ref=e123]: ผู้รับบริการ 15,000 คน
+            - generic [ref=e124]:
+              - generic [ref=e125]:
+                - generic [ref=e126]: 26 มีนาคม 2569
+                - generic [ref=e127]: 1 รายการ
+              - generic [ref=e129]:
+                - generic [ref=e130]:
+                  - generic [ref=e131]: อำเภอ
+                  - generic [ref=e132]: วังทอง
+                - generic [ref=e133]:
+                  - generic [ref=e134]: กิจกรรม
+                  - generic [ref=e135]: ศูนย์เด็กปลอดฝุ่น
+                - generic [ref=e136]:
+                  - generic [ref=e137]: รายละเอียด
+                  - generic [ref=e138]: จัดตั้งศูนย์เด็กปลอดฝุ่นในพื้นที่เสี่ยง
+                  - generic [ref=e139]: ผู้รับบริการ 3,200 คน
+        - complementary [ref=e140]:
+          - generic [ref=e141]:
+            - heading "เพิ่มกิจกรรมรายอำเภอ" [level=2] [ref=e142]:
+              - img [ref=e143]
+              - text: เพิ่มกิจกรรมรายอำเภอ
+            - paragraph [ref=e145]: เลือกอำเภอก่อน แล้วบันทึกกิจกรรมเป็นรายวันทางด้านขวามือ
+          - generic [ref=e146]:
+            - generic [ref=e147]:
+              - text: อำเภอ
+              - combobox [ref=e148]:
+                - option "เลือกอำเภอ" [disabled]
+                - option "ชาติตระการ" [selected]
+                - option "นครไทย"
+                - option "วัดโบสถ์"
+                - option "พรหมพิราม"
+                - option "วังทอง"
+                - option "เนินมะปราง"
+                - option "บางระกำ"
+                - option "เมืองพิษณุโลก"
+                - option "บางกระทุ่ม"
+            - generic [ref=e149]:
+              - text: วันที่บันทึก
+              - textbox [ref=e150]: 2026-04-02
+            - generic [ref=e151]:
+              - text: ประเภทกิจกรรม
+              - generic [ref=e152]:
+                - generic [ref=e153] [cursor=pointer]:
+                  - radio "แจก masks" [checked] [ref=e154]
+                  - generic [ref=e155]: แจก masks
+                - generic [ref=e156] [cursor=pointer]:
+                  - radio "ทำห้องปลอดฝุ่น" [ref=e157]
+                  - generic [ref=e158]: ทำห้องปลอดฝุ่น
+                - generic [ref=e159] [cursor=pointer]:
+                  - radio "ศูนย์เด็กปลอดฝุ่น" [ref=e160]
+                  - generic [ref=e161]: ศูนย์เด็กปลอดฝุ่น
+            - generic [ref=e162]:
+              - text: รายละเอียดกิจกรรม
+              - textbox "ระบุรายละเอียดเพิ่มเติมของกิจกรรม" [ref=e163]
+            - button "บันทึกกิจกรรมรายวัน" [ref=e164]
+      - generic [ref=e294]: จังหวัด พิษณุโลก มี PM2.5 ปัจจุบัน 57.53 ug/m3, ค่าเฉลี่ย 24 ชั่วโมง 68.54 ug/m3, AQI 158 จากแหล่งข้อมูล GISTDA
+  - button "Open Next.js Dev Tools" [ref=e300] [cursor=pointer]:
+    - img [ref=e301]
+  - alert [ref=e304]
+  - generic [ref=e305]: ชาติตระการ
